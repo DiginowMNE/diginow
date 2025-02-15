@@ -1,0 +1,136 @@
+.footer {
+  background-color: var(--background);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid var(--light-blue);
+}
+
+.footerContent {
+  margin: 0 auto;
+}
+
+.footerMain {
+  margin-bottom: 3rem;
+  padding: 8rem 10rem 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerBrand {
+  display: inline-block;
+}
+
+.footerLogo {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.footerLogo:hover {
+  transform: rotate(360deg);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.footerTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--light-blue);
+}
+
+.footerNav {
+}
+
+.footerNav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footerNav a:hover {
+  opacity: 1;
+  color: var(--light-blue);
+  transform: translateX(5px);
+}
+
+.footerContact {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+.footerContact p {
+  margin-bottom: 0.5rem;
+}
+
+.footerBottom {
+  border-top: 1px solid var(--light-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLinks a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  opacity: 1;
+  color: var(--light-blue);
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 485px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 376px) {
+}
+
+@media (max-width: 325px) {
+}

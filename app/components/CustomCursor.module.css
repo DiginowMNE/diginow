@@ -1,0 +1,52 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+  will-change: transform;
+  mix-blend-mode: difference;
+}
+
+.cursorInner {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+
+.cursorOuter {
+  width: 32px;
+  height: 32px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+
+.hovering .cursorInner {
+  transform: translate(-50%, -50%) scale(6);
+  background: white;
+  opacity: 1;
+}
+
+.hovering .cursorOuter {
+  display: none;
+}
+
+:global(body) {
+  cursor: none;
+}
+
+:global(a),
+:global(button) {
+  cursor: none;
+}

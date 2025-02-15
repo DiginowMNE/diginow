@@ -1,0 +1,107 @@
+.subscription {
+  padding: 16rem 10rem;
+  padding: 16rem 10rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.subscriptionTitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  color: var(--light-blue);
+}
+
+.subscriptionContent {
+  width: 100%;
+}
+
+.subscriptionTextContainer {
+  max-width: 40%;
+}
+
+.subscriptionSubtitle {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.subscriptionText {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+.contactButton {
+  border: 1px solid var(--light-blue);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+  color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  display: flex;
+  display: inline-block;
+}
+
+.contactButton:hover {
+  background-color: var(--light-blue);
+  color: var(--background);
+}
+
+.contactButton:hover .contactButtonIcon {
+  transform: translateX(10px);
+}
+
+.contactButtonIcon {
+  display: inline;
+  transition: transform 0.4s ease;
+  margin-left: 0.5rem;
+}
+
+.subscriptionImageContainer {
+  position: absolute;
+  top: 15%;
+  transform: translateY(-15%);
+  right: 0;
+  z-index: 2;
+  width: 50%;
+  will-change: transform;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.subscriptionImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  will-change: transform;
+}
+@media (max-width: 768px) {
+  .subscription {
+    padding: 4rem 2rem;
+  }
+
+  .subscriptionContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .subscriptionTextContainer {
+    max-width: 100%;
+  }
+}

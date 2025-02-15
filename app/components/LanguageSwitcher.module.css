@@ -1,0 +1,119 @@
+.container {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--font);
+}
+
+.button {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  margin: 0 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.button:hover {
+  color: var(--light-blue);
+  opacity: 1;
+}
+
+.flag {
+  width: 25px;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1680px) {
+}
+
+@media (max-width: 1600px) {
+  .flag {
+    width: 22px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1540px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1370px) {
+  .flag {
+    width: 20px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 960px) {
+  .flag {
+    width: 25px;
+    height: auto;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 485px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 460px) {
+  .flag {
+    width: 23px;
+  }
+}
+
+@media (max-width: 376px) {
+  .flag {
+    width: 20px;
+    height: auto;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 325px) {
+}
+
+@media (max-width: 1200px) and (min-height: 1920px) {
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1366px) {
+  .flag {
+    width: 25px;
+    height: auto;
+    margin-left: 1rem;
+  }
+}

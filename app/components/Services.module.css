@@ -1,0 +1,131 @@
+.services {
+  padding: 16rem 10rem;
+  background-color: var(--background);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.servicesTitle {
+  width: 45%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  color: var(--light-blue);
+}
+
+.servicesSubtitle {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.servicesTitleLine {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.servicesButton {
+  margin-top: 5rem;
+  display: flex;
+}
+
+.servicesButtonText {
+  border: 1px solid var(--light-blue);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+  color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+}
+
+.servicesButtonIcon {
+  display: inline;
+  transition: transform 0.4s ease;
+  margin-left: 0.5rem;
+}
+
+.servicesButtonText:hover .servicesButtonIcon {
+  transform: translateX(10px);
+}
+
+.servicesButtonText:hover {
+  background-color: var(--light-blue);
+  color: var(--background);
+}
+
+.servicesCards {
+  gap: 3rem;
+  padding: 3rem;
+  border: 1px solid;
+  width: 55%;
+  border-radius: 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.servicesCard {
+  transition: all 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 2rem;
+}
+
+.cardTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle,
+.cardIcon {
+  font-size: 1.4rem;
+}
+
+.cardTitle {
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.cardTextHidden,
+.cardTextShown {
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cardTextHidden {
+  max-height: 0;
+  transform: translateY(-10px);
+  margin: 0;
+  opacity: 0;
+}
+
+.cardTextShown {
+  max-height: 300px; /* Adjust this based on your content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardText {
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.cardIcon {
+  transition: transform 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
+}
+
+.cardTitleContainer[data-open="true"] .cardIcon {
+  transform: rotate(45deg);
+}
