@@ -41,3 +41,58 @@
 .hovering .cursorOuter {
   display: none;
 }
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1680px) {
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 900px) {
+  .cursor {
+    display: none;
+  }
+}
+
+@media (max-width: 835px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 610px) {
+}
+
+@media (max-width: 485px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 376px) {
+}
+
+@media (max-width: 325px) {
+}
+
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
+  .cursor {
+    display: none;
+  }
+}
