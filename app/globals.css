@@ -20,6 +20,12 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: var(--font-montserrat);
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
 }
 
 /* Add these styles for text selection */
@@ -31,4 +37,21 @@ body {
 ::-moz-selection {
   background: var(--light-blue);
   color: var(--background);
+}
+
+.highlight {
+  color: var(--light-blue); /* Global highlight style */
+}
+
+.slick-slide {
+  opacity: 0; /* Global slick-slide style */
+  transition: opacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.slick-slide.slick-active {
+  opacity: 1;
+}
+
+.highlight {
+  color: var(--light-blue);
 }

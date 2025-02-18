@@ -41,12 +41,3 @@
 .hovering .cursorOuter {
   display: none;
 }
-
-:global(body) {
-  cursor: none;
-}
-
-:global(a),
-:global(button) {
-  cursor: none;
-}

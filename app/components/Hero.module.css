@@ -101,9 +101,6 @@
 .dot {
   color: var(--light-blue);
 }
-:global(.highlight) {
-  color: var(--light-blue);
-}
 
 .aboutButton {
   display: flex;

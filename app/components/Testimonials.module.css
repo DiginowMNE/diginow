@@ -136,13 +136,3 @@
   color: var(--text);
   transform: translateY(-50%) scale(1.1);
 }
-
-/* Override default slick styles */
-:global(.slick-slide) {
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-:global(.slick-slide.slick-active) {
-  opacity: 1;
-}
