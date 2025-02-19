@@ -182,6 +182,34 @@
     height: 93vh;
     overflow: hidden;
     background: var(--background);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+
+  .mobileNavItemsContainer.open {
+    transform: translateX(0);
+  }
+
+  .mobileNavItemsContainer.closed {
+    transform: translateX(-100%);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 
   .desktopLanguageSwitcher {

@@ -120,6 +120,7 @@
   align-items: center;
   width: fit-content;
   justify-content: center;
+  will-change: transform;
 }
 
 .aboutButtonIcon {
@@ -241,6 +242,24 @@
   .aboutButtonText {
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  .aboutButtonText:hover .aboutButtonIcon {
+    transform: translateX(0px);
+  }
+
+  .aboutButtonText:hover {
+    background-color: transparent;
+    color: var(--light-blue);
+  }
+
+  .aboutButtonText:active .aboutButtonIcon {
+    transform: translateX(10px);
+  }
+
+  .aboutButtonText:active {
+    background-color: var(--light-blue);
+    color: var(--background);
   }
 }
 
@@ -392,5 +411,23 @@
   .aboutButtonText {
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  .aboutButtonText:hover .aboutButtonIcon {
+    transform: translateX(0px);
+  }
+
+  .aboutButtonText:hover {
+    background-color: transparent;
+    color: var(--light-blue);
+  }
+
+  .aboutButtonText:active .aboutButtonIcon {
+    transform: translateX(10px);
+  }
+
+  .aboutButtonText:active {
+    background-color: var(--light-blue);
+    color: var(--background);
   }
 }
