@@ -250,7 +250,7 @@
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .subtitle {
@@ -268,7 +268,7 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .subtitle {
@@ -278,11 +278,11 @@
 
 @media (max-width: 610px) {
   .heroContent {
-    max-width: 400px;
+    max-width: 450px;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
@@ -311,10 +311,14 @@
     font-size: 0.9rem;
   }
 }
-@media (max-width: 425px) {
-}
 
 @media (max-width: 460px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
 }
 
 @media (max-width: 376px) {
@@ -323,7 +327,7 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .subtitle {
@@ -341,7 +345,7 @@
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .subtitle {
@@ -368,7 +372,7 @@
   }
 
   .title {
-    font-size: 5rem;
+    font-size: 4.3rem;
     text-align: center;
     margin-bottom: 1rem;
   }
