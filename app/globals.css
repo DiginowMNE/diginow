@@ -55,3 +55,26 @@ button {
 .highlight {
   color: var(--light-blue);
 }
+
+@media (max-width: 900px) {
+  body {
+    cursor: default;
+  }
+
+  a,
+  button {
+    cursor: default;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
+  body {
+    cursor: default;
+  }
+
+  a,
+  button {
+    cursor: default;
+  }
+}
