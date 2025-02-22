@@ -185,7 +185,7 @@
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     will-change: transform;
     height: 93vh;
     background: var(--background);
@@ -197,6 +197,7 @@
 
   .mobileNavItemsContainer.closed {
     transform: translateX(-100%);
+    opacity: 0.8;
   }
 
   @keyframes slideIn {
