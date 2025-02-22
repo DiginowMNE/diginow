@@ -2,9 +2,10 @@
 import styles from "./Hero.module.css";
 import { useTranslation } from "../hooks/useTranslation";
 import Link from "next/link";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { Fade } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
+
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Hero = () => {
   const { t, locale } = useTranslation();

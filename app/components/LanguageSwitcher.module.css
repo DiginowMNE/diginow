@@ -72,7 +72,7 @@
   .flag {
     width: 25px;
     height: auto;
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -95,7 +95,7 @@
   .flag {
     width: 20px;
     height: auto;
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -106,7 +106,7 @@
   .flag {
     width: 30px;
     height: auto;
-    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -114,6 +114,6 @@
   .flag {
     width: 25px;
     height: auto;
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }

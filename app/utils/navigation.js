@@ -8,6 +8,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import { Fade, Slide } from "react-awesome-reveal";
 
 import { IoIosMenu, IoMdClose } from "react-icons/io";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Navigation = () => {
   const { t, locale } = useTranslation();
@@ -35,10 +36,8 @@ const Navigation = () => {
   }, [isMobileNavOpen]);
   return (
     <div>
-      <nav
-        className={`${styles.navContainer} ${scrolled ? styles.scrolled : ""}`}
-      >
-        <div className={styles.nav}>
+      <nav className={styles.navContainer}>
+        <div className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
           <Fade direction="left" triggerOnce className={styles.navLogo}>
             <Link href={`/${locale}`}>
               <Image
@@ -50,23 +49,19 @@ const Navigation = () => {
               />
             </Link>
           </Fade>
-          <ul className={styles.navItems}>
-            <Fade direction="down" triggerOnce>
+          <Fade cascade damping={0.2} triggerOnce>
+            <ul className={styles.navItems}>
               <li className={styles.navItem}>
                 <Link href={`/${locale}/about`}>{t("about")}</Link>
               </li>
-            </Fade>
-            <Fade direction="down" triggerOnce>
               <li className={styles.navItem}>
                 <Link href={`/${locale}/services`}>{t("services")}</Link>
               </li>
-            </Fade>
-            <Fade direction="down" triggerOnce>
               <li className={styles.navItem}>
                 <Link href={`/${locale}/contact`}>{t("contact")}</Link>
               </li>
-            </Fade>
-          </ul>
+            </ul>
+          </Fade>
           <Fade direction="right" triggerOnce>
             <LanguageSwitcher
               containerClassName={styles.desktopLanguageSwitcher}
@@ -96,50 +91,44 @@ const Navigation = () => {
             isMobileNavOpen ? styles.open : styles.closed
           }`}
         >
-          <ul className={styles.mobileNavItems}>
-            <li className={styles.mobileNavItem}>
-              <Link
-                href={`/${locale}/about`}
-                onClick={() => setIsMobileNavOpen(false)}
-                className={styles.mobileNavLinks}
-              >
-                {t("about")}
-              </Link>
-            </li>
-            <li className={styles.mobileNavItem}>
-              <Link
-                href={`/${locale}/services`}
-                onClick={() => setIsMobileNavOpen(false)}
-                className={styles.mobileNavLinks}
-              >
-                {t("services")}
-              </Link>
-            </li>
-            <li className={styles.mobileNavItem}>
-              <Link
-                href={`/${locale}/contact`}
-                onClick={() => setIsMobileNavOpen(false)}
-                className={styles.mobileNavLinks}
-              >
-                {t("contact")}
-              </Link>
-            </li>
-          </ul>
+          <Fade>
+            <ul className={styles.mobileNavItems}>
+              <li className={styles.mobileNavItem}>
+                <Link
+                  href={`/${locale}/about`}
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className={styles.mobileNavLinks}
+                >
+                  {t("about")}
+                  <MdKeyboardArrowRight />
+                </Link>
+              </li>
+              <li className={styles.mobileNavItem}>
+                <Link
+                  href={`/${locale}/services`}
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className={styles.mobileNavLinks}
+                >
+                  {t("services")}
+                  <MdKeyboardArrowRight />
+                </Link>
+              </li>
+              <li className={styles.mobileNavItem}>
+                <Link
+                  href={`/${locale}/contact`}
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className={styles.mobileNavLinks}
+                >
+                  {t("contact")}
+                  <MdKeyboardArrowRight />
+                </Link>
+              </li>
+            </ul>
+          </Fade>
           <div className={styles.mobileNavBottom}>
-            <div>
-              <Link href={`/${locale}`}>
-                <Image
-                  src="/logoWhite.png"
-                  alt="diginow"
-                  width={100}
-                  height={100}
-                  className={styles.mobileNavLogo}
-                />
-              </Link>
-            </div>
-            <div>
+            <Fade>
               <LanguageSwitcher />
-            </div>
+            </Fade>
           </div>
         </div>
       </nav>
