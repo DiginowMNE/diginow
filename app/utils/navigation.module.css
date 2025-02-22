@@ -349,6 +349,11 @@
   .mobileNavItems {
     padding: 0rem 2.5rem;
   }
+
+  .image {
+    width: 80px;
+    height: 100%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -356,13 +361,26 @@
     padding: 0rem 2.5rem;
   }
 
-  .mobileNavLogo {
-    width: 40px;
-    height: 100%;
-  }
-
   .mobileNavItem {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .nav {
+    height: 8vh;
+    padding: 0 2rem;
+  }
+
+  .mobileNavItemsContainer {
+    height: 92vh;
+  }
+  .mobileNavItems {
+    padding: 0rem 2rem;
+  }
+
+  .mobileNavBottom {
+    padding: 0 2rem;
   }
 }
 
@@ -376,17 +394,12 @@
   }
 
   .image {
-    width: 90px;
+    width: 70px;
     height: 100%;
   }
 
   .mobileNavToggleIcon {
     font-size: rem;
-  }
-
-  .mobileNavLogo {
-    width: 35px;
-    height: 100%;
   }
 
   .mobileNavItem {
