@@ -312,13 +312,14 @@
 
 @media (max-width: 768px) {
   .mobileNavItem {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 2rem 0;
   }
 }
 
 @media (max-width: 610px) {
   .mobileNavItem {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
