@@ -107,20 +107,20 @@
 
 .cardTextHidden {
   max-height: 0;
-  transform: translateY(-10px);
+  transform: translateY(-100%);
   margin: 0;
   opacity: 0;
 }
 
 .cardTextShown {
-  max-height: 300px; /* Adjust this based on your content */
+  max-height: 500px; /* Adjust this based on your content */
   opacity: 1;
   transform: translateY(0);
+  padding-top: 1rem;
 }
 
 .cardText {
   overflow: hidden;
-  margin-top: 1rem;
 }
 
 .cardIcon {
@@ -431,7 +431,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
   .cardTitle,
   .cardIcon {
     font-size: 1.2rem;
@@ -441,11 +441,24 @@
   .cardTextShown {
     font-size: 1rem;
   }
+  .servicesButton {
+    margin-top: 1rem;
+  }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
   .servicesButtonText {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .servicesCard {
+    padding: 1.5rem 0;
   }
 }
 
@@ -467,12 +480,16 @@
     font-size: 0.9rem;
   }
 
-  .servicesCard {
-    padding: 1rem 0;
+  .servicesButton {
+    margin-top: 0.5rem;
   }
 
   .servicesButtonText {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .servicesCard {
+    padding: 1rem 0;
   }
 }
 
@@ -481,13 +498,17 @@
     font-size: 2rem;
   }
 
+  .servicesTitleLine {
+    font-size: 0.9rem;
+  }
+
   .cardTitle,
   .cardIcon {
     font-size: 0.9rem;
   }
 
   .servicesButtonText {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 1rem 0rem;
   }
 }
@@ -499,7 +520,7 @@
   }
 
   .servicesSubtitle {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .cardTitle,
@@ -508,7 +529,16 @@
   }
 
   .servicesTitleLine {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .servicesButtonText {
+    font-size: 0.8rem;
+  }
+
+  .cardTextShown {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
   }
 }
 
