@@ -54,6 +54,7 @@ const Services = () => {
             <div className={styles.servicesButton}>
               <Link href="/services" className={styles.servicesButtonText}>
                 {t("servicesButtonText")}
+                <MdKeyboardArrowRight />
               </Link>
             </div>
           )}
@@ -140,6 +141,7 @@ const Services = () => {
         >
           <Link href="/services" className={styles.servicesButtonText}>
             {t("servicesButtonText")}
+            <MdKeyboardArrowRight />
           </Link>
         </div>
       )}
