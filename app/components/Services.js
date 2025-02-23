@@ -3,7 +3,7 @@
 import styles from "./Services.module.css";
 import { useTranslation } from "../hooks/useTranslation";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -12,7 +12,18 @@ import { HiOutlinePlusSm } from "react-icons/hi";
 const Services = () => {
   const { t } = useTranslation();
 
-  const isMobile = window.innerWidth < 900;
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const isMobile = windowWidth < 900;
 
   const [openCards, setOpenCards] = useState({
     card1: false,

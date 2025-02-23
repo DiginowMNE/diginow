@@ -310,6 +310,19 @@
   .servicesButtonText {
     font-size: 1.3rem;
   }
+
+  .servicesCards {
+    gap: 0;
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .servicesCard {
+    transition: all 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
+    border-bottom: 1px solid var(--text);
+    padding: 2rem 0;
+  }
 }
 
 @media (max-width: 800px) {
