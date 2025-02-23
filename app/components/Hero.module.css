@@ -212,24 +212,29 @@
 }
 
 @media (max-width: 900px) {
+  .hero {
+    height: 80vh;
+  }
+
   .heroContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    max-width: 800px;
+    max-width: 100%;
+    padding: 0 4rem;
     gap: 0rem;
   }
 
   .title {
-    font-size: 5rem;
-    text-align: center;
+    font-size: 8rem;
+    text-align: left;
     margin-bottom: 1rem;
   }
 
   .subtitle {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
   }
 
@@ -237,6 +242,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
   }
 
   .aboutButtonText {
@@ -265,15 +271,15 @@
 
 @media (max-width: 835px) {
   .heroContent {
-    max-width: 650px;
+    padding: 0 4rem;
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 
   .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .aboutButtonText {
@@ -282,30 +288,26 @@
 }
 
 @media (max-width: 768px) {
-  .heroContent {
-    max-width: 550px;
+  .hero {
+    height: 85vh;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
 
   .subtitle {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 610px) {
-  .heroContent {
-    max-width: 450px;
-  }
-
   .title {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .aboutButtonText {
@@ -315,11 +317,11 @@
 
 @media (max-width: 485px) {
   .heroContent {
-    max-width: 370px;
+    padding: 0 2rem;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .subtitle {
@@ -333,7 +335,15 @@
 
 @media (max-width: 460px) {
   .title {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .aboutButton {
+    margin-top: 1rem;
   }
 }
 
@@ -342,11 +352,11 @@
 
 @media (max-width: 376px) {
   .heroContent {
-    max-width: 320px;
+    padding: 0 1.5rem;
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
@@ -359,21 +369,25 @@
 }
 
 @media (max-width: 325px) {
+  .hero {
+    height: 95vh;
+  }
+
   .heroContent {
-    max-width: 270px;
+    padding: 0 1rem;
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .subtitle {
     font-size: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .aboutButtonText {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     padding: 0.5rem 1rem;
     border-radius: 0.6rem;
   }
