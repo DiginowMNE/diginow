@@ -102,6 +102,7 @@
 .cardTextShown {
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .cardTextHidden {
@@ -274,6 +275,7 @@
 @media (max-width: 900px) {
   .services {
     flex-direction: column;
+    gap: 2.5rem;
   }
 
   .servicesCards {
@@ -299,7 +301,8 @@
     font-size: 3.5rem;
   }
 
-  .servicesTitleLine {
+  .servicesTitleLine,
+  .cardTextShown {
     font-size: 1.2rem;
   }
 
@@ -319,9 +322,13 @@
   }
 
   .servicesCard {
-    transition: all 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
-    border-bottom: 1px solid var(--text);
     padding: 2rem 0;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
 
