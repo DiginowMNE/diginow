@@ -51,12 +51,12 @@
 }
 
 .solutionsTextContainer {
-  width: 40%;
   text-align: right;
+  width: 35%;
 }
 
 .solutionsSubtitle {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   text-align: right;
@@ -64,26 +64,309 @@
 
 .solutionsDescription {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--text);
-  width: 65%;
   margin-left: auto;
 }
 
 .solutionsImageLaptop {
   position: absolute;
   bottom: 0;
-  left: 30%;
-  transform: translateX(-50%);
+  left: 5%;
+  transform: translateX(-30%);
   z-index: 1;
   will-change: transform;
 }
 
 .solutionsImagePhone {
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   left: 45%;
   transform: translateY(20%);
   z-index: 2;
   will-change: transform;
+}
+
+@media (max-width: 1920px) {
+  .solutions {
+    padding-top: 5rem;
+    min-height: 800px;
+  }
+
+  .solutionsSubtitle {
+    font-size: 3.5rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1.2rem;
+  }
+
+  .imageLaptop {
+    width: 100%;
+  }
+
+  .imagePhone {
+    width: 80%;
+  }
+
+  .solutions::before {
+    top: 75%;
+  }
+}
+
+@media (max-width: 1680px) {
+  .solutionsTitle {
+    font-size: 1.3rem;
+  }
+
+  .solutionsSubtitle {
+    font-size: 3rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1rem;
+  }
+
+  .imageLaptop {
+    width: 90%;
+  }
+
+  .imagePhone {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1440px) {
+  .solutionsTitle {
+    font-size: 1.2rem;
+  }
+
+  .solutionsSubtitle {
+    font-size: 2.7rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1rem;
+  }
+
+  .imageLaptop {
+    width: 70%;
+  }
+
+  .imagePhone {
+    width: 60%;
+  }
+
+  .solutions {
+    padding-top: 4rem;
+    min-height: 650px;
+  }
+
+  .solutions::before {
+    top: 90%;
+  }
+}
+
+@media (max-width: 1370px) {
+  .solutionsTextContainer {
+    width: 40%;
+  }
+
+  .solutionsImageLaptop {
+    left: 3%;
+  }
+
+  .solutionsImagePhone {
+    left: 40%;
+  }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 900px) {
+  .solutions {
+    padding: 0rem 5rem;
+    padding-top: 4rem;
+    height: 1000px;
+  }
+
+  .solutionsTextContainer {
+    width: 100%;
+  }
+
+  .solutionsImageLaptop {
+    width: 110%;
+    left: 10%;
+  }
+
+  .solutionsImagePhone {
+    width: 40%;
+    left: 70%;
+  }
+
+  .solutionsTitle {
+    font-size: 1.4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .solutionsSubtitle {
+    font-size: 3.5rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 835px) {
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 0rem 4rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .solutions {
+    padding: 0rem 3rem;
+    padding-top: 3rem;
+    height: 800px;
+  }
+
+  .solutionsTitle {
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .solutionsSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .solutions {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    height: 750px;
+  }
+}
+
+@media (max-width: 425px) {
+  .solutionsSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 376px) {
+  .solutionsSubtitle {
+    font-size: 2.2rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .solutionsSubtitle {
+    font-size: 2rem;
+  }
+
+  .solutionsDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 325px) {
+  .solutions {
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+    gap: 2rem;
+  }
+
+  .solutionsSubtitle {
+    font-size: 1.8rem;
+  }
+
+  .solutionsDescription {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
+  .solutions {
+    padding: 0rem 5rem;
+  }
+
+  .solutionsTextContainer {
+    width: 100%;
+  }
+
+  .solutionsImageLaptop {
+    width: 110%;
+    left: 10%;
+  }
+
+  .solutionsImagePhone {
+    width: 40%;
+    left: 70%;
+  }
+
+  .solutionsTitle {
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1920px) {
+  .solutionsSubtitle {
+    font-size: 5.5rem;
+  }
+
+  .solutions {
+    height: 1200px;
+  }
+
+  .solutions::before {
+    top: 60%;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1366px) {
+  .solutions {
+    height: 1100px;
+    padding: 0rem 5rem;
+  }
+  .solutionsSubtitle {
+    font-size: 4.5rem;
+  }
+
+  .solutions::before {
+    top: 65%;
+  }
 }

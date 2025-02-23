@@ -191,9 +191,11 @@
 }
 
 @media (max-width: 1600px) {
-}
+  .services {
+    padding: 10rem 8rem;
+    gap: 6rem;
+  }
 
-@media (max-width: 1540px) {
   .title {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -220,12 +222,10 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .services {
-    padding: 14rem 8rem;
-    gap: 6rem;
-  }
+@media (max-width: 1540px) {
+}
 
+@media (max-width: 1440px) {
   .title {
     font-size: 1.2rem;
   }
@@ -361,10 +361,6 @@
 @media (max-width: 768px) {
   .services {
     padding: 7rem 4rem;
-  }
-
-  .servicesSubtitle {
-    font-size: 3.5rem;
   }
 }
 

@@ -41,7 +41,7 @@ const Services = () => {
   return (
     <div className={styles.services}>
       <div className={styles.servicesTitle}>
-        <Fade cascade damping={0.2} triggerOnce>
+        <Fade cascade damping={0.2} direction="up" triggerOnce>
           <h1 className={styles.title}>{t("servicesTitle")}</h1>
           <h2 className={styles.servicesSubtitle}>{t("servicesSubtitle")}</h2>
           <p className={styles.servicesTitleLine}>
@@ -60,8 +60,8 @@ const Services = () => {
           )}
         </Fade>
       </div>
-      <Fade className={styles.servicesCards} triggerOnce>
-        <Fade cascade damping={0.2} triggerOnce>
+      <Fade className={styles.servicesCards} direction="up" triggerOnce>
+        <Fade cascade damping={0.2} direction="up" triggerOnce>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
               <div
@@ -136,14 +136,16 @@ const Services = () => {
         </Fade>
       </Fade>
       {isMobile && (
-        <div
+        <Fade
+          direction="up"
+          triggerOnce
           className={`${styles.servicesButton} ${styles.mobileServicesButton}`}
         >
           <Link href="/services" className={styles.servicesButtonText}>
             {t("servicesButtonText")}
             <MdKeyboardArrowRight className={styles.mobileServicesButtonIcon} />
           </Link>
-        </div>
+        </Fade>
       )}
     </div>
   );
