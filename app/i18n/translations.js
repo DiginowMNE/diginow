@@ -32,10 +32,10 @@ export const translations = {
     testimonialSubtitle: "What Our Clients Say",
     testimonialText:
       "Discover real success stories achieved with Diginow’s solutions. The satisfaction of our clients is our greatest motivation. Hear the results of our collaboration in their own words and experience the Diginow difference.",
-    subscriptionTitle: "Subscription Plans",
-    subscriptionSubtitle: "Solutions Tailored to Your Needs",
-    subscriptionText:
-      "We offer flexible subscription plans tailored to your business objectives and needs. Contact us to learn more.",
+    divisionTitle: "Our Divisions",
+    divisionSubtitle: "Discover the Diginow Family",
+    divisionText:
+      "Diginow offers a comprehensive range of solutions through its specialized subsidiaries. Each division focuses on providing the best services in its area of expertise. Explore the wide range of services under the Diginow umbrella.",
   },
   sr: {
     about: "O nama",
@@ -71,10 +71,10 @@ export const translations = {
     testimonialSubtitle: "Šta naši klijenti kažu",
     testimonialText:
       "Otkrijte priče o uspjehu postignute uz pomoć Diginow rješenja. Zadovoljstvo naših klijenata je naša najveća motivacija. Doživite razliku uz Diginow.",
-    subscriptionTitle: "Planovi Pretplate",
-    subscriptionSubtitle: "Rješenja prilagođena vašim potrebama",
-    subscriptionText:
-      "Nudimo fleksibilne planove pretplate prilagođene vašim poslovnim ciljevima i potrebama. Kontaktirajte nas za više informacija.",
+    divisionTitle: "Nasi odjeli",
+    divisionSubtitle: "Otkrijte Diginow porodicu",
+    divisionText:
+      "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane odjele. Svaki odjel se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
   },
   tr: {
     about: "Hakkımızda",
@@ -109,9 +109,9 @@ export const translations = {
     testimonialSubtitle: "Müşterilerimizden Duyduklarımız",
     testimonialText:
       "Diginow’un sunduğu çözümlerle başarıya ulaşmış gerçek hikayeleri keşfedin. Müşterilerimizin memnuniyeti, bizim en büyük motivasyon kaynağımızdır. İş birliğimizin sonuçlarını kendi sözleriyle dinleyin ve Diginow’un farkını hissedin.",
-    subscriptionTitle: "Abonelik Planları",
-    subscriptionSubtitle: "İhtiyacınıza Uygun Çözümler",
-    subscriptionText:
-      "İş hedeflerinize ve ihtiyaçlarınıza uygun esnek abonelik planlarıyla yanınızdayız. Tüm planlarımız, işinizin büyüklüğüne ve sektörel ihtiyaçlarınıza göre özelleştirilebilir. Daha fazla bilgi için bizimle iletişime geçin. İş hedeflerinize ve ihtiyaçlarınıza uygun esnek abonelik planlarıyla yanınızdayız. ",
+    divisionTitle: "Alt Şirketler",
+    divisionSubtitle: "Diginow Ailesini Keşfedin",
+    divisionText:
+      "Diginow, farklı alanlarda uzmanlaşmış alt şirketleriyle, müşterilerine kapsamlı çözümler sunar. Her şirket, kendi uzmanlık alanında en iyi hizmeti vermek için çalışır. Diginow çatısı altındaki geniş hizmet yelpazemizi keşfedin.",
   },
 };

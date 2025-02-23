@@ -101,12 +101,20 @@
     font-size: 1.2rem;
   }
 
+  .solutionsImageLaptop {
+    width: 55%;
+  }
+
+  .solutionsImagePhone {
+    width: 17%;
+  }
+
   .imageLaptop {
     width: 100%;
   }
 
   .imagePhone {
-    width: 80%;
+    width: 100%;
   }
 
   .solutions::before {
@@ -128,11 +136,11 @@
   }
 
   .imageLaptop {
-    width: 90%;
+    width: 100%;
   }
 
   .imagePhone {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -152,12 +160,12 @@
     font-size: 1rem;
   }
 
-  .imageLaptop {
-    width: 70%;
+  .solutionsImagePhone {
+    left: 43%;
   }
 
-  .imagePhone {
-    width: 60%;
+  .solutionsImageLaptop {
+    left: 3%;
   }
 
   .solutions {
@@ -176,7 +184,7 @@
   }
 
   .solutionsImageLaptop {
-    left: 3%;
+    left: 2%;
   }
 
   .solutionsImagePhone {
@@ -192,9 +200,8 @@
 
 @media (max-width: 900px) {
   .solutions {
-    padding: 0rem 5rem;
-    padding-top: 4rem;
-    height: 1000px;
+    padding: 5rem 5rem;
+    min-height: 1050px;
   }
 
   .solutionsTextContainer {
@@ -202,13 +209,12 @@
   }
 
   .solutionsImageLaptop {
-    width: 110%;
-    left: 10%;
+    width: 90%;
+    left: 5%;
   }
 
   .solutionsImagePhone {
-    width: 40%;
-    left: 70%;
+    display: none;
   }
 
   .solutionsTitle {
@@ -223,23 +229,32 @@
   .solutionsDescription {
     font-size: 1.2rem;
   }
+
+  .solutions::before {
+    height: 0;
+  }
 }
 
 @media (max-width: 835px) {
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+  .solutions {
+    min-height: 1000px;
+  }
+
   .services {
-    padding: 0rem 4rem;
-    padding-top: 4rem;
+    padding: 4rem 4rem;
   }
 }
 
 @media (max-width: 610px) {
   .solutions {
-    padding: 0rem 3rem;
-    padding-top: 3rem;
-    height: 800px;
+    min-height: 820px;
+  }
+
+  .solutions {
+    padding: 3rem 3rem;
   }
 
   .solutionsTitle {
@@ -258,9 +273,9 @@
 
 @media (max-width: 485px) {
   .solutions {
-    padding: 0rem 2rem;
-    padding-top: 2rem;
-    height: 750px;
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+    min-height: 760px;
   }
 }
 
@@ -278,6 +293,9 @@
 }
 
 @media (max-width: 376px) {
+  .solutions {
+    min-height: 690px;
+  }
   .solutionsSubtitle {
     font-size: 2.2rem;
   }
@@ -288,6 +306,9 @@
 }
 
 @media (max-width: 360px) {
+  .solutions {
+    min-height: 680px;
+  }
   .solutionsSubtitle {
     font-size: 2rem;
   }
@@ -299,9 +320,8 @@
 
 @media (max-width: 325px) {
   .solutions {
-    padding: 0rem 1rem;
-    padding-top: 1rem;
-    gap: 2rem;
+    padding: 1rem 1rem;
+    min-height: 580px;
   }
 
   .solutionsSubtitle {
@@ -324,12 +344,12 @@
   }
 
   .solutionsImageLaptop {
-    width: 110%;
+    width: 75%;
     left: 10%;
   }
 
   .solutionsImagePhone {
-    width: 40%;
+    width: 25%;
     left: 70%;
   }
 

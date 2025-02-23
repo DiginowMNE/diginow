@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Solutions from "../components/Solutions";
 import Testimonials from "../components/Testimonials";
-import Subscription from "../components/Subscription";
+import Division from "../components/Division";
 import Footer from "../utils/Footer";
 import Logos from "../components/Logos";
 
@@ -16,7 +16,7 @@ export default function Home({ params }) {
       <Services />
       <Solutions />
       <Testimonials />
-      <Subscription />
+      <Division />
       <Footer />
     </main>
   );

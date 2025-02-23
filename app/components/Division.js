@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useRef } from "react";
-import styles from "./Subscription.module.css";
+import styles from "./Division.module.css";
 import { useTranslation } from "../hooks/useTranslation";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Subscription = () => {
+const Division = () => {
   const { t } = useTranslation();
   const containerRef = useRef(null);
   const ref = useRef(null);
@@ -62,19 +62,19 @@ const Subscription = () => {
             className={styles.subscriptionTitle}
             variants={opacityVariants}
           >
-            {t("subscriptionTitle")}
+            {t("divisionTitle")}
           </motion.h2>
           <motion.h3
             className={styles.subscriptionSubtitle}
             variants={opacityVariants}
           >
-            {t("subscriptionSubtitle")}
+            {t("divisionSubtitle")}
           </motion.h3>
           <motion.p
             className={styles.subscriptionText}
             variants={opacityVariants}
           >
-            {t("subscriptionText")}
+            {t("divisionText")}
           </motion.p>
           <motion.div variants={opacityVariants}>
             <Link className={styles.contactButton} href="/contact">
@@ -97,4 +97,4 @@ const Subscription = () => {
   );
 };
 
-export default Subscription;
+export default Division;
