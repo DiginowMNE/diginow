@@ -197,7 +197,6 @@
 
   .mobileNavItemsContainer.closed {
     transform: translateX(-100%);
-    opacity: 0.8;
   }
 
   @keyframes slideIn {

@@ -27,7 +27,7 @@
 
 .servicesTitleLine {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .servicesButton {
@@ -128,4 +128,193 @@
 
 .cardTitleContainer[data-open="true"] .cardIcon {
   transform: rotate(45deg);
+}
+
+@media (max-width: 1920px) {
+  .servicesSubtitle {
+    font-size: 3.5rem;
+  }
+
+  .servicesTitleLine {
+    font-size: 1.1rem;
+  }
+
+  .servicesButton {
+    margin-top: 4rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.3rem;
+  }
+
+  .cardTextShown {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1680px) {
+  .servicesTitle {
+    width: 50%;
+  }
+
+  .servicesCards {
+    padding: 2.5rem;
+    width: 50%;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .servicesSubtitle {
+    font-size: 3rem;
+  }
+
+  .servicesTitleLine {
+    font-size: 1rem;
+  }
+
+  .servicesButton {
+    margin-top: 4rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.3rem;
+  }
+
+  .cardTextShown {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1540px) {
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .servicesSubtitle {
+    font-size: 2.8rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.1rem;
+  }
+
+  .servicesButton {
+    margin-top: 3rem;
+  }
+
+  .servicesButtonText {
+    border: 1px solid var(--light-blue);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .services {
+    padding: 14rem 8rem;
+    gap: 6rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .servicesSubtitle {
+    font-size: 2.7rem;
+  }
+
+  .servicesButton {
+    margin-top: 3.5rem;
+  }
+
+  .servicesButtonText {
+    font-size: 1.1rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.2rem;
+  }
+
+  .cardTextShown {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1370px) {
+}
+
+@media (max-width: 1280px) {
+  .services {
+    gap: 4rem;
+  }
+  .servicesSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 900px) {
+  .services {
+    flex-direction: column;
+  }
+
+  .servicesTitle {
+    width: 100%;
+  }
+
+  .servicesCards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 835px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 610px) {
+}
+
+@media (max-width: 485px) {
+  .services {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 414px) {
+}
+
+@media (max-width: 376px) {
+}
+
+@media (max-width: 325px) {
+}
+
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
 }
