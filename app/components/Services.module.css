@@ -422,7 +422,7 @@
   }
 
   .servicesButton {
-    margin-top: 5rem;
+    margin-top: 2rem;
     width: 100%;
   }
 
@@ -432,15 +432,84 @@
 }
 
 @media (max-width: 425px) {
+  .cardTitle,
+  .cardIcon {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .cardTextShown {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 414px) {
+  .servicesButtonText {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 376px) {
+  .servicesSubtitle {
+    font-size: 2.2rem;
+  }
+
+  .servicesTitleLine {
+    font-size: 1rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 1rem;
+  }
+
+  .cardTextShown {
+    font-size: 0.9rem;
+  }
+
+  .servicesCard {
+    padding: 1rem 0;
+  }
+
+  .servicesButtonText {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .servicesSubtitle {
+    font-size: 2rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 0.9rem;
+  }
+
+  .servicesButtonText {
+    font-size: 1rem;
+    padding: 1rem 0rem;
+  }
 }
 
 @media (max-width: 325px) {
+  .services {
+    padding: 5rem 1rem;
+    gap: 2rem;
+  }
+
+  .servicesSubtitle {
+    font-size: 1.7rem;
+  }
+
+  .cardTitle,
+  .cardIcon {
+    font-size: 0.9rem;
+  }
+
+  .servicesTitleLine {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 1200px) and (min-height: 1920px),
