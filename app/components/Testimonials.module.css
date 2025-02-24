@@ -107,22 +107,23 @@
   position: absolute;
   top: 120%;
   left: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
 .prevButton {
-  left: 45%;
+  left: 50%;
+  margin-left: -40px;
 }
 
 .nextButton {
-  right: 45%;
+  left: 50%;
+  margin-left: 40px;
 }
 
 .button:hover {
   background: var(--background);
   color: var(--text);
-  transform: translateY(-50%) scale(1.1);
 }
 
 @media (max-width: 1920px) {
@@ -137,6 +138,11 @@
   .position,
   .company {
     font-size: 1.8rem;
+  }
+
+  .button {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -160,16 +166,13 @@
   }
 
   .button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
     top: 130%;
   }
 }
 
 @media (max-width: 1600px) {
   .testimonials {
-    padding: 8rem 8rem;
+    padding: 7rem 8rem;
     padding-bottom: 10rem;
   }
 
@@ -179,6 +182,11 @@
 }
 
 @media (max-width: 1440px) {
+  .testimonials {
+    padding: 6rem 8rem;
+    padding-bottom: 10rem;
+  }
+
   .testimonialsTitle {
     font-size: 1.2rem;
   }
@@ -227,20 +235,6 @@
   .company {
     font-size: 1.2rem;
   }
-
-  .button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .prevButton {
-    left: 44%;
-  }
-
-  .nextButton {
-    right: 45%;
-    margin-left: 1rem;
-  }
 }
 
 @media (max-width: 835px) {
@@ -265,20 +259,41 @@
   .company {
     font-size: 1rem;
   }
-
-  .prevButton {
-    left: 40%;
-  }
-
-  .nextButton {
-    right: 40%;
-  }
 }
 
 @media (max-width: 610px) {
+  .testimonials {
+    padding: 5rem 3rem;
+    padding-bottom: 8rem;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .authorName,
+  .position,
+  .company {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 485px) {
+  .testimonials {
+    padding: 4rem 2rem;
+    padding-bottom: 6rem;
+  }
+
+  .button {
+    top: 120%;
+    border: none;
+  }
 }
 
 @media (max-width: 425px) {
@@ -291,6 +306,10 @@
 }
 
 @media (max-width: 325px) {
+  .testimonials {
+    padding: 3rem 1rem;
+    padding-bottom: 6rem;
+  }
 }
 
 @media (max-width: 1200px) and (min-height: 1920px),
@@ -306,7 +325,14 @@
   }
 
   .slide {
-    padding: 0 2rem;
+    padding: 0 0rem;
+  }
+
+  .button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+    top: 120%;
   }
 }
 
@@ -320,26 +346,14 @@
   .company {
     font-size: 1.8rem;
   }
-
-  .button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    top: 120%;
-    left: 50%;
-    transform: translateY(-50%);
-  }
-
-  .prevButton {
-    left: 44%;
-  }
-
-  .nextButton {
-    right: 41%;
-  }
 }
 
 @media (max-width: 1024px) and (min-height: 1366px) {
+  .testimonials {
+    padding: 8rem 5rem;
+    padding-bottom: 13rem;
+  }
+
   .text {
     font-size: 2.3rem;
   }
@@ -348,22 +362,5 @@
   .position,
   .company {
     font-size: 1.6rem;
-  }
-
-  .button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-    top: 120%;
-    left: 50%;
-    transform: translateY(-50%);
-  }
-
-  .prevButton {
-    left: 44%;
-  }
-
-  .nextButton {
-    right: 41%;
   }
 }
