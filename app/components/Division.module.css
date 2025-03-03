@@ -41,37 +41,6 @@
   margin-bottom: 5rem;
 }
 
-.contactButton {
-  border: 1px solid var(--light-blue);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  transition: all 0.4s ease;
-  color: var(--light-blue);
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  justify-content: center;
-  display: flex;
-  display: inline-block;
-}
-
-.contactButton:hover {
-  background-color: var(--light-blue);
-  color: var(--background);
-}
-
-.contactButton:hover .contactButtonIcon {
-  transform: translateX(10px);
-}
-
-.contactButtonIcon {
-  display: inline;
-  transition: transform 0.4s ease;
-  margin-left: 0.5rem;
-}
-
 .subscriptionImageContainer {
   position: absolute;
   top: 15%;

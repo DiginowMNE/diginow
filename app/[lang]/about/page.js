@@ -1,11 +1,7 @@
-import Navigation from "../../utils/navigation";
+import AboutClient from "./aboutClient";
 
 export default function About({ params }) {
-  return (
-    <main>
-      <Navigation />
-    </main>
-  );
+  return <AboutClient />;
 }
 
 export async function generateStaticParams() {

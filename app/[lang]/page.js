@@ -6,6 +6,7 @@ import Testimonials from "../components/Testimonials";
 import Division from "../components/Division";
 import Footer from "../utils/Footer";
 import Logos from "../components/Logos";
+import Contact from "../components/Contact";
 
 export default function Home({ params }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ params }) {
       <Solutions />
       <Testimonials />
       <Division />
+      <Contact />
       <Footer />
     </main>
   );

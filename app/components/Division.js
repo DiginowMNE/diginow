@@ -76,12 +76,6 @@ const Division = () => {
           >
             {t("divisionText")}
           </motion.p>
-          <motion.div variants={opacityVariants}>
-            <Link className={styles.contactButton} href="/contact">
-              {t("contact")}{" "}
-              <MdKeyboardArrowRight className={styles.contactButtonIcon} />
-            </Link>
-          </motion.div>
         </motion.div>
       </div>
       <motion.div className={styles.subscriptionImageContainer} style={{ y }}>

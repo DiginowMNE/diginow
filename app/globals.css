@@ -56,6 +56,37 @@ button {
   color: var(--light-blue);
 }
 
+/* Styles for the Select component */
+.MuiOutlinedInput-root {
+  border-color: var(--light-blue) !important;
+
+  color: var(--text) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--light-blue) !important;
+  border-radius: 1rem !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.MuiSelect-icon {
+  color: var(--light-blue) !important;
+}
+
+.MuiInputLabel-root {
+  font-weight: 300 !important;
+}
+
+.MuiSelect-select {
+  background-color: transparent !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--light-blue) !important;
+  outline: none !important;
+}
+
 @media (max-width: 900px) {
   body {
     cursor: default;
@@ -76,5 +107,11 @@ button {
   a,
   button {
     cursor: default;
+  }
+}
+
+@media (max-width: 1920px) {
+  .MuiInputLabel-root {
+    font-size: 1rem !important;
   }
 }

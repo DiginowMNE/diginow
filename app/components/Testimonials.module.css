@@ -310,6 +310,16 @@
     padding: 3rem 1rem;
     padding-bottom: 6rem;
   }
+
+  .text {
+    font-size: 1.1rem;
+  }
+
+  .authorName,
+  .position,
+  .company {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1200px) and (min-height: 1920px),

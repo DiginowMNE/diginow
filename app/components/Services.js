@@ -10,7 +10,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiOutlinePlusSm } from "react-icons/hi";
 
 const Services = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -52,7 +52,10 @@ const Services = () => {
           </p>
           {!isMobile && (
             <div className={styles.servicesButton}>
-              <Link href="/services" className={styles.servicesButtonText}>
+              <Link
+                href={`/${locale}/ourServices`}
+                className={styles.servicesButtonText}
+              >
                 {t("servicesButtonText")}
                 <MdKeyboardArrowRight className={styles.servicesButtonIcon} />
               </Link>
@@ -141,7 +144,10 @@ const Services = () => {
           triggerOnce
           className={`${styles.servicesButton} ${styles.mobileServicesButton}`}
         >
-          <Link href="/services" className={styles.servicesButtonText}>
+          <Link
+            href={`/${locale}/ourServices`}
+            className={styles.servicesButtonText}
+          >
             {t("servicesButtonText")}
             <MdKeyboardArrowRight className={styles.mobileServicesButtonIcon} />
           </Link>

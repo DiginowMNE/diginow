@@ -1,0 +1,199 @@
+.container {
+  padding: 8rem 10rem;
+  padding-top: 12rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.contactTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contactText {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.contactInfoContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.contactEmail,
+.contactPhone,
+.contactAddress {
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue);
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+
+.contactForm {
+  padding: 3rem;
+  border: 1px solid var(--light-blue);
+  border-radius: 3rem;
+}
+
+.contactFormInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid var(--light-blue);
+  margin-bottom: 2rem;
+}
+
+.contactFormInput label {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--light-blue);
+  text-transform: uppercase;
+}
+
+.contactFormInput input,
+.contactFormInputMessage textarea {
+  background-color: transparent;
+  padding: 0rem 0;
+  resize: none;
+  color: var(--text);
+  outline: none;
+  font-size: 0.8rem;
+}
+
+.contactFormInput input {
+  border: none;
+  width: 100%;
+}
+
+.contactFormInputMessage {
+  margin-top: 1.5rem;
+}
+
+.contactFormInputMessage label {
+  text-transform: uppercase;
+  color: var(--light-blue);
+}
+
+.contactFormInputMessage textarea {
+  display: flex;
+  border: 1px solid var(--light-blue);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.contactFormInputMessage textarea::placeholder {
+  color: var(--light-blue);
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Add styles for autofilled inputs */
+.contactFormInput input:-webkit-autofill,
+.contactFormInput input:-webkit-autofill:hover,
+.contactFormInput input:-webkit-autofill:focus,
+.contactFormInput input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.contactFormInputName,
+.contactFormInputCompanyEmail {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+
+.contactFormInputName div {
+  width: 50%;
+}
+
+.contactFormInputSelect {
+  width: 100%;
+}
+
+.contactFormButton {
+  border: 1px solid var(--light-blue);
+  border-radius: 1rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+  color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  will-change: transform;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.contactFormButton:hover {
+  background-color: var(--light-blue);
+  color: var(--background);
+}
+
+@media (max-width: 1920px) {
+  .container {
+    padding: 6rem 8rem;
+    padding-top: 9rem;
+    gap: 3.5rem;
+  }
+
+  .contactText {
+    font-size: 3rem;
+  }
+
+  .contactInfoContainer {
+    gap: 1.5rem;
+  }
+
+  .contactEmail,
+  .contactPhone,
+  .contactAddress {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contactForm {
+    padding: 2.5rem;
+  }
+
+  .contactFormInput {
+    gap: 0.5rem;
+  }
+
+  .contactFormInput label,
+  .contactFormInputMessage label {
+    font-size: 0.8rem;
+  }
+
+  .contactFormInput input,
+  .contactFormInputMessage textarea {
+    font-size: 0.8rem;
+  }
+
+  .contactFormButton {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1680px) {
+  .container {
+    padding: 6rem 8rem;
+    padding-top: 9rem;
+  }
+}
