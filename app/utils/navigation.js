@@ -10,7 +10,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Navigation = () => {
+const Navigation = ({ customClassName, customClassName2 }) => {
   const { t, locale } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -36,8 +36,12 @@ const Navigation = () => {
   }, [isMobileNavOpen]);
   return (
     <div>
-      <nav className={styles.navContainer}>
-        <div className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+      <nav className={`${styles.navContainer} ${customClassName}`}>
+        <div
+          className={`${styles.nav} ${
+            scrolled ? styles.scrolled : ""
+          } ${customClassName2}`}
+        >
           <Fade direction="left" triggerOnce className={styles.navLogo}>
             <Link href={`/${locale}`}>
               <Image

@@ -1,0 +1,100 @@
+.nav {
+  background-color: var(--background);
+  position: static;
+  height: 10vh;
+}
+
+.aboutUsContainer {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 1rem;
+  height: 90vh;
+  background-color: var(--text);
+  overflow: hidden;
+}
+
+.aboutUsContent {
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.aboutUs,
+.ourDivisions,
+.ourTeam,
+.ourProjects {
+  display: none;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow-y: hidden;
+}
+
+.aboutUs h1,
+.ourDivisions h1,
+.ourTeam h1,
+.ourProjects h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.aboutUs p,
+.ourDivisions p,
+.ourTeam p,
+.ourProjects p {
+  margin-bottom: 2rem;
+}
+
+.aboutUs.active,
+.ourDivisions.active,
+.ourTeam.active,
+.ourProjects.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--background);
+}
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  color: var(--background);
+  height: 100%;
+  overflow: hidden;
+}
+
+.sideNavItem {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sideNavItem svg {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.sideNavItem.active svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sideNavItem:hover svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sideNavItem.active {
+  color: var(--light-blue);
+}
+
+.sideNavItem:hover {
+  color: var(--light-blue);
+}

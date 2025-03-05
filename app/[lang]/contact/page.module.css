@@ -3,14 +3,14 @@
   padding-top: 12rem;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   gap: 5rem;
 }
 
 .contactTextContainer {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
+  width: 50%;
 }
 
 .contactText {
@@ -20,6 +20,7 @@
 
 .contactInfoContainer {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -28,32 +29,18 @@
 .contactAddress {
   font-size: 1.5rem;
   font-weight: 400;
-  border: 1px solid var(--light-blue);
   color: var(--light-blue);
-  border-radius: 3rem;
-  padding: 1rem 2rem;
 }
 
 .contactForm {
-  padding: 3rem;
-  border: 1px solid var(--light-blue);
-  border-radius: 3rem;
+  padding: 2.5rem;
+  background-color: var(--text);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .contactFormInput {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  border-bottom: 1px solid var(--light-blue);
-  margin-bottom: 2rem;
-}
-
-.contactFormInput label {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--light-blue);
-  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .contactFormInput input,
@@ -67,34 +54,36 @@
 }
 
 .contactFormInput input {
-  border: none;
+  border: 1px solid #00000045;
+  border-radius: 0.5rem;
   width: 100%;
+  padding: 0.5rem;
+  color: var(--background);
 }
 
 .contactFormInputMessage {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .contactFormInputMessage label {
   text-transform: uppercase;
-  color: var(--light-blue);
+  color: var(--background);
 }
 
 .contactFormInputMessage textarea {
   display: flex;
-  border: 1px solid var(--light-blue);
-  border-radius: 1rem;
+  border: 1px solid #00000045;
+  border-radius: 0.5rem;
   padding: 0.5rem;
   width: 100%;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  color: var(--background);
 }
 
-.contactFormInputMessage textarea::placeholder {
-  color: var(--light-blue);
-  opacity: 0.5;
-  font-weight: 300;
-  font-size: 1rem;
+.contactFormInputMessage textarea::placeholder,
+.contactFormInput input::placeholder {
+  color: #0000006d;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 
 /* Add styles for autofilled inputs */
@@ -122,11 +111,12 @@
 }
 
 .contactFormButton {
-  border: 1px solid var(--light-blue);
-  border-radius: 1rem;
+  border: 1px solid var(--background);
+  border-radius: 0.5rem;
   font-weight: 400;
   transition: all 0.4s ease;
-  color: var(--light-blue);
+  color: var(--text);
+  background-color: var(--background);
   display: flex;
   align-items: center;
   width: fit-content;
@@ -139,8 +129,9 @@
 }
 
 .contactFormButton:hover {
-  background-color: var(--light-blue);
-  color: var(--background);
+  background-color: var(--blue);
+  color: var(--text);
+  border-color: var(--blue);
 }
 
 @media (max-width: 1920px) {
@@ -151,7 +142,7 @@
   }
 
   .contactText {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .contactInfoContainer {
@@ -162,11 +153,10 @@
   .contactPhone,
   .contactAddress {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
   }
 
   .contactForm {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   .contactFormInput {
@@ -184,7 +174,7 @@
   }
 
   .contactFormButton {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 0.9rem;
     padding: 0.7rem 1.2rem;
     width: 100%;

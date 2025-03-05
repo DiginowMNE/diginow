@@ -58,20 +58,18 @@ button {
 
 /* Styles for the Select component */
 .MuiOutlinedInput-root {
-  border-color: var(--light-blue) !important;
-
+  border-color: #00000045 !important;
   color: var(--text) !important;
 }
 
 .MuiOutlinedInput-notchedOutline {
-  border-color: var(--light-blue) !important;
-  border-radius: 1rem !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  border-color: #00000045 !important;
+  border-radius: 0.5rem !important;
 }
 
 .MuiSelect-icon {
-  color: var(--light-blue) !important;
+  color: #000000b6 !important;
+  transition: all 0.3s ease !important;
 }
 
 .MuiInputLabel-root {
@@ -79,12 +77,64 @@ button {
 }
 
 .MuiSelect-select {
-  background-color: transparent !important;
+  background-color: var(--text) !important;
+  color: var(--background) !important;
 }
 
 .Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--light-blue) !important;
+  border-color: #00000045 !important;
+  border-width: 1px !important;
   outline: none !important;
+}
+
+.MuiSelect-select {
+  color: var(--background) !important;
+  font-weight: 300 !important;
+  font-size: 0.9rem !important;
+  padding: 0.5rem !important;
+}
+
+/* Menu Props Styling */
+.MuiMenu-paper {
+  background-color: var(--text) !important;
+  border-radius: 0.5rem !important;
+  color: var(--background) !important;
+  font-size: 0.8rem !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root {
+  color: var(--background) !important;
+  font-size: 0.9rem !important;
+  font-weight: 300 !important;
+  padding: 0.4rem !important;
+  transition: all 0.3s ease !important;
+  background-color: var(--text) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root:hover {
+  background-color: var(--text) !important;
+  color: var(--blue) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected {
+  background-color: var(--text) !important;
+  color: var(--background) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected:hover {
+  background-color: var(--text) !important;
+  color: var(--blue) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-disabled {
+  color: #0000006d !important;
+  opacity: 1 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-disabled em {
+  font-style: normal !important;
 }
 
 @media (max-width: 900px) {
@@ -114,4 +164,29 @@ button {
   .MuiInputLabel-root {
     font-size: 1rem !important;
   }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-blue);
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-blue) transparent;
 }
