@@ -4,6 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import Navigation from "../../utils/navigation";
 import styles from "./page.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
+import AddIcon from "@mui/icons-material/Add";
 
 const AboutClient = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -60,65 +61,94 @@ const AboutClient = () => {
           <Fade
             cascade
             damping={0.2}
+            direction="up"
+            triggerOnce
             className={`${styles.aboutUs} ${
               activeSection === "about" ? styles.active : ""
             }`}
           >
             <h1>About Us</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Diginow is a dynamic and innovative company committed to
+              empowering small and medium-sized enterprises (SMEs) and
+              non-governmental organizations (NGOs) through cutting-edge digital
+              solutions, strategic consultancy, and specialized training. With a
+              firm foundation in engineering and technology, we bridge the gap
+              between traditional business models and the digital future,
+              ensuring that our clients stay ahead in an ever-evolving
+              marketplace.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              At Diginow, we believe in fostering long-term partnerships,
+              tailoring our services to meet the unique needs of each
+              organization. Our mission is to simplify digital transformation,
+              enhance project management efficiency, and provide seamless web
+              solutions that align with our clients&#39; objectives. Whether
+              it&#39;s through expert-led training, consultancy, or technical
+              implementation, we are dedicated to delivering excellence and
+              driving sustainable growth for our partners.
             </p>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit.
-            </p>
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia.
-            </p>
-            <p>
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae. Itaque earum rerum hic tenetur a
-              sapiente delectus, ut aut reiciendis voluptatibus maiores alias.
-            </p>
-            <p>
-              Nam libero tempore, cum soluta nobis est eligendi optio cumque
-              nihil impedit quo minus id quod maxime placeat facere possimus,
-              omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus.
+              Our team is composed of highly skilled professionals with
+              extensive industry experience. We are passionate about innovation,
+              adaptability, and strategic thinking, ensuring that every project
+              we undertake results in tangible success for our clients.
             </p>
           </Fade>
           <Fade
             cascade
             damping={0.2}
+            direction="up"
+            triggerOnce
             className={`${styles.ourDivisions} ${
               activeSection === "divisions" ? styles.active : ""
             }`}
           >
             <h1>Our Divisions</h1>
-            <p>
-              We are a team of experienced professionals who are dedicated to
-              providing the best possible solutions to our clients.
+            <p className={styles.divisionsDescription}>
+              Diginow is structured into specialized divisions to provide
+              focused expertise in key areas of digital transformation,
+              consultancy, and training. Our divisions include:
+            </p>
+            <Fade cascade damping={0.2} direction="up" triggerOnce>
+              <div className={styles.divisionsContainer}>
+                <div>
+                  <h3>Project Management Training</h3>
+                  <p>
+                    Providing comprehensive training programs designed to equip
+                    professionals with essential project management skills,
+                    including PMP certification courses tailored for NGOs and
+                    businesses.
+                  </p>
+                </div>
+                <div>
+                  <h3>Digitalization Consultancy</h3>
+                  <p>
+                    Helping organizations streamline operations, adopt
+                    innovative digital tools, and create sustainable digital
+                    transformation strategies.
+                  </p>
+                </div>
+                <div>
+                  <h3>Web Development & Design</h3>
+                  <p>
+                    Crafting user-friendly, high-performance websites that align
+                    with business goals and enhance digital presence.
+                  </p>
+                </div>
+                <div>
+                  <h3>Digital Marketing</h3>
+                  <p>
+                    Developing effective digital marketing strategies to
+                    increase visibility and drive growth.
+                  </p>
+                </div>
+              </div>
+            </Fade>
+            <p className={styles.divisionsDescription}>
+              Each division operates with a commitment to excellence, ensuring
+              that our clients receive customized and effective solutions to
+              their unique challenges.
             </p>
           </Fade>
           <Fade

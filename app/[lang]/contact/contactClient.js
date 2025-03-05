@@ -57,7 +57,7 @@ export default function ContactClient() {
             </Fade>
           </Fade>
         </div>
-        <Slide direction="right">
+        <Slide direction="right" className={styles.contactFormContainer}>
           <div className={styles.contactForm}>
             <form>
               <div className={styles.contactFormInputName}>

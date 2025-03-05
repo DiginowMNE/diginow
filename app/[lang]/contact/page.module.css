@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  overflow-x: hidden;
 }
 
 .contactTextContainer {
@@ -32,15 +33,24 @@
   color: var(--light-blue);
 }
 
+.contactFormContainer {
+  width: 45%;
+  overflow-x: hidden;
+}
+
 .contactForm {
   padding: 2.5rem;
   background-color: var(--text);
   border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .contactFormInput {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .contactFormInput input,

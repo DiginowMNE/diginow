@@ -3,6 +3,7 @@
   width: 100%;
   z-index: 100;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav {
@@ -11,6 +12,7 @@
   align-items: center;
   padding: 1.5rem 10rem;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav.scrolled {
