@@ -97,7 +97,7 @@ export default function ContactClient() {
       email: e.target.email.value.trim(),
       reasonForContact: reasonForContact,
       message: e.target.message.value.trim(),
-      website: e.target.website.value,
+      website: e.target.website.value, // Honeypot field
     };
 
     if (!validateForm(formData)) {
@@ -106,19 +106,13 @@ export default function ContactClient() {
     }
 
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-        signal: controller.signal,
       });
-
-      clearTimeout(timeoutId);
 
       const data = await response.json();
 
@@ -134,11 +128,7 @@ export default function ContactClient() {
       }
     } catch (error) {
       setSubmitStatus("error");
-      if (error.name === "AbortError") {
-        setErrorMessage("Request timed out. Please try again.");
-      } else {
-        setErrorMessage("An error occurred. Please try again later.");
-      }
+      setErrorMessage("An error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }

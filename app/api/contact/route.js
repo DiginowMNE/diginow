@@ -1,62 +1,26 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { headers } from "next/headers";
-import Redis from "ioredis";
 
-// Redis configuration with retry strategy
-const redis = new Redis(process.env.REDIS_URL || "redis://localhost:6379", {
-  retryStrategy: (times) => {
-    const delay = Math.min(times * 50, 2000);
-    return delay;
-  },
-  maxRetriesPerRequest: 3,
-  enableReadyCheck: false,
-});
-
-const RATE_LIMIT_WINDOW = 60 * 60; // 1 hour in seconds
+// Simple in-memory rate limiting (for development)
+// In production, use Redis or a database
+const rateLimit = new Map();
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour
 const MAX_REQUESTS = 5; // 5 requests per hour
 
-// Create transporter outside the handler to reuse connections
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  pool: true, // Use pooled connections
-  maxConnections: 5,
-  maxMessages: 100,
-  rateDelta: 1000, // 1 second
-  rateLimit: 5, // 5 messages per second
-});
+function isRateLimited(ip) {
+  const now = Date.now();
+  const userRequests = rateLimit.get(ip) || { count: 0, timestamp: now };
 
-async function isRateLimited(ip) {
-  const key = `rate_limit:${ip}`;
-
-  try {
-    // Get current count
-    const count = await redis.get(key);
-
-    if (!count) {
-      // First request, set initial count with expiration
-      await redis.setex(key, RATE_LIMIT_WINDOW, "1");
-      return false;
-    }
-
-    const currentCount = parseInt(count);
-
-    if (currentCount >= MAX_REQUESTS) {
-      return true;
-    }
-
-    // Increment count
-    await redis.incr(key);
-    return false;
-  } catch (error) {
-    console.error("Redis error:", error);
-    // If Redis fails, allow the request
-    return false;
+  if (now - userRequests.timestamp > RATE_LIMIT_WINDOW) {
+    userRequests.count = 1;
+    userRequests.timestamp = now;
+  } else {
+    userRequests.count++;
   }
+
+  rateLimit.set(ip, userRequests);
+  return userRequests.count > MAX_REQUESTS;
 }
 
 function validateEmail(email) {
@@ -74,8 +38,7 @@ export async function POST(req) {
     const ip = headersList.get("x-forwarded-for") || "unknown";
 
     // Rate limiting check
-    const limited = await isRateLimited(ip);
-    if (limited) {
+    if (isRateLimited(ip)) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
         { status: 429 }
@@ -111,10 +74,19 @@ export async function POST(req) {
       message: sanitizeInput(message),
     };
 
+    // Create a transporter using SMTP
+    const transporter = nodemailer.createTransport({
+      service: "gmail", // or your preferred email service
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Send to yourself
       subject: `New Website Message Submission from ${sanitizedData.name} ${sanitizedData.lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -127,13 +99,8 @@ export async function POST(req) {
       `,
     };
 
-    // Send email with timeout
-    const sendEmailPromise = transporter.sendMail(mailOptions);
-    const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error("Email sending timed out")), 8000);
-    });
-
-    await Promise.race([sendEmailPromise, timeoutPromise]);
+    // Send email
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
       { message: "Email sent successfully" },
@@ -142,7 +109,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send email. Please try again later." },
+      { error: "Failed to send email" },
       { status: 500 }
     );
   }
