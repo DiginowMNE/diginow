@@ -1,26 +1,91 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { headers } from "next/headers";
+import { cookies } from "next/headers";
 
-// Simple in-memory rate limiting (for development)
-// In production, use Redis or a database
-const rateLimit = new Map();
+// Improved rate limiting using cookies
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour
 const MAX_REQUESTS = 5; // 5 requests per hour
 
-function isRateLimited(ip) {
-  const now = Date.now();
-  const userRequests = rateLimit.get(ip) || { count: 0, timestamp: now };
+async function isRateLimited() {
+  const cookieStore = cookies();
+  const rateLimitCookie = cookieStore.get("rateLimit");
 
-  if (now - userRequests.timestamp > RATE_LIMIT_WINDOW) {
-    userRequests.count = 1;
-    userRequests.timestamp = now;
-  } else {
-    userRequests.count++;
+  if (!rateLimitCookie) {
+    return false;
   }
 
-  rateLimit.set(ip, userRequests);
-  return userRequests.count > MAX_REQUESTS;
+  const { count, timestamp } = JSON.parse(rateLimitCookie.value);
+  const now = Date.now();
+
+  if (now - timestamp > RATE_LIMIT_WINDOW) {
+    return false;
+  }
+
+  return count >= MAX_REQUESTS;
+}
+
+async function updateRateLimit() {
+  const cookieStore = cookies();
+  const rateLimitCookie = cookieStore.get("rateLimit");
+
+  if (!rateLimitCookie) {
+    cookieStore.set(
+      "rateLimit",
+      JSON.stringify({ count: 1, timestamp: Date.now() }),
+      {
+        maxAge: RATE_LIMIT_WINDOW / 1000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+      }
+    );
+    return;
+  }
+
+  const { count, timestamp } = JSON.parse(rateLimitCookie.value);
+  const now = Date.now();
+
+  if (now - timestamp > RATE_LIMIT_WINDOW) {
+    cookieStore.set("rateLimit", JSON.stringify({ count: 1, timestamp: now }), {
+      maxAge: RATE_LIMIT_WINDOW / 1000,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+    });
+  } else {
+    cookieStore.set(
+      "rateLimit",
+      JSON.stringify({ count: count + 1, timestamp }),
+      {
+        maxAge: RATE_LIMIT_WINDOW / 1000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+      }
+    );
+  }
+}
+
+async function verifyRecaptcha(token) {
+  try {
+    const response = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+      }
+    );
+
+    const data = await response.json();
+    return data.success;
+  } catch (error) {
+    console.error("Error verifying reCAPTCHA:", error);
+    return false;
+  }
 }
 
 function validateEmail(email) {
@@ -34,19 +99,31 @@ function sanitizeInput(input) {
 
 export async function POST(req) {
   try {
-    const headersList = headers();
-    const ip = headersList.get("x-forwarded-for") || "unknown";
-
     // Rate limiting check
-    if (isRateLimited(ip)) {
+    if (await isRateLimited()) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
         { status: 429 }
       );
     }
 
-    const { name, lastName, company, email, reasonForContact, message } =
-      await req.json();
+    const {
+      name,
+      lastName,
+      company,
+      email,
+      reasonForContact,
+      message,
+      captchaToken,
+    } = await req.json();
+
+    // Verify reCAPTCHA
+    if (!captchaToken || !(await verifyRecaptcha(captchaToken))) {
+      return NextResponse.json(
+        { error: "Invalid reCAPTCHA verification" },
+        { status: 400 }
+      );
+    }
 
     // Validate required fields
     if (!name || !lastName || !email || !message) {
@@ -101,6 +178,9 @@ export async function POST(req) {
 
     // Send email
     await transporter.sendMail(mailOptions);
+
+    // Update rate limit after successful validation
+    await updateRateLimit();
 
     return NextResponse.json(
       { message: "Email sent successfully" },

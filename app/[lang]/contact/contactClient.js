@@ -6,8 +6,9 @@ import styles from "./page.module.css";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { Fade, Slide } from "react-awesome-reveal";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Footer from "../../utils/Footer";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const reasonForContact = {
   sr: {
@@ -33,7 +34,9 @@ export default function ContactClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [captchaValue, setCaptchaValue] = useState(null);
   const formRef = useRef(null);
+  const recaptchaRef = useRef(null);
 
   const handleReasonChange = (event) => {
     setReasonForContact(event.target.value);
@@ -90,6 +93,12 @@ export default function ContactClient() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    if (!captchaValue) {
+      setErrorMessage("Please complete the reCAPTCHA verification");
+      setIsSubmitting(false);
+      return;
+    }
+
     const formData = {
       name: e.target.name.value.trim(),
       lastName: e.target.lastName.value.trim(),
@@ -97,7 +106,8 @@ export default function ContactClient() {
       email: e.target.email.value.trim(),
       reasonForContact: reasonForContact,
       message: e.target.message.value.trim(),
-      website: e.target.website.value, // Honeypot field
+      website: e.target.website.value,
+      captchaToken: captchaValue,
     };
 
     if (!validateForm(formData)) {
@@ -120,6 +130,7 @@ export default function ContactClient() {
         setSubmitStatus("success");
         formRef.current.reset();
         setReasonForContact("");
+        recaptchaRef.current.reset();
       } else {
         setSubmitStatus("error");
         setErrorMessage(
@@ -249,6 +260,13 @@ export default function ContactClient() {
                   minLength={10}
                   maxLength={1000}
                 ></textarea>
+              </div>
+              <div style={{ marginBottom: "20px" }}>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  onChange={(value) => setCaptchaValue(value)}
+                />
               </div>
               <button
                 type="submit"
