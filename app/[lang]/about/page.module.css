@@ -21,6 +21,7 @@
 
 .aboutUsContent {
   padding: 2rem;
+  padding-top: 4rem;
   overflow-y: auto;
   height: 100%;
 }
@@ -41,9 +42,15 @@
 .ourDivisions h1,
 .ourTeam h1,
 .ourProjects h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   margin-bottom: 1rem;
+  text-transform: lowercase;
+  background-color: var(--light-blue);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  margin-bottom: 3rem;
 }
 
 .aboutUs p,
@@ -63,11 +70,29 @@
   color: var(--background);
 }
 
+.aboutUsSubtitle,
+.divisionsSubtitle,
+.projectsSubtitle,
+.teamSubtitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  color: var(--background);
+}
+
+.aboutUsSubtitle span,
+.divisionsSubtitle span,
+.projectsSubtitle span,
+.teamSubtitle span {
+  color: var(--light-blue);
+}
+
 .divisionsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   padding: 2rem 0;
+  align-items: start;
 }
 
 .divisionsContainer div {
@@ -75,33 +100,81 @@
   padding: 1.5rem;
   border-radius: 1rem;
   color: var(--background);
-
   transition: all 0.3s ease;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .divisionsContainer div:hover {
-  background-color: var(--background);
-  color: var(--background);
+  background-color: rgb(203, 203, 203);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  color: var(--text);
 }
 
 .divisionsContainer div h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  background-color: var(--text);
+  margin-bottom: 0.5rem;
   color: var(--background);
-  padding: 0.5rem;
-  border-radius: 0.6rem;
-  text-align: center;
 }
 
-.divisionsDescription {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1rem;
+.teamContainer {
+  display: flex;
+
+  gap: 3rem;
+}
+
+.teamMember {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 50%;
+}
+
+.teamMember h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--light-blue);
+  line-height: 1;
+}
+
+.teamMember h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
   color: var(--background);
+}
+
+.teamMemberImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.teamMemberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.teamMemberDescription {
+  display: none;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.project {
+  background-color: rgb(213, 213, 213);
+  padding: 1.5rem;
+  border-radius: 1rem;
 }
 
 .sideNav {

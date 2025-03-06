@@ -6,8 +6,7 @@ import styles from "./page.module.css";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { Fade, Slide } from "react-awesome-reveal";
-import { useState } from "react";
-
+import { useState, useRef } from "react";
 import Footer from "../../utils/Footer";
 
 const reasonForContact = {
@@ -31,9 +30,108 @@ const reasonForContact = {
 export default function ContactClient() {
   const { t } = useTranslation();
   const [reasonForContact, setReasonForContact] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+  const formRef = useRef(null);
 
   const handleReasonChange = (event) => {
     setReasonForContact(event.target.value);
+  };
+
+  const validateForm = (formData) => {
+    // Check for honeypot field
+    if (formData.website) {
+      setErrorMessage("Invalid submission");
+      return false;
+    }
+
+    // Basic validation
+    if (
+      !formData.name ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.message
+    ) {
+      setErrorMessage("Please fill in all required fields");
+      return false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setErrorMessage("Please enter a valid email address");
+      return false;
+    }
+
+    // Reason validation
+    if (!reasonForContact) {
+      setErrorMessage("Please select a reason for contact");
+      return false;
+    }
+
+    // Length validation
+    if (formData.name.length < 2 || formData.lastName.length < 2) {
+      setErrorMessage("Name and last name must be at least 2 characters long");
+      return false;
+    }
+
+    if (formData.message.length < 10) {
+      setErrorMessage("Message must be at least 10 characters long");
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage("");
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const formData = {
+      name: e.target.name.value.trim(),
+      lastName: e.target.lastName.value.trim(),
+      company: e.target.company.value.trim(),
+      email: e.target.email.value.trim(),
+      reasonForContact: reasonForContact,
+      message: e.target.message.value.trim(),
+      website: e.target.website.value, // Honeypot field
+    };
+
+    if (!validateForm(formData)) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        formRef.current.reset();
+        setReasonForContact("");
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(
+          data.error || "Failed to send message. Please try again."
+        );
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -59,7 +157,15 @@ export default function ContactClient() {
         </div>
         <Slide direction="right" className={styles.contactFormContainer}>
           <div className={styles.contactForm}>
-            <form>
+            <form onSubmit={handleSubmit} ref={formRef}>
+              {/* Honeypot field - hidden from real users */}
+              <input
+                type="text"
+                name="website"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
               <div className={styles.contactFormInputName}>
                 <div className={styles.contactFormInput}>
                   <input
@@ -68,6 +174,9 @@ export default function ContactClient() {
                     name="name"
                     placeholder="Ime"
                     required
+                    minLength={2}
+                    maxLength={50}
+                    pattern="[A-Za-z\s]+"
                   />
                 </div>
                 <div className={styles.contactFormInput}>
@@ -77,6 +186,9 @@ export default function ContactClient() {
                     name="lastName"
                     placeholder="Prezime"
                     required
+                    minLength={2}
+                    maxLength={50}
+                    pattern="[A-Za-z\s]+"
                   />
                 </div>
               </div>
@@ -88,6 +200,8 @@ export default function ContactClient() {
                     name="company"
                     placeholder="Kompanija"
                     required
+                    maxLength={100}
+                    pattern="[A-Za-z0-9\s\-\.]+"
                   />
                 </div>
                 <div className={styles.contactFormInput}>
@@ -97,6 +211,7 @@ export default function ContactClient() {
                     name="email"
                     placeholder="Email"
                     required
+                    maxLength={100}
                   />
                 </div>
               </div>
@@ -121,6 +236,7 @@ export default function ContactClient() {
                   <MenuItem value="Digitalization Consultancy">
                     Digitalization Consultancy
                   </MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
                 </Select>
               </div>
               <div className={styles.contactFormInputMessage}>
@@ -130,11 +246,27 @@ export default function ContactClient() {
                   rows={5}
                   placeholder="Poruka"
                   required
+                  minLength={10}
+                  maxLength={1000}
                 ></textarea>
               </div>
-              <button type="submit" className={styles.contactFormButton}>
-                {t("contactSend")}
+              <button
+                type="submit"
+                className={styles.contactFormButton}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : t("contactSend")}
               </button>
+              {submitStatus === "success" && (
+                <p style={{ color: "green", marginTop: "10px" }}>
+                  Message sent successfully!
+                </p>
+              )}
+              {(submitStatus === "error" || errorMessage) && (
+                <p style={{ color: "red", marginTop: "10px" }}>
+                  {errorMessage}
+                </p>
+              )}
             </form>
           </div>
         </Slide>
