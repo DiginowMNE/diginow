@@ -16,6 +16,20 @@ const redis = new Redis(process.env.REDIS_URL || "redis://localhost:6379", {
 const RATE_LIMIT_WINDOW = 60 * 60; // 1 hour in seconds
 const MAX_REQUESTS = 5; // 5 requests per hour
 
+// Create transporter outside the handler to reuse connections
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  pool: true, // Use pooled connections
+  maxConnections: 5,
+  maxMessages: 100,
+  rateDelta: 1000, // 1 second
+  rateLimit: 5, // 5 messages per second
+});
+
 async function isRateLimited(ip) {
   const key = `rate_limit:${ip}`;
 
@@ -97,15 +111,6 @@ export async function POST(req) {
       message: sanitizeInput(message),
     };
 
-    // Create a transporter using SMTP
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
@@ -122,8 +127,13 @@ export async function POST(req) {
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Send email with timeout
+    const sendEmailPromise = transporter.sendMail(mailOptions);
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error("Email sending timed out")), 8000);
+    });
+
+    await Promise.race([sendEmailPromise, timeoutPromise]);
 
     return NextResponse.json(
       { message: "Email sent successfully" },
@@ -132,7 +142,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { error: "Failed to send email. Please try again later." },
       { status: 500 }
     );
   }
