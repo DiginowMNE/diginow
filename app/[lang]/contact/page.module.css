@@ -144,6 +144,14 @@
   border-color: var(--blue);
 }
 
+.recaptcha {
+  margin-top: 1rem;
+}
+
+.entityTypeSelect {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 1920px) {
   .container {
     padding: 6rem 8rem;

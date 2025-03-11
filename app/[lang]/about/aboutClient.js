@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import Navigation from "../../utils/navigation";
 import styles from "./page.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
-
+import Footer from "../../utils/Footer";
 import Image from "next/image";
 
 const AboutClient = () => {
@@ -299,6 +299,7 @@ const AboutClient = () => {
           </Fade>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

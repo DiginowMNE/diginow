@@ -10,24 +10,6 @@ import { useState, useRef, useEffect } from "react";
 import Footer from "../../utils/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const reasonForContact = {
-  sr: {
-    websiteDevelopment: "Razvoj veb stranica",
-    projectManagement: "Upravljanje projektima",
-    digitalizationConsultancy: "Digitalizacione konsultacije",
-  },
-  en: {
-    websiteDevelopment: "Website Development",
-    projectManagement: "Project Management",
-    digitalizationConsultancy: "Digitalization Consultancy",
-  },
-  tr: {
-    websiteDevelopment: "Web Geliştirme",
-    projectManagement: "Proje Yönetimi",
-    digitalizationConsultancy: "Dijitalleşme Danışmanlığı",
-  },
-};
-
 export default function ContactClient() {
   const { t } = useTranslation();
   const [reasonForContact, setReasonForContact] = useState("");
@@ -35,11 +17,16 @@ export default function ContactClient() {
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [entityType, setEntityType] = useState("");
   const formRef = useRef(null);
   const recaptchaRef = useRef(null);
 
   const handleReasonChange = (event) => {
     setReasonForContact(event.target.value);
+  };
+
+  const handleEntityTypeChange = (event) => {
+    setEntityType(event.target.value);
   };
 
   const validateForm = (formData) => {
@@ -102,6 +89,7 @@ export default function ContactClient() {
     const formData = {
       name: e.target.name.value.trim(),
       lastName: e.target.lastName.value.trim(),
+      entityType: entityType,
       company: e.target.company.value.trim(),
       email: e.target.email.value.trim(),
       reasonForContact: reasonForContact,
@@ -130,6 +118,7 @@ export default function ContactClient() {
         setSubmitStatus("success");
         formRef.current.reset();
         setReasonForContact("");
+        setEntityType("");
         recaptchaRef.current.reset();
       } else {
         setSubmitStatus("error");
@@ -203,13 +192,31 @@ export default function ContactClient() {
                   />
                 </div>
               </div>
+              <div className={styles.entityTypeSelect}>
+                <Select
+                  labelId="entityType-label"
+                  id="entityType"
+                  name="entityType"
+                  className={styles.contactFormInputSelect}
+                  value={entityType}
+                  onChange={handleEntityTypeChange}
+                  displayEmpty
+                  required
+                >
+                  <MenuItem disabled value="">
+                    <em>Izaberite tip entiteta</em>
+                  </MenuItem>
+                  <MenuItem value="ngo">NVO</MenuItem>
+                  <MenuItem value="company">Kompanija</MenuItem>
+                </Select>
+              </div>
               <div className={styles.contactFormInputCompanyEmail}>
                 <div className={styles.contactFormInput}>
                   <input
                     type="text"
                     id="company"
                     name="company"
-                    placeholder="Kompanija"
+                    placeholder="Naziv entiteta"
                     required
                     maxLength={100}
                     pattern="[A-Za-z0-9\s\-\.]+"
@@ -261,7 +268,7 @@ export default function ContactClient() {
                   maxLength={1000}
                 ></textarea>
               </div>
-              <div style={{ marginBottom: "20px" }}>
+              <div className={styles.recaptcha}>
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}

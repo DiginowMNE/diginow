@@ -1,0 +1,201 @@
+.nav {
+  background-color: var(--background);
+}
+
+.container {
+  background-color: var(--text);
+  z-index: 0;
+  color: var(--background);
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  padding: 6rem 10rem 0 10rem;
+  padding-bottom: 2rem;
+  background-color: var(--light-blue);
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3rem;
+}
+
+.service,
+.serviceWeb {
+  padding: 8rem 10rem;
+}
+
+.serviceType {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  line-height: 1.1;
+  color: var(--light-blue);
+}
+
+.serviceTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.serviceTitleDigitalization {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.serviceContent {
+  width: 45%;
+  font-size: 0.9rem;
+}
+
+.serviceListContainer {
+  width: 55%;
+}
+
+.serviceContentDigitalization {
+  width: 55%;
+}
+
+.serviceListContainerDigitalization {
+  width: 45%;
+}
+
+.serviceListItem {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+
+.serviceListItemDigitalization {
+  background-color: var(--background);
+  color: var(--light-blue);
+}
+
+.serviceListItemContent {
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--light-blue);
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.serviceListItemContentProject {
+  border-color: rgb(169, 169, 169);
+}
+
+.serviceListItemNumber {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--light-blue);
+  color: var(--background);
+  border-radius: 0.5rem;
+}
+
+.serviceListItemNumberProject {
+  background-color: rgb(221, 221, 221);
+  color: var(--background);
+}
+
+.serviceSubtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  border: 1px solid var(--background);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.serviceSubtitleDigitalization {
+  border-color: var(--light-blue);
+  color: var(--light-blue);
+}
+
+.serviceListItemTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.serviceListContent {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.digiText {
+  margin-bottom: 1rem;
+}
+
+.digitalization {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.webText {
+  margin-top: 3rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.webIcons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+  .webIcons {
+  }
+}
+
+@media (max-width: 480px) {
+  .webIcons {
+  }
+}
+
+.webIconItem {
+  transition: transform 0.2s ease;
+}
+
+.webIconItem:hover {
+  transform: scale(1.1);
+}
