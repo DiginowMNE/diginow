@@ -6,6 +6,7 @@
   background-color: var(--text);
   z-index: 0;
   color: var(--background);
+  overflow-x: hidden;
 }
 
 .servicesContainer {
@@ -108,7 +109,8 @@
 }
 
 .serviceListItemContentProject {
-  border-color: rgb(169, 169, 169);
+  background-color: rgb(221, 221, 221);
+  border-color: transparent;
 }
 
 .serviceListItemNumber {

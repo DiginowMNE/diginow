@@ -1,6 +1,5 @@
 .solutions {
-  padding: 16rem 10rem 0 10rem;
-  padding-top: 8rem;
+  padding: 8rem 10rem 0;
   overflow: hidden;
   position: relative;
   min-height: 1000px;
@@ -87,6 +86,7 @@
   will-change: transform;
 }
 
+/* Large Desktop */
 @media (max-width: 1920px) {
   .solutions {
     padding-top: 5rem;
@@ -109,10 +109,7 @@
     width: 17%;
   }
 
-  .imageLaptop {
-    width: 100%;
-  }
-
+  .imageLaptop,
   .imagePhone {
     width: 100%;
   }
@@ -122,6 +119,7 @@
   }
 }
 
+/* Desktop */
 @media (max-width: 1680px) {
   .solutionsTitle {
     font-size: 1.3rem;
@@ -134,30 +132,21 @@
   .solutionsDescription {
     font-size: 1rem;
   }
-
-  .imageLaptop {
-    width: 100%;
-  }
-
-  .imagePhone {
-    width: 100%;
-  }
 }
 
-@media (max-width: 1600px) {
-}
-
+/* Smaller Desktop */
 @media (max-width: 1440px) {
+  .solutions {
+    padding-top: 4rem;
+    min-height: 650px;
+  }
+
   .solutionsTitle {
     font-size: 1.2rem;
   }
 
   .solutionsSubtitle {
     font-size: 2.7rem;
-  }
-
-  .solutionsDescription {
-    font-size: 1rem;
   }
 
   .solutionsImagePhone {
@@ -168,16 +157,12 @@
     left: 3%;
   }
 
-  .solutions {
-    padding-top: 4rem;
-    min-height: 650px;
-  }
-
   .solutions::before {
     top: 90%;
   }
 }
 
+/* Laptop */
 @media (max-width: 1370px) {
   .solutionsTextContainer {
     width: 40%;
@@ -192,15 +177,10 @@
   }
 }
 
-@media (max-width: 1280px) {
-}
-
-@media (max-width: 1024px) {
-}
-
+/* Tablet */
 @media (max-width: 900px) {
   .solutions {
-    padding: 5rem 5rem;
+    padding: 5rem;
     min-height: 1050px;
   }
 
@@ -235,26 +215,19 @@
   }
 }
 
-@media (max-width: 835px) {
-}
-
+/* Small Tablet */
 @media (max-width: 769px) {
   .solutions {
+    padding: 4rem;
     min-height: 1000px;
-  }
-
-  .solutions {
-    padding: 4rem 4rem;
   }
 }
 
+/* Large Mobile */
 @media (max-width: 610px) {
   .solutions {
+    padding: 3rem;
     min-height: 820px;
-  }
-
-  .solutions {
-    padding: 3rem 3rem;
   }
 
   .solutionsTitle {
@@ -271,31 +244,20 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 485px) {
   .solutions {
-    padding: 2rem 2rem;
-    padding-bottom: 0;
+    padding: 2rem 2rem 0;
     min-height: 760px;
   }
 }
 
-@media (max-width: 425px) {
-  .solutionsSubtitle {
-    font-size: 2.5rem;
-  }
-
-  .solutionsDescription {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 460px) {
-}
-
+/* Small Mobile */
 @media (max-width: 376px) {
   .solutions {
     min-height: 690px;
   }
+
   .solutionsSubtitle {
     font-size: 2.2rem;
   }
@@ -305,10 +267,12 @@
   }
 }
 
+/* Extra Small Mobile */
 @media (max-width: 360px) {
   .solutions {
     min-height: 680px;
   }
+
   .solutionsSubtitle {
     font-size: 2rem;
   }
@@ -318,9 +282,10 @@
   }
 }
 
+/* Very Small Mobile */
 @media (max-width: 325px) {
   .solutions {
-    padding: 1rem 1rem;
+    padding: 1rem;
     min-height: 580px;
   }
 
@@ -333,10 +298,11 @@
   }
 }
 
+/* Tablets in Portrait Mode */
 @media (max-width: 1200px) and (min-height: 1920px),
   (max-width: 1024px) and (min-height: 1366px) {
   .solutions {
-    padding: 0rem 5rem;
+    padding: 0 5rem;
   }
 
   .solutionsTextContainer {
@@ -363,13 +329,14 @@
   }
 }
 
+/* iPad Pro 12.9" */
 @media (max-width: 1200px) and (min-height: 1920px) {
-  .solutionsSubtitle {
-    font-size: 5.5rem;
-  }
-
   .solutions {
     height: 1200px;
+  }
+
+  .solutionsSubtitle {
+    font-size: 5.5rem;
   }
 
   .solutions::before {
@@ -377,11 +344,13 @@
   }
 }
 
+/* iPad Pro 11" */
 @media (max-width: 1024px) and (min-height: 1366px) {
   .solutions {
     height: 1100px;
-    padding: 0rem 5rem;
+    padding: 0 5rem;
   }
+
   .solutionsSubtitle {
     font-size: 4.5rem;
   }

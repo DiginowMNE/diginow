@@ -1,3 +1,4 @@
+/* Base styles */
 .navContainer {
   position: fixed;
   width: 100%;
@@ -33,6 +34,7 @@
   height: 100%;
 }
 
+/* Navigation item styles */
 .navItem {
   margin: 0 1rem;
   position: relative;
@@ -71,6 +73,7 @@
   transform: rotate(360deg);
 }
 
+/* Mobile navigation styles */
 .mobileNavToggle {
   display: none;
   background: transparent;
@@ -83,15 +86,31 @@
   display: none;
 }
 
+.mobileNavToggleIcon {
+  transition: transform 0.3s ease;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNavToggleIcon.open {
+  transform: rotate(90deg);
+}
+
+/* Utility classes */
 .block {
   display: block;
 }
-
+.hidden {
+  display: none;
+}
 .no-scroll {
   overflow: hidden;
   height: 100vh;
 }
 
+/* Media Queries */
 @media (max-width: 1920px) {
   .nav {
     padding: 1rem 5rem;
@@ -102,22 +121,8 @@
   .navItem a {
     font-size: 0.9rem;
   }
-
   .image {
     width: 80px;
-    height: 100%;
-  }
-}
-
-@media (max-width: 1600px) {
-}
-
-@media (max-width: 1540px) {
-}
-
-@media (max-width: 1440px) {
-  .nav {
-    padding: 1rem 4.5rem;
   }
 }
 
@@ -125,12 +130,9 @@
   .nav {
     padding: 1rem 4rem;
   }
-
   .image {
     width: 70px;
-    height: 100%;
   }
-
   .navItem a {
     font-size: 0.8rem;
   }
@@ -140,24 +142,25 @@
   .nav {
     padding: 1rem 3.5rem;
   }
-
   .image {
     width: 60px;
-    height: 100%;
   }
-
   .navItems a {
     font-size: 0.7rem;
   }
 }
 
-@media (max-width: 1024px) {
-}
-
 @media (max-width: 960px) {
   .nav {
+    height: 7vh;
+    padding: 0 4rem;
     background: var(--background);
     z-index: 100;
+  }
+
+  .nav.scrolled {
+    background: var(--background);
+    backdrop-filter: none;
   }
 
   .navContainer.scrolled {
@@ -167,19 +170,14 @@
   .navItems {
     display: none;
   }
-
   .mobileNavToggle {
     display: block;
   }
-
-  .nav {
-    height: 7vh;
-    padding: 0 4rem;
+  .navLogo:hover {
+    transform: none;
   }
-
-  .nav.scrolled {
-    background: var(--background);
-    backdrop-filter: blur(0px);
+  .image {
+    width: 110px;
   }
 
   .mobileNavItemsContainer {
@@ -190,79 +188,27 @@
     transition: all 0.5s ease-in-out;
     height: 0vh;
     background: var(--background);
+    will-change: transform;
   }
 
   .mobileNavItemsContainer.open {
     height: 93vh;
   }
-
   .mobileNavItemsContainer.closed {
     height: 0vh;
   }
 
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  .desktopLanguageSwitcher {
-    display: none;
-  }
-
-  .block {
-    display: block;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .mobileNavItems {
-    padding: 0rem 4rem;
-  }
-
-  .mobileNavItem {
-    font-size: 1.4rem;
-    color: var(--text);
-    padding: 1rem 0;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    border-bottom: 1px solid #ededed2a;
-  }
-
-  .navLogo:hover {
-    transform: rotate(0deg);
-  }
-
-  .image {
-    width: 110px;
-    height: 100%;
-  }
-
-  .mobileNavToggleIcon {
-    font-size: 2rem;
-  }
-
-  .mobileNavItems {
-    padding: 0rem 4rem;
+  .mobileNavItems,
+  .mobileNavBottom {
+    padding: 0 4rem;
   }
 
   .mobileNavItem {
     font-size: 1.5rem;
+    color: var(--text);
     padding: 3rem 0;
+    text-decoration: none;
+    border-bottom: 1px solid #ededed2a;
   }
 
   .mobileNavLinks {
@@ -274,60 +220,31 @@
 
   .mobileNavBottom {
     margin-top: 3rem;
-    padding: 0rem 4rem;
+  }
+
+  .mobileNavToggleIcon {
+    font-size: 2rem;
+  }
+
+  .desktopLanguageSwitcher {
+    display: none;
   }
 }
 
 @media (max-width: 835px) {
-  .nav {
+  .nav,
+  .mobileNavItems,
+  .mobileNavBottom {
     padding: 0 3rem;
   }
 
   .image {
     width: 100px;
-    height: 100%;
   }
-
   .mobileNavToggleIcon {
     font-size: 1.5rem;
   }
-
-  .mobileNavItems {
-    padding: 0rem 3rem;
-  }
-
-  .mobileNavBottom {
-    padding: 1.5rem 3rem 1.5rem 3rem;
-  }
-
   .mobileNavItem {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .mobileNavItem {
-    font-size: 1.2rem;
-    padding: 2rem 0;
-  }
-
-  .mobileNavToggleIcon {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 610px) {
-  .mobileNavItem {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 485px) {
-  .nav {
-    padding: 0 2.5rem;
-  }
-
-  .mobileNavToggleIcon {
     font-size: 1.2rem;
   }
 }
@@ -335,82 +252,45 @@
 @media (max-width: 460px) {
   .nav {
     height: 8vh;
+    padding: 0 2.5rem;
   }
 
   .mobileNavItemsContainer {
     height: 92vh;
   }
-
-  .mobileNavBottom {
-    padding: 0 2.5rem;
-    margin-top: 3rem;
-  }
-
-  .mobileNavItems {
-    padding: 0rem 2.5rem;
-  }
-
   .image {
     width: 80px;
-    height: 100%;
-  }
-}
-
-@media (max-width: 425px) {
-  .mobileNavItems {
-    padding: 0rem 2.5rem;
   }
 
-  .mobileNavItem {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 414px) {
-  .nav {
-    height: 8vh;
-    padding: 0 2rem;
-  }
-
-  .mobileNavItemsContainer {
-    height: 92vh;
-  }
-  .mobileNavItems {
-    padding: 0rem 2rem;
+  .mobileNavItems,
+  .mobileNavBottom {
+    padding: 0 2.5rem;
   }
 
   .mobileNavBottom {
-    padding: 0 2rem;
+    margin-top: 3rem;
   }
 }
 
 @media (max-width: 376px) {
   .nav {
     height: 10vh;
+    padding: 0 2rem;
   }
 
   .mobileNavItemsContainer {
     height: 90vh;
   }
-
   .image {
     width: 70px;
-    height: 100%;
   }
-
-  .mobileNavToggleIcon {
-    font-size: rem;
-  }
-
   .mobileNavItem {
     font-size: 1rem;
+    padding: 2rem 0;
   }
 
-  .nav {
-    padding: 0 2rem;
-  }
-
-  .mobileNavItems {
+  .mobileNavItems,
+  .mobileNavBottom {
     padding: 0 2rem;
   }
 
@@ -424,53 +304,51 @@
   .nav {
     height: 12vh;
   }
-
   .mobileNavItemsContainer {
     height: 88vh;
   }
-
   .mobileNavItem {
     font-size: 0.9rem;
-  }
-
-  .mobileNavItem {
     padding: 2rem 0;
   }
-
   .mobileNavBottom {
     margin-top: 1.5rem;
   }
 }
 
+/* Tablet/iPad specific styles */
 @media (max-width: 1200px) and (min-height: 1920px),
   (max-width: 1024px) and (min-height: 1366px) {
-  .navLogo:hover {
-    transform: rotate(0deg);
-  }
-
   .nav {
     height: 7vh;
     padding: 0 5rem;
   }
-
   .image {
     width: 110px;
   }
-
   .navItem a {
     font-size: 1rem;
   }
+  .navLogo:hover {
+    transform: none;
+  }
 }
 
-.mobileNavToggleIcon {
-  transition: transform 0.3s ease;
-  display: block;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.mobileNavToggleIcon.open {
-  transform: rotate(90deg);
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

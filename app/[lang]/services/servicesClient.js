@@ -4,8 +4,7 @@ import Navigation from "../../utils/navigation";
 import { useTranslation } from "../../hooks/useTranslation";
 import styles from "./page.module.css";
 import Footer from "../../utils/Footer";
-import AddIcon from "@mui/icons-material/Add";
-import { Slide } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 import { ReactOriginalWordmark } from "devicons-react";
 import { JavascriptOriginal } from "devicons-react";
 import { Html5OriginalWordmark } from "devicons-react";
@@ -49,28 +48,36 @@ export default function ContactClient() {
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.container}>
         <div className={styles.title}>
-          <Slide>
+          <Slide triggerOnce>
             <h1>Services</h1>
           </Slide>
         </div>
         <div className={styles.servicesContainer}>
           <div className={styles.service}>
             <div className={styles.serviceContent}>
-              <h2 className={styles.serviceType}>
-                Project Management Training
-              </h2>
-              <h3 className={styles.serviceTitle}>
-                Master the Art of Project Management
-              </h3>
-              <p>
-                Project management is one of the most critical skills in the
-                business world. Diginow’s 35-hour PMP-focused training program
-                is not only limited to exam preparation but also equips you with
-                practical knowledge and techniques to succeed in real-world
-                projects.
-              </p>
+              <Fade triggerOnce direction="up" cascade damping={0.2}>
+                <h2 className={styles.serviceType}>
+                  Project Management Training
+                </h2>
+                <h3 className={styles.serviceTitle}>
+                  Master the Art of Project Management
+                </h3>
+                <p>
+                  Project management is one of the most critical skills in the
+                  business world. Diginow’s 35-hour PMP-focused training program
+                  is not only limited to exam preparation but also equips you
+                  with practical knowledge and techniques to succeed in
+                  real-world projects.
+                </p>
+              </Fade>
             </div>
-            <div className={styles.serviceListContainer}>
+            <Slide
+              direction="right"
+              cascade
+              damping={0.2}
+              triggerOnce
+              className={styles.serviceListContainer}
+            >
               <ul className={styles.serviceList}>
                 <li className={styles.serviceListItem}>
                   <div
@@ -114,111 +121,121 @@ export default function ContactClient() {
                   </div>
                 </li>
               </ul>
-            </div>
+            </Slide>
           </div>
           <div className={`${styles.service} ${styles.digitalization}`}>
             <div
               className={`${styles.serviceContent} ${styles.serviceContentDigitalization}`}
             >
-              <h2 className={styles.serviceType}>Digitalization Consultancy</h2>
-              <h3
-                className={`${styles.serviceTitle} ${styles.serviceTitleDigitalization}`}
-              >
-                Digitalization is the key to the future success of businesses
-                and NGOs.
-              </h3>
-              <p className={styles.digiText}>
-                At Diginow, we analyze your processes, identify areas for
-                improvement, and create digital transformation strategies
-                tailored to your needs.
-              </p>
-              <p>
-                All our digitalization projects are executed with a tailor-made
-                approach, working closely with you to maximize the efficiency of
-                your technological investments.
-              </p>
+              <Fade triggerOnce direction="up" cascade damping={0.2}>
+                <h2 className={styles.serviceType}>
+                  Digitalization Consultancy
+                </h2>
+                <h3
+                  className={`${styles.serviceTitle} ${styles.serviceTitleDigitalization}`}
+                >
+                  Digitalization is the key to the future success of businesses
+                  and NGOs.
+                </h3>
+                <p className={styles.digiText}>
+                  At Diginow, we analyze your processes, identify areas for
+                  improvement, and create digital transformation strategies
+                  tailored to your needs.
+                </p>
+                <p>
+                  All our digitalization projects are executed with a
+                  tailor-made approach, working closely with you to maximize the
+                  efficiency of your technological investments.
+                </p>
+              </Fade>
             </div>
             <div
               className={`${styles.serviceListContainer} ${styles.serviceListContainerDigitalization}`}
             >
-              <ul className={styles.serviceList}>
-                <li
-                  className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
-                >
-                  <div className={styles.serviceListItemNumber}>1.</div>
-                  <div className={styles.serviceListItemContent}>
-                    <p className={styles.serviceListItemTitle}>
-                      Digitalization Solutions for NGOs
-                    </p>
-                    <span className={styles.serviceListContent}>
-                      Providing technological tools tailored to NGOs, from
-                      fundraising tools to operational efficiency strategies.
-                    </span>
-                  </div>
-                </li>
-                <li
-                  className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
-                >
-                  <div className={styles.serviceListItemNumber}>2.</div>
-                  <div className={styles.serviceListItemContent}>
-                    <p className={styles.serviceListItemTitle}>
-                      Digitalization Strategies for SMEs
-                    </p>
-                    <span className={styles.serviceListContent}>
-                      Developing systems to enhance your competitiveness and
-                      optimize your business processes.
-                    </span>
-                  </div>
-                </li>
-              </ul>
+              <Slide direction="right" cascade damping={0.2} triggerOnce>
+                <ul className={styles.serviceList}>
+                  <li
+                    className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
+                  >
+                    <div className={styles.serviceListItemNumber}>1.</div>
+                    <div className={styles.serviceListItemContent}>
+                      <p className={styles.serviceListItemTitle}>
+                        Digitalization Solutions for NGOs
+                      </p>
+                      <span className={styles.serviceListContent}>
+                        Providing technological tools tailored to NGOs, from
+                        fundraising tools to operational efficiency strategies.
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
+                  >
+                    <div className={styles.serviceListItemNumber}>2.</div>
+                    <div className={styles.serviceListItemContent}>
+                      <p className={styles.serviceListItemTitle}>
+                        Digitalization Strategies for SMEs
+                      </p>
+                      <span className={styles.serviceListContent}>
+                        Developing systems to enhance your competitiveness and
+                        optimize your business processes.
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </Slide>
             </div>
           </div>
           <div className={styles.serviceWeb}>
-            <h2 className={styles.serviceType}>Web Development & Design</h2>
-            <h3 className={styles.serviceTitle}>
-              Web Solutions That Reflect Your Goals
-            </h3>
-            <div className={styles.webText}>
-              <p>
-                Your website is your face in the digital world, and we are
-                committed to designing it in the best possible way. We develop
-                fast, secure, and performance-oriented web solutions. Our goal
-                is to create websites that align with your business objectives
-                and resonate with your audience.
-              </p>
-              <p>
-                We create creative and modern designs that reflect the unique
-                identity of your company. Our design process prioritizes both
-                aesthetic elements and user experience. We aim to create a
-                visual language that captivates your visitors at first glance
-                and drives them to action.
-              </p>
-            </div>
+            <Fade triggerOnce direction="up" cascade damping={0.2}>
+              <h2 className={styles.serviceType}>Web Development & Design</h2>
+              <h3 className={styles.serviceTitle}>
+                Web Solutions That Reflect Your Goals
+              </h3>
+              <div className={styles.webText}>
+                <p>
+                  Your website is your face in the digital world, and we are
+                  committed to designing it in the best possible way. We develop
+                  fast, secure, and performance-oriented web solutions. Our goal
+                  is to create websites that align with your business objectives
+                  and resonate with your audience.
+                </p>
+                <p>
+                  We create creative and modern designs that reflect the unique
+                  identity of your company. Our design process prioritizes both
+                  aesthetic elements and user experience. We aim to create a
+                  visual language that captivates your visitors at first glance
+                  and drives them to action.
+                </p>
+              </div>
+            </Fade>
             <div className={styles.webIcons}>
-              <Html5OriginalWordmark
-                size={iconSize}
-                className={styles.webIconItem}
-              />
-              <Css3OriginalWordmark
-                size={iconSize}
-                className={styles.webIconItem}
-              />
-              <JavascriptOriginal
-                size={iconSize}
-                className={styles.webIconItem}
-              />
-              <ReactOriginalWordmark
-                size={iconSize}
-                className={styles.webIconItem}
-              />
-              <NextjsOriginalWordmark
-                size={iconSize}
-                className={styles.webIconItem}
-              />
-              <NodejsOriginalWordmark
-                size={iconSize}
-                className={styles.webIconItem}
-              />
+              <Fade triggerOnce direction="up" cascade damping={0.2}>
+                <Html5OriginalWordmark
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+                <Css3OriginalWordmark
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+                <JavascriptOriginal
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+                <ReactOriginalWordmark
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+                <NextjsOriginalWordmark
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+                <NodejsOriginalWordmark
+                  size={iconSize}
+                  className={styles.webIconItem}
+                />
+              </Fade>
             </div>
           </div>
         </div>

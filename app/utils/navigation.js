@@ -34,6 +34,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
       document.body.style.overflow = "";
     }
   }, [isMobileNavOpen]);
+
   return (
     <div>
       <nav className={`${styles.navContainer} ${customClassName}`}>
