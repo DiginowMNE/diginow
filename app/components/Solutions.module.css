@@ -252,6 +252,12 @@
   }
 }
 
+@media (max-width: 405px) {
+  .solutions {
+    min-height: 790px;
+  }
+}
+
 /* Small Mobile */
 @media (max-width: 376px) {
   .solutions {

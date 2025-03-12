@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useTranslation } from "../hooks/useTranslation";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";

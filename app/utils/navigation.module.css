@@ -186,16 +186,15 @@
     justify-content: flex-start;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-    height: 0vh;
     background: var(--background);
     will-change: transform;
   }
 
   .mobileNavItemsContainer.open {
-    height: 93vh;
+    transform: translateX(0);
   }
   .mobileNavItemsContainer.closed {
-    height: 0vh;
+    transform: translateX(-100%);
   }
 
   .mobileNavItems,
