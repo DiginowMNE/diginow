@@ -22,17 +22,34 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Diginow | Digitalna transformacija i poslovna rješenja",
-  description:
-    "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva. Naš cilj nije samo da budemo pružalac usluga, već i dugoročni partner. Sa našim inovativnim pristupom, spremni smo da unaprijedimo vaše poslovanje i napravimo razliku.",
+  title: {
+    default: "Diginow | Digitalna transformacija i poslovna rješenja",
+    template: "%s | Diginow",
+    absolute: "Diginow | Digital Transformation and Business Solutions",
+  },
+  description: {
+    default:
+      "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva.",
+    en: "Diginow provides customized solutions for small and medium enterprises and NGOs, understanding the dynamics of an ever-changing business world. We offer training to ensure project success, consulting services for business process optimization, and modern web solutions to strengthen your digital presence.",
+  },
   metadataBase: new URL("https://diginow.me"),
   keywords: [
+    // Montenegrin keywords
     "digitalna transformacija",
     "konsultantske usluge",
     "web razvoj",
     "obuke",
     "digitalna rješenja",
     "poslovno savjetovanje",
+    // English keywords
+    "digital transformation",
+    "consulting services",
+    "web development",
+    "training",
+    "digital solutions",
+    "business consulting",
+    "Montenegro",
+    "Balkans",
   ],
   authors: [{ name: "Diginow" }],
   creator: "Diginow",
@@ -42,28 +59,53 @@ export const metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: "https://diginow.me",
+    languages: {
+      "sr-ME": "https://diginow.me",
+      "en-US": "https://diginow.me/en",
+    },
+  },
   openGraph: {
-    title: "Diginow - Digitalna transformacija i poslovna rješenja",
-    description:
-      "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke, konsultacije i web razvoj.",
+    title: {
+      default: "Diginow - Digitalna transformacija i poslovna rješenja",
+      en: "Diginow - Digital Transformation and Business Solutions",
+    },
+    description: {
+      default:
+        "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke, konsultacije i web razvoj.",
+      en: "Customized digital solutions for SMEs and NGOs. Training, consulting, and web development.",
+    },
     url: "https://diginow.me",
     siteName: "Diginow",
-    locale: "sr_RS",
+    locale: {
+      default: "sr_ME",
+      alternate: ["en_US"],
+    },
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Diginow - Digitalna transformacija",
+        alt: {
+          default: "Diginow - Digitalna transformacija",
+          en: "Diginow - Digital Transformation",
+        },
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diginow - Digitalna transformacija i poslovna rješenja",
-    description:
-      "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke, konsultacije i web razvoj.",
+    title: {
+      default: "Diginow - Digitalna transformacija i poslovna rješenja",
+      en: "Diginow - Digital Transformation and Business Solutions",
+    },
+    description: {
+      default:
+        "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke, konsultacije i web razvoj.",
+      en: "Customized digital solutions for SMEs and NGOs. Training, consulting, and web development.",
+    },
     images: ["/og-image.jpg"],
   },
   robots: {
