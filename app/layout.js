@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "diginow",
+  title: "Diginow | Digitalna transformacija i poslovna rješenja",
   description:
     "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva. Naš cilj nije samo da budemo pružalac usluga, već i dugoročni partner. Sa našim inovativnim pristupom, spremni smo da unaprijedimo vaše poslovanje i napravimo razliku.",
   metadataBase: new URL("https://diginow.me"),
