@@ -53,7 +53,7 @@ const Services = () => {
           {!isMobile && (
             <div className={styles.servicesButton}>
               <Link
-                href={`/${locale}/ourServices`}
+                href={`/${locale}/services`}
                 className={styles.servicesButtonText}
               >
                 {t("servicesButtonText")}
