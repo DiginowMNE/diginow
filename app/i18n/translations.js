@@ -43,6 +43,7 @@ export const translations = {
     contactEmail: "Email",
     contactMessage: "Message",
     contactSend: "Send",
+    contactEntityType: "Select Entity Type",
   },
   sr: {
     about: "O nama",
@@ -89,6 +90,7 @@ export const translations = {
     contactEmail: "Email",
     contactMessage: "Poruka",
     contactSend: "Pošalji",
+    contactEntityType: "Izaberite tip entiteta",
   },
   tr: {
     about: "Hakkımızda",
@@ -134,5 +136,6 @@ export const translations = {
     contactEmail: "Email",
     contactMessage: "Mesaj",
     contactSend: "Gönder",
+    contactEntityType: "Tipi Seçin",
   },
 };

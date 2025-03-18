@@ -204,7 +204,7 @@ export default function ContactClient() {
                   required
                 >
                   <MenuItem disabled value="">
-                    <em>Izaberite tip entiteta</em>
+                    <em>{t("contactEntityType")}</em>
                   </MenuItem>
                   <MenuItem value="ngo">NVO</MenuItem>
                   <MenuItem value="company">Kompanija</MenuItem>
@@ -216,7 +216,7 @@ export default function ContactClient() {
                     type="text"
                     id="company"
                     name="company"
-                    placeholder="Naziv entiteta"
+                    placeholder={"Naziv entiteta"}
                     required
                     maxLength={100}
                     pattern="[A-Za-z0-9\s\-\.]+"
