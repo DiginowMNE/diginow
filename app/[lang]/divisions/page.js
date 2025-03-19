@@ -1,11 +1,7 @@
-import About from "./about";
+import Divisions from "./divisions";
 
 export default function AboutPage({ params }) {
-  return (
-    <>
-      <About />
-    </>
-  );
+  return <Divisions />;
 }
 
 export async function generateStaticParams() {

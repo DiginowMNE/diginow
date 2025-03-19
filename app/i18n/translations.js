@@ -19,11 +19,11 @@ export const translations = {
     serviceCardTitleThree: "Web Development & Design",
     serviceCardSubtitleThree: "Web Solutions That Reflect Your Goals",
     serviceCardTextOne:
-      "Project management is one of the most critical skills in the business world. Diginow’s 35-hour PMP-focused training program is not only limited to exam preparation but also equips you with practical knowledge and techniques to succeed in real-world projects.",
+      "Diginow’s 35-hour PMP-focused training program is not only limited to exam preparation but also equips you with practical knowledge and techniques to succeed in real-world projects.",
     serviceCardTextTwo:
-      "Digitalization is the key to the future success of businesses and NGOs. At Diginow, we analyze your processes, identify areas for improvement, and create digital transformation strategies tailored to your needs. ",
+      "At Diginow, we analyze your processes, identify areas for improvement, and create digital transformation strategies tailored to your needs. ",
     serviceCardTextThree:
-      "Your website is your face in the digital world, and we are committed to designing it in the best possible way. We develop fast, secure, and performance-oriented web solutions. Our goal is to create websites that align with your business objectives and resonate with your audience.",
+      "Your website is your face in the digital world, and we are committed to designing it in the best possible way.",
     solutionTitle: "Client Solutions",
     solutionSubtitle: "The Right Solutions for Every Business",
     solutionText:
@@ -40,10 +40,19 @@ export const translations = {
     contactText:
       "Whether you want to inquire about a project or have a question, we are happy to talk to you. We are here to provide solutions that meet your needs. Reach out and let’s start working together.",
     contactName: "Name",
+    contactLastName: "Last Name",
     contactEmail: "Email",
     contactMessage: "Message",
     contactSend: "Send",
     contactEntityType: "Select Entity Type",
+    contactCompany: "Company",
+    contactNgo: "NGO",
+    contactEntityName: "Entity Name",
+    contactReason: "Select Reason for Contact",
+    contactReasonWebDevelopment: "Web Development",
+    contactReasonProjectManagement: "Project Management",
+    contactReasonDigitalizationConsultancy: "Digitalization Consultancy",
+    contactReasonOther: "Other",
   },
   sr: {
     about: "O nama",
@@ -66,11 +75,11 @@ export const translations = {
     serviceCardTitleThree: "Veb Razvoj i Dizajn",
     serviceCardSubtitleThree: "Veb Rješenja Koja Odražavaju Vaše Ciljeve",
     serviceCardTextOne:
-      "Upravljanje projektima je jedna od najvažnijih vještina u poslovnom svijetu. Diginow-ov 35-satni program obuke fokusiran na PMP ne samo da priprema za ispite, već vas oprema praktičnim znanjima i tehnikama potrebnim za uspjeh u stvarnim projektima. Obuke su prilagođene vašim potrebama i individualnim zahtjevima.",
+      "Diginow-ov 35-satni program obuke fokusiran na PMP ne samo da priprema za ispite, već vas oprema praktičnim znanjima i tehnikama potrebnim za uspjeh u stvarnim projektima.",
     serviceCardTextTwo:
-      "Digitalizacija je ključ budućeg uspjeha preduzeća i NVO-a. U Diginow-u analiziramo vaše procese, identifikujemo prostor za unapređenje i kreiramo strategije digitalne transformacije prilagođene vašim potrebama. Naše usluge uključuju prilagođene alate za povećanje efikasnosti i konkurentnosti.",
+      "U Diginow-u analiziramo vaše procese, identifikujemo prostor za unapređenje i kreiramo strategije digitalne transformacije prilagođene vašim potrebama.",
     serviceCardTextThree:
-      "Vaša veb stranica je vaš digitalni identitet, a mi se obavezujemo da je dizajniramo na najbolji mogući način. Razvijamo brza, sigurna i performansno optimizovana veb rješenja koja odgovaraju vašim poslovnim ciljevima i ciljnoj publici.",
+      "Vaša veb stranica je vaš digitalni identitet, a mi se obavezujemo da je dizajniramo na najbolji mogući način.",
     solutionTitle: "Rješenja za klijente",
     solutionSubtitle: "Prava rješenja za svako preduzeće",
     solutionText:
@@ -87,10 +96,19 @@ export const translations = {
     contactText:
       "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. Obratite nam se i počnimo saradnju!",
     contactName: "Ime",
+    contactLastName: "Prezime",
     contactEmail: "Email",
     contactMessage: "Poruka",
     contactSend: "Pošalji",
     contactEntityType: "Izaberite tip entiteta",
+    contactCompany: "Preduzeće",
+    contactNgo: "NVO",
+    contactReason: "Izaberite razlog za kontakt",
+    contactEntityName: "Naziv entiteta",
+    contactReasonWebDevelopment: "Web razvoj",
+    contactReasonProjectManagement: "Upravljanje projektima",
+    contactReasonDigitalizationConsultancy: "Konsultacija za digitalizaciju",
+    contactReasonOther: "Ostalo",
   },
   tr: {
     about: "Hakkımızda",
@@ -112,11 +130,11 @@ export const translations = {
     serviceCardTitleThree: "Web Geliştirme",
     serviceCardSubtitleThree: "Hedeflerinizi Yansıtan Web Çözümleri",
     serviceCardTextOne:
-      "Proje yönetimi, iş dünyasının en önemli becerilerinden biridir. Diginow’un sunduğu 35 saatlik PMP odaklı eğitim programı, yalnızca sınava hazırlıkla sınırlı kalmaz; aynı zamanda sizi gerçek dünyadaki projelerde başarıya taşıyacak pratik bilgiler ve tekniklerle donatır.",
+      "Diginow’un sunduğu 35 saatlik PMP odaklı eğitim programı, yalnızca sınava hazırlıkla sınırlı kalmaz; aynı zamanda sizi gerçek dünyadaki projelerde başarıya taşıyacak pratik bilgiler ve tekniklerle donatır.",
     serviceCardTextTwo:
-      "Dijitalleşme, işletmelerin ve NGO'ların gelecekteki başarısının anahtarıdır. Diginow olarak, iş süreçlerinizi analiz ediyor, iyileştirilmesi gereken noktaları belirliyor ve size özel dijital dönüşüm stratejileri oluşturuyoruz.",
+      "Diginow olarak, iş süreçlerinizi analiz ediyor, iyileştirilmesi gereken noktaları belirliyor ve size özel dijital dönüşüm stratejileri oluşturuyoruz.",
     serviceCardTextThree:
-      "Web siteniz, dijital dünyadaki yüzünüzdür ve biz bunu en iyi şekilde tasarlamayı taahhüt ediyoruz. Hızlı, güvenli ve performans odaklı web çözümleri geliştiriyoruz. Kullanıcı dostu bir deneyim sunarken, aynı zamanda arama motorlarında yüksek sıralamalar elde etmenize yardımcı oluyoruz. Sizinle birlikte çalışarak, iş hedeflerinizi yansıtan ve müşteri kitlenize hitap eden bir web sitesi oluşturuyoruz.",
+      "Web siteniz, dijital dünyadaki yüzünüzdür ve biz bunu en iyi şekilde tasarlamayı taahhüt ediyoruz.",
     solutionTitle: "Müşteri Çözümleri",
     solutionSubtitle: "Her İşletme İçin Doğru Çözümler",
     solutionText:
@@ -133,9 +151,18 @@ export const translations = {
     contactText:
       "İster bir proje hakkında bilgi almak isteyin, ister bir sorunuz olsun, sizinle konuşmaktan mutluluk duyarız. İhtiyaçlarınıza uygun çözümler sunmak için buradayız. Bize ulaşın, birlikte çalışmaya başlayalım.",
     contactName: "İsim",
+    contactLastName: "Soyisim",
     contactEmail: "Email",
+    contactEntityType: "Kurum Türünü Seçin",
     contactMessage: "Mesaj",
+    contactCompany: "Şirket",
+    contactNgo: "STK",
     contactSend: "Gönder",
-    contactEntityType: "Tipi Seçin",
+    contactEntityName: "Kurum Adı",
+    contactReason: "İletişim nedenini seçin",
+    contactReasonWebDevelopment: "Web Geliştirme",
+    contactReasonProjectManagement: "Proje Yönetimi",
+    contactReasonDigitalizationConsultancy: "Dijitalleşme Danışmanlığı",
+    contactReasonOther: "Diğer",
   },
 };

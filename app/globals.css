@@ -182,3 +182,24 @@ button {
   background: var(--light-blue);
   border-radius: 10px;
 }
+
+/* Text justification and subtitle spacing */
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.subtitle {
+  letter-spacing: -0.02em;
+  word-spacing: -0.1em;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* For specific cases where you want to remove extra spacing */
+.no-spacing {
+  letter-spacing: 0;
+  word-spacing: 0;
+}

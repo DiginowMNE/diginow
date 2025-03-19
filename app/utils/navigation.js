@@ -57,10 +57,32 @@ const Navigation = ({ customClassName, customClassName2 }) => {
           <Fade cascade damping={0.2} triggerOnce>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
-                <Link href={`/${locale}/about`}>{t("about")}</Link>
+                <Link href={`/${locale}/about`} className={styles.navLink}>
+                  {t("about")}
+                </Link>
+                <div
+                  className={`${styles.dropdown} ${
+                    scrolled ? styles.scrolledDropdown : ""
+                  }`}
+                >
+                  <div className={styles.dropdownItem}>
+                    <Link href={`/${locale}/about`}>About Us</Link>
+                  </div>
+                  <div className={styles.dropdownItem}>
+                    <Link href={`/${locale}/divisions`}>Our Divisions</Link>
+                  </div>
+                  <div className={styles.dropdownItem}>
+                    <Link href={`/${locale}/team`}>Our Team</Link>
+                  </div>
+                  <div className={styles.dropdownItem}>
+                    <Link href={`/${locale}/projects`}>Our Projects</Link>
+                  </div>
+                </div>
               </li>
               <li className={styles.navItem}>
-                <Link href={`/${locale}/services`}>{t("services")}</Link>
+                <Link href={`/${locale}/services`} className={styles.navLink}>
+                  {t("services")}
+                </Link>
               </li>
               <li className={styles.navItem}>
                 <Link href={`/${locale}/contact`}>{t("contact")}</Link>

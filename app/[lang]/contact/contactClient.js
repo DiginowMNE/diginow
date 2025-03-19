@@ -147,11 +147,8 @@ export default function ContactClient() {
           >
             <p className={styles.contactText}>{t("contactText")}</p>
             <Fade cascade damping={0.2} direction="up">
-              <p className={styles.contactEmail}>info@diginow.me</p>
-              <p className={styles.contactPhone}>+387 61 234 567</p>
-              <p className={styles.contactAddress}>
-                Ulica slobode 60, Podgorica
-              </p>
+              <p className={styles.contactEmail}>diginowmne@gmail.com</p>
+              <p className={styles.contactAddress}>Podgorica, Montenegro</p>
             </Fade>
           </Fade>
         </div>
@@ -172,7 +169,7 @@ export default function ContactClient() {
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Ime"
+                    placeholder={t("contactName")}
                     required
                     minLength={2}
                     maxLength={50}
@@ -184,7 +181,7 @@ export default function ContactClient() {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    placeholder="Prezime"
+                    placeholder={t("contactLastName")}
                     required
                     minLength={2}
                     maxLength={50}
@@ -206,8 +203,8 @@ export default function ContactClient() {
                   <MenuItem disabled value="">
                     <em>{t("contactEntityType")}</em>
                   </MenuItem>
-                  <MenuItem value="ngo">NVO</MenuItem>
-                  <MenuItem value="company">Kompanija</MenuItem>
+                  <MenuItem value="ngo">{t("contactNgo")}</MenuItem>
+                  <MenuItem value="company">{t("contactCompany")}</MenuItem>
                 </Select>
               </div>
               <div className={styles.contactFormInputCompanyEmail}>
@@ -216,7 +213,7 @@ export default function ContactClient() {
                     type="text"
                     id="company"
                     name="company"
-                    placeholder={"Naziv entiteta"}
+                    placeholder={t("contactEntityName")}
                     required
                     maxLength={100}
                     pattern="[A-Za-z0-9\s\-\.]+"
@@ -227,7 +224,7 @@ export default function ContactClient() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder={t("contactEmail")}
                     required
                     maxLength={100}
                   />
@@ -245,16 +242,18 @@ export default function ContactClient() {
                   required
                 >
                   <MenuItem disabled value="">
-                    <em>Izaberite razlog za kontakt</em>
+                    <em>{t("contactReason")}</em>
                   </MenuItem>
-                  <MenuItem value="Web Development">Web Development</MenuItem>
+                  <MenuItem value="Web Development">
+                    {t("contactReasonWebDevelopment")}
+                  </MenuItem>
                   <MenuItem value="Project Management">
-                    Project Management
+                    {t("contactReasonProjectManagement")}
                   </MenuItem>
                   <MenuItem value="Digitalization Consultancy">
-                    Digitalization Consultancy
+                    {t("contactReasonDigitalizationConsultancy")}
                   </MenuItem>
-                  <MenuItem value="Other">Other</MenuItem>
+                  <MenuItem value="Other">{t("contactReasonOther")}</MenuItem>
                 </Select>
               </div>
               <div className={styles.contactFormInputMessage}>
@@ -262,7 +261,7 @@ export default function ContactClient() {
                   id="message"
                   name="message"
                   rows={5}
-                  placeholder="Poruka"
+                  placeholder={t("contactMessage")}
                   required
                   minLength={10}
                   maxLength={1000}

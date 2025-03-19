@@ -17,11 +17,10 @@
 .title {
   font-size: 6rem;
   font-weight: 800;
-  margin-bottom: 2rem;
   text-transform: uppercase;
-  padding: 6rem 10rem 0 10rem;
-  padding-bottom: 2rem;
+  padding: 6rem 10rem 2rem 10rem;
   background-color: var(--light-blue);
+  color: var(--background);
 }
 
 .service {

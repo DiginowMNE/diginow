@@ -3,12 +3,8 @@
   background-color: var(--background);
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  gap: 10rem;
-}
-
-.servicesTitle {
-  width: 45%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .title {
@@ -20,9 +16,9 @@
 }
 
 .servicesSubtitle {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .servicesTitleLine {
@@ -47,6 +43,7 @@
   align-items: center;
   width: fit-content;
   justify-content: center;
+  max-width: 400px;
 }
 
 .servicesButtonIcon {
@@ -66,20 +63,42 @@
 
 .servicesCards {
   gap: 3rem;
-  padding: 3rem;
-  border: 1px solid;
-  width: 55%;
   border-radius: 1rem;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
 }
 
 .servicesCard {
   transition: all 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
-  border-bottom: 1px solid var(--text);
-  padding-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--light-blue);
+  height: 100%;
+}
+
+.servicesCard:hover {
+  transform: translateY(-10px);
+  background-color: var(--light-blue);
+}
+
+.servicesCard:hover .cardTitle {
+  color: var(--background);
+}
+
+.servicesCard:hover .cardText,
+.servicesCard:hover .cardIcon {
+  color: var(--background);
+}
+
+.cardIcon {
+  color: var(--light-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 .cardTitleContainer {
@@ -88,43 +107,16 @@
   justify-content: space-between;
 }
 
-.cardTitle,
-.cardIcon {
-  font-size: 1.4rem;
-}
-
 .cardTitle {
-  line-height: 1.2;
-  font-weight: 400;
-}
-
-.cardTextHidden,
-.cardTextShown {
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-
-.cardTextHidden {
-  max-height: 0;
-  transform: translateY(-100%);
-  margin: 0;
-  opacity: 0;
-}
-
-.cardTextShown {
-  max-height: 500px; /* Adjust this based on your content */
-  opacity: 1;
-  transform: translateY(0);
-  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--light-blue);
+  line-height: 1;
 }
 
 .cardText {
-  overflow: hidden;
-}
-
-.cardIcon {
-  transition: transform 0.4s cubic-bezier(0.555, 0.885, 0.32, 1.275);
+  color: var(--light-blue);
 }
 
 .cardTitleContainer[data-open="true"] .cardIcon {
@@ -133,7 +125,7 @@
 
 @media (max-width: 1920px) {
   .servicesSubtitle {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 
   .servicesTitleLine {
@@ -143,25 +135,13 @@
   .servicesButton {
     margin-top: 4rem;
   }
-
-  .cardTitle,
-  .cardIcon {
-    font-size: 1.3rem;
-  }
-
-  .cardTextShown {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 1680px) {
   .servicesTitle {
-    width: 50%;
   }
 
   .servicesCards {
-    padding: 2.5rem;
-    width: 50%;
   }
 
   .title {
@@ -169,7 +149,7 @@
   }
 
   .servicesSubtitle {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   .servicesTitleLine {
@@ -179,21 +159,11 @@
   .servicesButton {
     margin-top: 4rem;
   }
-
-  .cardTitle,
-  .cardIcon {
-    font-size: 1.3rem;
-  }
-
-  .cardTextShown {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 1600px) {
   .services {
     padding: 10rem 8rem;
-    gap: 6rem;
   }
 
   .title {
@@ -202,12 +172,8 @@
   }
 
   .servicesSubtitle {
-    font-size: 2.8rem;
-  }
-
-  .cardTitle,
-  .cardIcon {
-    font-size: 1.1rem;
+    font-size: 4rem;
+    width: 90%;
   }
 
   .servicesButton {
@@ -242,11 +208,6 @@
     font-size: 1.1rem;
   }
 
-  .cardTitle,
-  .cardIcon {
-    font-size: 1.2rem;
-  }
-
   .cardTextShown {
     font-size: 0.9rem;
   }
@@ -262,11 +223,6 @@
   .servicesSubtitle {
     font-size: 2.5rem;
   }
-
-  .cardTitle,
-  .cardIcon {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -274,7 +230,6 @@
 
 @media (max-width: 900px) {
   .services {
-    flex-direction: column;
     gap: 2.5rem;
   }
 
@@ -335,8 +290,7 @@
     padding: 2rem 0;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 1.5rem;
     font-weight: 500;
   }
@@ -387,8 +341,7 @@
     padding: 2rem 0;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 1.4rem;
     font-weight: 500;
   }
@@ -428,8 +381,7 @@
 }
 
 @media (max-width: 435px) {
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -447,8 +399,7 @@
     font-size: 1.1rem;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 1.1rem;
     font-weight: 500;
   }
@@ -467,8 +418,7 @@
     font-size: 1rem;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 1rem;
   }
 
@@ -498,8 +448,7 @@
     font-size: 0.9rem;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 0.9rem;
   }
 
@@ -519,8 +468,7 @@
     font-size: 1.8rem;
   }
 
-  .cardTitle,
-  .cardIcon {
+  .cardTitle {
     font-size: 0.9rem;
   }
 

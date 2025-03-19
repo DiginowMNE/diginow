@@ -5,9 +5,10 @@ import { useTranslation } from "../hooks/useTranslation";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
-
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { HiOutlinePlusSm } from "react-icons/hi";
+import { MdAccountTree } from "react-icons/md";
+import { LiaDigitalTachographSolid } from "react-icons/lia";
+import { FaCode } from "react-icons/fa6";
 
 const Services = () => {
   const { t, locale } = useTranslation();
@@ -44,36 +45,15 @@ const Services = () => {
         <Fade cascade damping={0.2} direction="up" triggerOnce>
           <h1 className={styles.title}>{t("servicesTitle")}</h1>
           <h2 className={styles.servicesSubtitle}>{t("servicesSubtitle")}</h2>
-          <p className={styles.servicesTitleLine}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          {!isMobile && (
-            <div className={styles.servicesButton}>
-              <Link
-                href={`/${locale}/services`}
-                className={styles.servicesButtonText}
-              >
-                {t("servicesButtonText")}
-                <MdKeyboardArrowRight className={styles.servicesButtonIcon} />
-              </Link>
-            </div>
-          )}
         </Fade>
       </div>
       <Fade className={styles.servicesCards} direction="up" triggerOnce>
         <Fade cascade damping={0.2} direction="up" triggerOnce>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <div
-                className={styles.cardTitleContainer}
-                onClick={() => toggleCard("card1")}
-                data-open={openCards.card1}
-              >
+              <MdAccountTree className={styles.cardIcon} />
+              <div className={styles.cardTitleContainer}>
                 <h2 className={styles.cardTitle}>{t("serviceCardTitleOne")}</h2>
-                <HiOutlinePlusSm className={styles.cardIcon} />
               </div>
               <div className={styles.cardText}>
                 <p
@@ -90,13 +70,9 @@ const Services = () => {
           </div>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <div
-                className={styles.cardTitleContainer}
-                onClick={() => toggleCard("card2")}
-                data-open={openCards.card2}
-              >
+              <LiaDigitalTachographSolid className={styles.cardIcon} />
+              <div className={styles.cardTitleContainer}>
                 <h2 className={styles.cardTitle}>{t("serviceCardTitleTwo")}</h2>
-                <HiOutlinePlusSm className={styles.cardIcon} />
               </div>
               <div className={styles.cardText}>
                 <p
@@ -113,15 +89,11 @@ const Services = () => {
           </div>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <div
-                className={styles.cardTitleContainer}
-                onClick={() => toggleCard("card3")}
-                data-open={openCards.card3}
-              >
+              <FaCode className={styles.cardIcon} />
+              <div className={styles.cardTitleContainer}>
                 <h2 className={styles.cardTitle}>
                   {t("serviceCardTitleThree")}
                 </h2>
-                <HiOutlinePlusSm className={styles.cardIcon} />
               </div>
               <div className={styles.cardText}>
                 <p
@@ -138,21 +110,17 @@ const Services = () => {
           </div>
         </Fade>
       </Fade>
-      {isMobile && (
-        <Fade
-          direction="up"
-          triggerOnce
-          className={`${styles.servicesButton} ${styles.mobileServicesButton}`}
-        >
+      <Fade direction="up" triggerOnce>
+        <div className={styles.servicesButton}>
           <Link
-            href={`/${locale}/ourServices`}
+            href={`/${locale}/services`}
             className={styles.servicesButtonText}
           >
             {t("servicesButtonText")}
-            <MdKeyboardArrowRight className={styles.mobileServicesButtonIcon} />
+            <MdKeyboardArrowRight className={styles.servicesButtonIcon} />
           </Link>
-        </Fade>
-      )}
+        </div>
+      </Fade>
     </div>
   );
 };
