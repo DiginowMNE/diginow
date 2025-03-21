@@ -70,11 +70,16 @@
 
 .solutionsImageLaptop {
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   left: 5%;
   transform: translateX(-30%);
   z-index: 1;
   will-change: transform;
+}
+
+.imageLaptop {
+  width: 160%;
+  object-fit: contain;
 }
 
 .solutionsImagePhone {
@@ -102,7 +107,7 @@
   }
 
   .solutionsImageLaptop {
-    width: 55%;
+    width: 50%;
   }
 
   .solutionsImagePhone {

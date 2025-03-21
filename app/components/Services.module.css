@@ -76,6 +76,7 @@
   border-radius: 1rem;
   border: 1px solid var(--light-blue);
   height: 100%;
+  height: fit-content;
 }
 
 .servicesCard:hover {
@@ -117,6 +118,7 @@
 
 .cardText {
   color: var(--light-blue);
+  font-size: 0.9rem;
 }
 
 .cardTitleContainer[data-open="true"] .cardIcon {

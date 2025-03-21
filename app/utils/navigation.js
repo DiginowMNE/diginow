@@ -85,7 +85,9 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href={`/${locale}/contact`}>{t("contact")}</Link>
+                <Link href={`/${locale}/contact`} className={styles.navLink}>
+                  {t("contact")}
+                </Link>
               </li>
             </ul>
           </Fade>

@@ -32,7 +32,7 @@ const Logos = () => {
       loop={0}
       autoFill={true}
     >
-      {logos.map((src, index) => (
+      {/* {logos.map((src, index) => (
         <Image
           key={index}
           src={src}
@@ -41,7 +41,7 @@ const Logos = () => {
           height={100}
           className={styles.logo}
         />
-      ))}
+      ))} */}
     </Marquee>
   );
 };
