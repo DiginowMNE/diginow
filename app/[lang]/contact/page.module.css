@@ -4,6 +4,8 @@
   justify-content: space-between;
   gap: 7rem;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .contactTextContainer {
@@ -39,6 +41,8 @@
 .contactFormContainer {
   width: 50%;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .contactForm {
@@ -633,5 +637,54 @@
   .recaptcha {
     transform: scale(0.8);
     margin: 1rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .contactText {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contactEmail,
+  .contactAddress {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding: 6rem 1rem;
+  }
+
+  .contactText {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .contactText {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .contactText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .contactText {
+    font-size: 1rem;
+  }
+
+  .contactEmail,
+  .contactAddress {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.3rem;
   }
 }

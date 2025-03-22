@@ -197,7 +197,11 @@
     height: 7vh;
     padding: 0 4rem;
     background: var(--background);
-    z-index: 100;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .nav.scrolled {
@@ -230,13 +234,25 @@
     transition: all 0.5s ease-in-out;
     background: var(--background);
     will-change: transform;
+    z-index: 999;
+    position: fixed;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
   }
 
   .mobileNavItemsContainer.open {
     transform: translateX(0);
+    pointer-events: auto;
+    height: 93vh;
   }
+
   .mobileNavItemsContainer.closed {
     transform: translateX(-100%);
+    pointer-events: none;
   }
 
   .mobileNavItems,
