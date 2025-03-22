@@ -13,6 +13,9 @@ import { NextjsOriginalWordmark } from "devicons-react";
 import { NodejsOriginalWordmark } from "devicons-react";
 import { useEffect, useState } from "react";
 
+import { FaBuildingNgo } from "react-icons/fa6";
+import { FaSuitcase } from "react-icons/fa";
+
 export default function ContactClient() {
   const { t } = useTranslation();
   const [iconSize, setIconSize] = useState("100");
@@ -83,7 +86,7 @@ export default function ContactClient() {
                   <div
                     className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
                   >
-                    1.
+                    <FaBuildingNgo />
                   </div>
                   <div
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}
@@ -102,7 +105,7 @@ export default function ContactClient() {
                   <div
                     className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
                   >
-                    2.
+                    <FaSuitcase />
                   </div>
                   <div
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}

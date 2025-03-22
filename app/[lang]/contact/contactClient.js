@@ -173,7 +173,6 @@ export default function ContactClient() {
                     required
                     minLength={2}
                     maxLength={50}
-                    pattern="[A-Za-z\s]+"
                   />
                 </div>
                 <div className={styles.contactFormInput}>
@@ -185,7 +184,6 @@ export default function ContactClient() {
                     required
                     minLength={2}
                     maxLength={50}
-                    pattern="[A-Za-z\s]+"
                   />
                 </div>
               </div>
