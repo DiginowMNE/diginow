@@ -65,16 +65,12 @@ button {
 
 .MuiOutlinedInput-notchedOutline {
   border-color: #00000045 !important;
-  border-radius: 0.5rem !important;
+  border-radius: 1rem !important;
 }
 
 .MuiSelect-icon {
   color: #000000b6 !important;
   transition: all 0.3s ease !important;
-}
-
-.MuiInputLabel-root {
-  font-weight: 300 !important;
 }
 
 .MuiSelect-select {
@@ -90,9 +86,9 @@ button {
 
 .MuiSelect-select {
   color: var(--background) !important;
-  font-weight: 300 !important;
-  font-size: 0.9rem !important;
-  padding: 0.5rem !important;
+  font-size: 1.5rem !important;
+  padding: 1rem 2rem !important;
+  line-height: 1.5 !important;
 }
 
 .MuiSelect-select:hover {
@@ -104,14 +100,13 @@ button {
   background-color: var(--text) !important;
   border-radius: 0.5rem !important;
   color: var(--background) !important;
-  font-size: 0.8rem !important;
+  font-size: 1.5rem !important;
 }
 
 .MuiMenu-paper .MuiMenuItem-root {
   color: var(--background) !important;
-  font-size: 0.9rem !important;
-  font-weight: 300 !important;
-  padding: 0.4rem !important;
+  font-size: 1.5rem !important;
+  padding: 1rem 2rem !important;
   transition: all 0.3s ease !important;
   background-color: var(--text) !important;
   cursor: url("/cursor-pointer-v3.png"), pointer !important;
@@ -141,6 +136,100 @@ button {
 
 .MuiMenu-paper .MuiMenuItem-root.Mui-disabled em {
   font-style: normal !important;
+}
+
+@media (max-width: 3200px) {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 0.8rem !important;
+  }
+
+  .MuiSelect-select {
+    font-size: 1.3rem !important;
+    padding: 0.8rem 1.8rem !important;
+  }
+
+  /* Menu Props Styling */
+  .MuiMenu-paper {
+    border-radius: 0.8rem !important;
+    font-size: 1.3rem !important;
+  }
+
+  .MuiMenu-paper .MuiMenuItem-root {
+    font-size: 1.3rem !important;
+    padding: 0.8rem 1.8rem !important;
+  }
+}
+
+@media (max-width: 2560px) {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 0.5rem !important;
+  }
+
+  .MuiSelect-select {
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Menu Props Styling */
+  .MuiMenu-paper {
+    border-radius: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+
+  .MuiMenu-paper .MuiMenuItem-root {
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 2310px) {
+  .contactText {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 2240px) {
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1680px) {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 0.4rem !important;
+  }
+
+  /* Menu Props Styling */
+  .MuiMenu-paper {
+    border-radius: 0.4rem !important;
+  }
+}
+
+@media (max-width: 1540px) {
+}
+
+@media (max-width: 1440px) {
+  .MuiSelect-select {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Menu Props Styling */
+  .MuiMenu-paper {
+    border-radius: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .MuiMenu-paper .MuiMenuItem-root {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1280px) {
 }
 
 @media (max-width: 900px) {

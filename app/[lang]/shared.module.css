@@ -1,13 +1,11 @@
 .nav {
   background-color: var(--background);
   position: static;
-  height: 10vh;
 }
 
 .nav2 {
   background-color: var(--background);
   position: static;
-  height: 10vh;
 }
 
 .aboutUsContainer {

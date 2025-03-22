@@ -59,13 +59,7 @@ const Footer = () => {
             >
               LinkedIn
             </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
+
             <a
               href="https://instagram.com"
               target="_blank"

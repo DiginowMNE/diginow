@@ -10,6 +10,10 @@ import { useState, useRef, useEffect } from "react";
 import Footer from "../../utils/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import { FaLinkedin } from "react-icons/fa";
+
+import { FaInstagram } from "react-icons/fa";
+
 export default function ContactClient() {
   const { t } = useTranslation();
   const [reasonForContact, setReasonForContact] = useState("");
@@ -143,16 +147,60 @@ export default function ContactClient() {
             direction="up"
             cascade
             damping={0.2}
+            triggerOnce
             className={styles.contactInfoContainer}
           >
-            <p className={styles.contactText}>{t("contactText")}</p>
-            <Fade cascade damping={0.2} direction="up">
-              <p className={styles.contactEmail}>diginowmne@gmail.com</p>
-              <p className={styles.contactAddress}>Podgorica, Montenegro</p>
-            </Fade>
+            <p
+              className={styles.contactText}
+              dangerouslySetInnerHTML={{ __html: t("contactText") }}
+            />
+            <div className={styles.contactInfo}>
+              <div className={styles.contactInfoContainer}>
+                <Fade
+                  cascade
+                  damping={0.2}
+                  direction="up"
+                  triggerOnce
+                  delay={500}
+                >
+                  <p className={styles.contactEmail}>diginowmne@gmail.com</p>
+                  <p className={styles.contactAddress}>Podgorica, Montenegro</p>
+                </Fade>
+              </div>
+
+              <div className={styles.socials}>
+                <Fade
+                  cascade
+                  damping={0.2}
+                  direction="up"
+                  triggerOnce
+                  delay={1000}
+                >
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin className={styles.socialsIcon} />
+                  </a>
+
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram className={styles.socialsIcon} />
+                  </a>
+                </Fade>
+              </div>
+            </div>
           </Fade>
         </div>
-        <Slide direction="right" className={styles.contactFormContainer}>
+        <Slide
+          direction="right"
+          triggerOnce
+          className={styles.contactFormContainer}
+        >
           <div className={styles.contactForm}>
             <form onSubmit={handleSubmit} ref={formRef}>
               {/* Honeypot field - hidden from real users */}

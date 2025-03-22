@@ -94,7 +94,7 @@ export const translations = {
       "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane odjele. Svaki odjel se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
     contactTitle: "Kontaktirajte nas",
     contactText:
-      "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. Obratite nam se i počnimo saradnju!",
+      "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. <span class='highlight'>Obratite nam se i počnimo saradnju!</span>",
     contactName: "Ime",
     contactLastName: "Prezime",
     contactEmail: "Email",
