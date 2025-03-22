@@ -111,7 +111,9 @@ export default function ContactClient() {
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}
                   >
                     <p className={styles.serviceListItemTitle}>
-                      <span>Training Set for For-Profit Companies</span>
+                      <span>
+                        Training Set for <br /> For-Profit Companies
+                      </span>
                     </p>
                     <span className={styles.serviceListContent}>
                       Tailored to meet the competitive dynamics of the business

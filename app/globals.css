@@ -20,6 +20,7 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: var(--font-montserrat);
+  font-weight: 500;
   cursor: url("/cursor-default.png"), auto;
 }
 
