@@ -1,4 +1,3 @@
-import Navigation from "../../utils/navigation";
 import ContactClient from "./contactClient";
 
 export default function Contact({ params }) {

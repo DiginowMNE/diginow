@@ -124,6 +124,7 @@
 .button:hover {
   background: var(--background);
   color: var(--text);
+  cursor: url("/cursor-pointer-v3.png"), pointer;
 }
 
 @media (max-width: 1920px) {

@@ -20,12 +20,12 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: var(--font-montserrat);
-  cursor: none;
+  cursor: url("/cursor-default.png"), auto;
 }
 
 a,
 button {
-  cursor: none;
+  cursor: url("/cursor-pointer-v3.png"), pointer;
 }
 
 /* Add these styles for text selection */
@@ -94,6 +94,10 @@ button {
   padding: 0.5rem !important;
 }
 
+.MuiSelect-select:hover {
+  cursor: url("/cursor-pointer-v3.png"), pointer !important;
+}
+
 /* Menu Props Styling */
 .MuiMenu-paper {
   background-color: var(--text) !important;
@@ -109,6 +113,7 @@ button {
   padding: 0.4rem !important;
   transition: all 0.3s ease !important;
   background-color: var(--text) !important;
+  cursor: url("/cursor-pointer-v3.png"), pointer !important;
 }
 
 .MuiMenu-paper .MuiMenuItem-root:hover {
@@ -138,26 +143,10 @@ button {
 }
 
 @media (max-width: 900px) {
-  body {
-    cursor: default;
-  }
-
-  a,
-  button {
-    cursor: default;
-  }
 }
 
 @media (max-width: 1200px) and (min-height: 1920px),
   (max-width: 1024px) and (min-height: 1366px) {
-  body {
-    cursor: default;
-  }
-
-  a,
-  button {
-    cursor: default;
-  }
 }
 
 @media (max-width: 1920px) {

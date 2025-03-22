@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import CustomCursor from "./components/CustomCursor";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -128,7 +128,6 @@ export default function RootLayout({ children, params }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <CustomCursor />
       </body>
     </html>
   );
