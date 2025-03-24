@@ -8,12 +8,13 @@ import { useTranslation } from "../hooks/useTranslation";
 import { Fade } from "react-awesome-reveal";
 
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 
 const Navigation = ({ customClassName, customClassName2 }) => {
   const { t, locale } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isMobileDropdownActive, setIsMobileDropdownActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,15 +123,40 @@ const Navigation = ({ customClassName, customClassName2 }) => {
         >
           <Fade>
             <ul className={styles.mobileNavItems}>
-              <li className={styles.mobileNavItem}>
-                <Link
-                  href={`/${locale}/about`}
-                  onClick={() => setIsMobileNavOpen(false)}
-                  className={styles.mobileNavLinks}
-                >
+              <li
+                className={styles.mobileNavItem}
+                onClick={() =>
+                  setIsMobileDropdownActive(!isMobileDropdownActive)
+                }
+              >
+                <span className={styles.mobileNavLinks}>
                   {t("about")}
-                  <MdKeyboardArrowRight />
-                </Link>
+                  <span
+                    className={`${styles.mobileNavArrow} ${
+                      isMobileDropdownActive ? styles.openMobileIcon : ""
+                    }`}
+                  >
+                    <MdKeyboardArrowRight />
+                  </span>
+                </span>
+                <div
+                  className={`${styles.mobileDropdown} ${
+                    isMobileDropdownActive ? styles.mobileDropdownActive : ""
+                  }`}
+                >
+                  <div className={styles.mobileDropdownItem}>
+                    <Link href={`/${locale}/about`}>About Diginow</Link>
+                  </div>
+                  <div className={styles.mobileDropdownItem}>
+                    <Link href={`/${locale}/divisions`}>Our Divisions</Link>
+                  </div>
+                  <div className={styles.mobileDropdownItem}>
+                    <Link href={`/${locale}/team`}>Our Team</Link>
+                  </div>
+                  <div className={styles.mobileDropdownItem}>
+                    <Link href={`/${locale}/projects`}>Our Projects</Link>
+                  </div>
+                </div>
               </li>
               <li className={styles.mobileNavItem}>
                 <Link
@@ -139,7 +165,6 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                   className={styles.mobileNavLinks}
                 >
                   {t("services")}
-                  <MdKeyboardArrowRight />
                 </Link>
               </li>
               <li className={styles.mobileNavItem}>
@@ -149,7 +174,6 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                   className={styles.mobileNavLinks}
                 >
                   {t("contact")}
-                  <MdKeyboardArrowRight />
                 </Link>
               </li>
             </ul>
