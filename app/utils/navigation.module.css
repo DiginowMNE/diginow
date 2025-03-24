@@ -221,7 +221,7 @@
 
 @media (max-width: 960px) {
   .nav {
-    height: 7vh;
+    height: 10vh;
     padding: 0 4rem;
     background: var(--background);
     z-index: 1000;
@@ -263,7 +263,7 @@
     will-change: transform;
     z-index: 999;
     position: fixed;
-    top: 7vh;
+    top: 10vh;
     left: 0;
     right: 0;
     bottom: 0;
@@ -274,7 +274,7 @@
   .mobileNavItemsContainer.open {
     transform: translateX(0);
     pointer-events: auto;
-    height: 93vh;
+    height: 90vh;
   }
 
   .mobileNavItemsContainer.closed {
@@ -292,7 +292,6 @@
   }
 
   .mobileNavItem {
-    font-size: 1.5rem;
     color: var(--text);
     padding: 1rem 0;
     text-decoration: none;
@@ -303,6 +302,7 @@
     align-items: center;
     justify-content: space-between;
     color: var(--text);
+    font-size: 1.5rem;
   }
 
   .mobileNavArrow {
@@ -358,10 +358,10 @@
   }
 
   .image {
-    width: 100px;
+    width: 140px;
   }
   .mobileNavToggleIcon {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .mobileNavItem {
     font-size: 1.2rem;
@@ -378,7 +378,7 @@
     height: 92vh;
   }
   .image {
-    width: 80px;
+    width: 120px;
   }
 
   .mobileNavItems,
@@ -407,7 +407,7 @@
   }
 
   .image {
-    width: 70px;
+    width: 100px;
   }
   .mobileNavItem {
     font-size: 1rem;
