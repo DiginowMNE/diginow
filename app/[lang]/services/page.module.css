@@ -25,6 +25,7 @@
 
 .service {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   gap: 3rem;
@@ -42,11 +43,18 @@
   color: var(--light-blue);
 }
 
+.serviceTypeBlue {
+  color: var(--blue);
+}
+
 .serviceTitle {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.1;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .serviceTitleDigitalization {
@@ -60,28 +68,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  gap: 3rem;
   justify-content: center;
   align-items: flex-start;
 }
 
 .serviceContent {
-  width: 45%;
-  font-size: 0.9rem;
-}
-
-.serviceListContainer {
-  width: 55%;
-}
-
-.serviceContentDigitalization {
-  width: 55%;
-}
-
-.serviceListContainerDigitalization {
-  width: 45%;
+  font-size: 1rem;
 }
 
 .serviceListItem {
@@ -91,18 +85,34 @@
   align-items: flex-start;
   justify-content: center;
   border-radius: 0.5rem;
-  padding: 1.5rem;
+  padding: 2rem;
   border: 2px solid var(--background);
+  width: 50%;
+  transition: all 0.3s ease;
+}
+
+.serviceListItem:hover {
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .serviceListItemDigitalization {
   background-color: var(--background);
   color: var(--light-blue);
+  border-color: var(--light-blue);
+}
+
+.serviceListItemDigitalization:hover {
+  background-color: var(--light-blue);
+  color: var(--background);
+}
+
+.serviceListItemDigitalization:hover .serviceListItemNumber {
+  color: var(--text);
 }
 
 .serviceListItemContent {
   border-radius: 0.5rem;
-  font-size: 0.9rem;
   line-height: 1;
 }
 
@@ -113,8 +123,12 @@
 .serviceListItemNumber {
   font-size: 3rem;
   line-height: 1;
-  color: var(--background);
+  color: var(--light-blue);
   margin-bottom: 1rem;
+}
+
+.serviceListItemNumberDigitalization {
+  color: var(--text);
 }
 
 .serviceSubtitle {
@@ -139,7 +153,7 @@
 }
 
 .serviceListContent {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1;
 }
 

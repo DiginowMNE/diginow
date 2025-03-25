@@ -89,6 +89,37 @@
   color: var(--light-blue);
 }
 
+.aboutUsContentText {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem 4rem;
+}
+
+.aboutUsContentText p:first-of-type {
+  margin-bottom: 1rem;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.aboutUsContentText p:nth-of-type(2),
+.aboutUsContentText p:nth-of-type(3) {
+  border: 2px solid var(--background);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+}
+
+.highlight {
+  font-weight: 900;
+  color: var(--background);
+}
+
+.aboutUsContentText p svg {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
 .divisionsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

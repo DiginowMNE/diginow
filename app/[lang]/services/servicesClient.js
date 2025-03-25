@@ -11,10 +11,13 @@ import { Html5OriginalWordmark } from "devicons-react";
 import { Css3OriginalWordmark } from "devicons-react";
 import { NextjsOriginalWordmark } from "devicons-react";
 import { NodejsOriginalWordmark } from "devicons-react";
+import { FigmaOriginal } from "devicons-react";
 import { useEffect, useState } from "react";
 
-import { FaBuildingNgo } from "react-icons/fa6";
+import { HiSpeakerphone } from "react-icons/hi";
 import { FaSuitcase } from "react-icons/fa";
+import { HiServer, HiTemplate } from "react-icons/hi";
+import { HiTerminal } from "react-icons/hi";
 
 export default function ContactClient() {
   const { t } = useTranslation();
@@ -59,7 +62,9 @@ export default function ContactClient() {
           <div className={styles.service}>
             <div className={styles.serviceContent}>
               <Fade triggerOnce direction="up" cascade damping={0.2}>
-                <h2 className={styles.serviceType}>
+                <h2
+                  className={`${styles.serviceType} ${styles.serviceTypeBlue}`}
+                >
                   Project Management Training
                 </h2>
                 <h3 className={styles.serviceTitle}>
@@ -74,8 +79,8 @@ export default function ContactClient() {
                 </p>
               </Fade>
             </div>
-            <Slide
-              direction="right"
+            <Fade
+              direction="up"
               cascade
               damping={0.2}
               triggerOnce
@@ -86,7 +91,7 @@ export default function ContactClient() {
                   <div
                     className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
                   >
-                    <FaBuildingNgo />
+                    <HiSpeakerphone />
                   </div>
                   <div
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}
@@ -126,7 +131,7 @@ export default function ContactClient() {
                   </div>
                 </li>
               </ul>
-            </Slide>
+            </Fade>
           </div>
           <div className={`${styles.service} ${styles.digitalization}`}>
             <div
@@ -157,12 +162,16 @@ export default function ContactClient() {
             <div
               className={`${styles.serviceListContainer} ${styles.serviceListContainerDigitalization}`}
             >
-              <Slide direction="right" cascade damping={0.2} triggerOnce>
+              <Fade direction="up" cascade damping={0.2} triggerOnce>
                 <ul className={styles.serviceList}>
                   <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
-                    <div className={styles.serviceListItemNumber}>1.</div>
+                    <div
+                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
+                    >
+                      <HiServer />
+                    </div>
                     <div className={styles.serviceListItemContent}>
                       <p className={styles.serviceListItemTitle}>
                         Digitalization Solutions for NGOs
@@ -176,7 +185,11 @@ export default function ContactClient() {
                   <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
-                    <div className={styles.serviceListItemNumber}>2.</div>
+                    <div
+                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
+                    >
+                      <HiTemplate />
+                    </div>
                     <div className={styles.serviceListItemContent}>
                       <p className={styles.serviceListItemTitle}>
                         Digitalization Strategies for SMEs
@@ -188,13 +201,16 @@ export default function ContactClient() {
                     </div>
                   </li>
                 </ul>
-              </Slide>
+              </Fade>
             </div>
           </div>
           <div className={styles.serviceWeb}>
             <Fade triggerOnce direction="up" cascade damping={0.2}>
-              <h2 className={styles.serviceType}>Web Development & Design</h2>
+              <h2 className={`${styles.serviceType} ${styles.serviceTypeBlue}`}>
+                Web Development & Design
+              </h2>
               <h3 className={styles.serviceTitle}>
+                <HiTerminal />
                 Web Solutions That Reflect Your Goals
               </h3>
               <div className={styles.webText}>
@@ -240,6 +256,7 @@ export default function ContactClient() {
                   size={iconSize}
                   className={styles.webIconItem}
                 />
+                <FigmaOriginal size={iconSize} className={styles.webIconItem} />
               </Fade>
             </div>
           </div>

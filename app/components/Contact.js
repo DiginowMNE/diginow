@@ -16,7 +16,10 @@ const Contact = () => {
         <h1 className={styles.contactTitle}>{t("contactTitle")}</h1>
       </Fade>
       <Fade direction="up" triggerOnce>
-        <p className={styles.contactText}>{t("contactText")}</p>
+        <p
+          className={styles.contactText}
+          dangerouslySetInnerHTML={{ __html: t("contactText") }}
+        />
       </Fade>
       <Fade direction="up" triggerOnce className={styles.contactButton}>
         <Link href={`/${locale}/contact`} className={styles.contactButtonText}>
