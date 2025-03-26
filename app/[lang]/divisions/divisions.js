@@ -25,39 +25,43 @@ const Divisions = () => {
               clients receive customized and effective solutions to their unique
               challenges.
             </h2>
-            <p className={styles.divisionsDescription}>
-              Diginow is structured into specialized divisions to provide
-              focused expertise in key areas of digital transformation,
-              consultancy, and training. Our divisions include:
-            </p>
-            <Fade cascade damping={0.2} direction="up" triggerOnce>
-              <div className={styles.divisionsContainer}>
-                <div>
-                  <h3>Project Management Training</h3>
-                  <p>
-                    Providing comprehensive training programs designed to equip
-                    professionals with essential project management skills,
-                    including PMP certification courses tailored for NGOs and
-                    businesses.
-                  </p>
-                </div>
-                <div>
-                  <h3>Digitalization Consultancy</h3>
-                  <p>
-                    Helping organizations streamline operations, adopt
-                    innovative digital tools, and create sustainable digital
-                    transformation strategies.
-                  </p>
-                </div>
-                <div>
-                  <h3>Web Development & Design</h3>
-                  <p>
-                    Crafting user-friendly, high-performance websites that align
-                    with business goals and enhance digital presence.
-                  </p>
-                </div>
+            <div className={styles.divisionsContainer}>
+              <Fade cascade damping={0.2} direction="up" triggerOnce>
+                <p className={styles.divisionsDescription}>
+                  Diginow is structured into specialized divisions to provide
+                  focused expertise in key areas of digital transformation,
+                  consultancy, and training. Our divisions include:
+                </p>
+              </Fade>
+              <div className={styles.divisionsItemContainer}>
+                <Fade cascade damping={0.2} direction="up" triggerOnce>
+                  <div className={styles.divisionsItem}>
+                    <h3>Project Management Training</h3>
+                    <p className={styles.divisionsItemDescription}>
+                      Providing comprehensive training programs designed to
+                      equip professionals with essential project management
+                      skills, including PMP certification courses tailored for
+                      NGOs and businesses.
+                    </p>
+                  </div>
+                  <div className={styles.divisionsItem}>
+                    <h3>Digitalization Consultancy</h3>
+                    <p className={styles.divisionsItemDescription}>
+                      Helping organizations streamline operations, adopt
+                      innovative digital tools, and create sustainable digital
+                      transformation strategies.
+                    </p>
+                  </div>
+                  <div className={styles.divisionsItem}>
+                    <h3>Web Development & Design</h3>
+                    <p className={styles.divisionsItemDescription}>
+                      Crafting user-friendly, high-performance websites that
+                      align with business goals and enhance digital presence.
+                    </p>
+                  </div>
+                </Fade>
               </div>
-            </Fade>
+            </div>
           </Fade>
         </div>
       </div>

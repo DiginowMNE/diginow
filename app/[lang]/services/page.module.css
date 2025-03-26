@@ -33,7 +33,8 @@
 
 .service,
 .serviceWeb {
-  padding: 8rem 10rem;
+  padding: 6rem 10rem;
+  overflow: hidden;
 }
 
 .serviceType {
@@ -94,6 +95,7 @@
 .serviceListItem:hover {
   background-color: var(--background);
   color: var(--text);
+  transform: translateY(-10px);
 }
 
 .serviceListItemDigitalization {
@@ -105,6 +107,7 @@
 .serviceListItemDigitalization:hover {
   background-color: var(--light-blue);
   color: var(--background);
+  transform: translateY(-10px);
 }
 
 .serviceListItemDigitalization:hover .serviceListItemNumber {

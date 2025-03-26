@@ -86,8 +86,8 @@ export default function ContactClient() {
               triggerOnce
               className={styles.serviceListContainer}
             >
-              <ul className={styles.serviceList}>
-                <li className={styles.serviceListItem}>
+              <div className={styles.serviceList}>
+                <div className={styles.serviceListItem}>
                   <div
                     className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
                   >
@@ -105,8 +105,8 @@ export default function ContactClient() {
                       project cycle management to fundraising strategies.
                     </span>
                   </div>
-                </li>
-                <li className={styles.serviceListItem}>
+                </div>
+                <div className={styles.serviceListItem}>
                   <div
                     className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
                   >
@@ -129,8 +129,8 @@ export default function ContactClient() {
                       learning experience.
                     </span>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </Fade>
           </div>
           <div className={`${styles.service} ${styles.digitalization}`}>
@@ -163,8 +163,8 @@ export default function ContactClient() {
               className={`${styles.serviceListContainer} ${styles.serviceListContainerDigitalization}`}
             >
               <Fade direction="up" cascade damping={0.2} triggerOnce>
-                <ul className={styles.serviceList}>
-                  <li
+                <div className={styles.serviceList}>
+                  <div
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
                     <div
@@ -181,8 +181,8 @@ export default function ContactClient() {
                         fundraising tools to operational efficiency strategies.
                       </span>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
                     <div
@@ -199,8 +199,8 @@ export default function ContactClient() {
                         optimize your business processes.
                       </span>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </Fade>
             </div>
           </div>

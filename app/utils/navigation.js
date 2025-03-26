@@ -66,18 +66,15 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                     scrolled ? styles.scrolledDropdown : ""
                   }`}
                 >
-                  <div className={styles.dropdownItem}>
-                    <Link href={`/${locale}/about`}>About Us</Link>
-                  </div>
-                  <div className={styles.dropdownItem}>
-                    <Link href={`/${locale}/divisions`}>Our Divisions</Link>
-                  </div>
-                  <div className={styles.dropdownItem}>
-                    <Link href={`/${locale}/team`}>Our Team</Link>
-                  </div>
-                  <div className={styles.dropdownItem}>
-                    <Link href={`/${locale}/projects`}>Our Projects</Link>
-                  </div>
+                  <Link href={`/${locale}/divisions`}>
+                    <div className={styles.dropdownItem}>Our Divisions</div>
+                  </Link>
+                  <Link href={`/${locale}/team`}>
+                    <div className={styles.dropdownItem}>Our Team</div>
+                  </Link>
+                  <Link href={`/${locale}/projects`}>
+                    <div className={styles.dropdownItem}>Our Projects</div>
+                  </Link>
                 </div>
               </li>
               <li className={styles.navItem}>

@@ -42,24 +42,30 @@ const AboutClient = () => {
                 ensuring that our clients stay ahead in an ever-evolving
                 marketplace.
               </p>
-              <p>
-                <GoGoal />
-                <span className={styles.highlight}>Our mission</span> is to
-                simplify digital transformation, enhance project management
-                efficiency, and provide seamless web solutions that align with
-                our clients&#39; objectives. Whether it&#39;s through expert-led
-                training, consultancy, or technical implementation, we are
-                dedicated to delivering excellence and driving sustainable
-                growth for our partners.
-              </p>
-              <p>
-                <FaUsers />
-                <span className={styles.highlight}>Our team</span> is composed
-                of highly skilled professionals with extensive industry
-                experience. We are passionate about innovation, adaptability,
-                and strategic thinking, ensuring that every project we undertake
-                results in tangible success for our clients.
-              </p>
+              <div className={styles.aboutUsContentTextItem}>
+                <div className={styles.aboutUsContentTextItemTitle}>
+                  <GoGoal />{" "}
+                  <span className={styles.highlight}>Our mission</span>
+                </div>
+                Our mission is to simplify digital transformation, enhance
+                project management efficiency, and provide seamless web
+                solutions that align with our clients&#39; objectives. Whether
+                it&#39;s through expert-led training, consultancy, or technical
+                implementation, we are dedicated to delivering excellence and
+                driving sustainable growth for our partners.
+              </div>
+              <div className={styles.aboutUsContentTextItem}>
+                <div className={styles.aboutUsContentTextItemTitle}>
+                  {" "}
+                  <FaUsers />
+                  <span className={styles.highlight}>Our team</span>
+                </div>
+                Our team is composed of highly skilled professionals with
+                extensive industry experience. We are passionate about
+                innovation, adaptability, and strategic thinking, ensuring that
+                every project we undertake results in tangible success for our
+                clients.
+              </div>
             </div>
           </Fade>
         </div>

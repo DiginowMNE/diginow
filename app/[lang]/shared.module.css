@@ -18,7 +18,7 @@
 
 .aboutUsContent {
   padding: 5rem 10rem 8rem 10rem;
-  overflow-y: auto;
+  overflow-y: hidden;
   height: 100%;
   width: 100%;
 }
@@ -41,8 +41,6 @@
   margin-bottom: 1rem;
   text-transform: lowercase;
   display: inline-block;
-  margin-bottom: 3rem;
-  padding-bottom: 0.5rem;
   text-transform: capitalize;
   border-bottom: 3px solid var(--background);
   color: var(--background);
@@ -56,23 +54,13 @@
   color: var(--background);
 }
 
-.aboutUs.active,
-.ourDivisions.active,
-.ourTeam.active,
-.ourProjects.active {
-  display: block;
-  opacity: 1;
-  transform: translateX(0);
-  color: var(--background);
-}
-
 .aboutUsSubtitle,
 .divisionsSubtitle,
 .projectsSubtitle,
 .teamSubtitle {
   font-size: 3.5rem;
   font-weight: 900;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--background);
 }
 
@@ -96,12 +84,13 @@
   grid-row: 1 / 3;
 }
 
-.aboutUsContentText p:nth-of-type(2),
-.aboutUsContentText p:nth-of-type(3) {
+.aboutUsContentTextItem {
   border: 2px solid var(--background);
+  color: var(--background);
   padding: 2rem;
   border-radius: 0.5rem;
   height: fit-content;
+  transition: all 0.3s ease;
 }
 
 .highlight {
@@ -109,40 +98,74 @@
   color: var(--background);
 }
 
-.aboutUsContentText p svg {
-  font-size: 4rem;
+.aboutUsContentTextItem:hover {
+  background-color: var(--background);
+  color: var(--text);
+  transform: translateY(-10px);
+}
+
+.aboutUsContentTextItem:hover .highlight {
+  color: var(--light-blue);
+}
+
+.aboutUsContentTextItemTitle {
+  font-size: 2rem;
   margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  line-height: 1;
 }
 
 .divisionsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 2rem 0;
-  align-items: start;
+  width: 100%;
 }
 
-.divisionsContainer div {
-  background-color: rgb(213, 213, 213);
-  padding: 1.5rem;
+.divisionsDescription {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.divisionsItemContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.divisionsItem {
+  border: 2px solid var(--background);
+  padding: 2rem;
   border-radius: 1rem;
   color: var(--background);
   transition: all 0.3s ease;
   height: fit-content;
   display: flex;
   flex-direction: column;
+  grid-row: 2 / 3;
 }
 
-.divisionsContainer div:hover {
-  background-color: rgb(203, 203, 203);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+.divisionsItem:hover {
+  background-color: var(--background);
+  color: var(--text);
+  transform: translateY(-10px);
 }
 
-.divisionsContainer div h3 {
+.divisionsItemDescription {
+  transition: color 0.3s ease;
+}
+
+.divisionsItem:hover .divisionsItemDescription {
+  color: var(--text);
+}
+
+.divisionsItem h3 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  color: var(--blue);
 }
 
 .teamContainer {
