@@ -67,13 +67,13 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                   }`}
                 >
                   <Link href={`/${locale}/divisions`}>
-                    <div className={styles.dropdownItem}>Our Divisions</div>
+                    <div className={styles.dropdownItem}>{t("divisions")}</div>
                   </Link>
                   <Link href={`/${locale}/team`}>
-                    <div className={styles.dropdownItem}>Our Team</div>
+                    <div className={styles.dropdownItem}>{t("team")}</div>
                   </Link>
                   <Link href={`/${locale}/projects`}>
-                    <div className={styles.dropdownItem}>Our Projects</div>
+                    <div className={styles.dropdownItem}>{t("projects")}</div>
                   </Link>
                 </div>
               </li>

@@ -1,6 +1,9 @@
 export const translations = {
   en: {
     about: "About Us",
+    divisions: "Our Divisions",
+    projects: "Our Projects",
+    team: "Our Team",
     services: "Our Services",
     contact: "Contact Us",
     herotitle: "Experience the Future Now",
@@ -53,10 +56,23 @@ export const translations = {
     contactReasonProjectManagement: "Project Management",
     contactReasonDigitalizationConsultancy: "Digitalization Consultancy",
     contactReasonOther: "Other",
+    aboutTitle:
+      "At Diginow, we believe in fostering long-term partnerships,<span class='highlight'> tailoring our services to meet the unique needs</span> of each organization.",
+    aboutSubtitle:
+      "<span class='highlight-font'>Diginow</span> is a dynamic and innovative company committed to empowering small and medium-sized enterprises (SMEs) and non-governmental organizations (NGOs) through cutting-edge digital solutions, strategic consultancy, and specialized training. With a firm foundation in engineering and technology, we bridge the gap between traditional business models and the digital future, ensuring that our clients stay ahead in an ever-evolving marketplace.",
+    aboutCardTitleOne: "Our mission",
+    aboutCardTextOne:
+      "Our mission is to simplify digital transformation, enhance project management efficiency, and provide seamless web solutions that align with our clients&#39; objectives. Whether it&#39;s through expert-led training, consultancy, or technical implementation, we are dedicated to delivering excellence and driving sustainable growth for our partners.",
+    aboutCardTitleTwo: "Our team",
+    aboutCardTextTwo:
+      "Our team is composed of highly skilled professionals with extensive industry experience. We are passionate about innovation, adaptability, and strategic thinking, ensuring that every project we undertake results in tangible success for our clients.",
   },
   sr: {
     about: "O nama",
     services: "Naše Usluge",
+    divisions: "Naši Odjeli",
+    projects: "Naši Projekti",
+    team: "Naš Tim",
     contact: "Kontaktirajte nas",
     herotitle:
       "<span class='highlight-font'>Iskusite </span>Budućnost <span class='highlight-font'>Sada</span>",
@@ -109,10 +125,23 @@ export const translations = {
     contactReasonProjectManagement: "Upravljanje projektima",
     contactReasonDigitalizationConsultancy: "Konsultacija za digitalizaciju",
     contactReasonOther: "Ostalo",
+    aboutTitle:
+      "U Diginow-u vjerujemo u dugoročna partnerstva, <span class='highlight'>prilagođavajući naše usluge jedinstvenim potrebama</span> svake organizacije.",
+    aboutSubtitle:
+      "<span class='highlight-font'>Diginow</span> je dinamična i inovativna kompanija posvećena osnaživanju malih i srednjih preduzeća (MSP) i nevladinih organizacija (NVO) kroz najsavremenija digitalna rješenja, strateške konsultacije i specijalizovane obuke. Sa snažnim temeljima u inženjerstvu i tehnologiji, spajamo tradicionalne poslovne modele sa digitalnom budućnošću, osiguravajući da naši klijenti budu korak ispred u stalno promjenjivom tržištu.",
+    aboutCardTitleOne: "Naša misija",
+    aboutCardTextOne:
+      "Naša misija je da pojednostavimo digitalnu transformaciju, povećamo efikasnost upravljanja projektima i pružimo besprijekorna web rješenja koja su usklađena sa ciljevima naših klijenata. Bilo kroz stručne obuke, konsultacije ili tehničku implementaciju, posvećeni smo pružanju vrhunskih rješenja i podsticanju održivog rasta naših partnera.",
+    aboutCardTitleTwo: "Naš tim",
+    aboutCardTextTwo:
+      "Naš tim čine visoko kvalifikovani profesionalci sa bogatim industrijskim iskustvom. Strastveni smo u pogledu inovacija, prilagodljivosti i strateškog razmišljanja, osiguravajući da svaki projekat koji preuzmemo rezultira opipljivim uspjehom za naše klijente.",
   },
   tr: {
     about: "Hakkımızda",
     services: "Hizmetlerimiz",
+    divisions: "Alt Şirketlerimiz",
+    projects: "Projelerimiz",
+    team: "Ekibimiz",
     contact: "İletişim",
     herotitle: "Geleceği Şimdi Yaşayın",
     herosubtitle:
@@ -164,5 +193,15 @@ export const translations = {
     contactReasonProjectManagement: "Proje Yönetimi",
     contactReasonDigitalizationConsultancy: "Dijitalleşme Danışmanlığı",
     contactReasonOther: "Diğer",
+    aboutTitle:
+      "Diginow olarak uzun vadeli iş ortaklıkları kurmaya inanıyoruz.<span class='highlight'> Hizmetlerimizi her organizasyonun benzersiz </span>ihtiyaçlarına göre özelleştirerek.",
+    aboutSubtitle:
+      "<span class='highlight-font'>Diginow</span> küçük ve orta ölçekli işletmeler (KOBİ&#39;ler) ile sivil toplum kuruluşlarını (STK&#39;lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
+    aboutCardTitleOne: "Misyonumuz",
+    aboutCardTextOne:
+      "Misyonumuz, küçük ve orta ölçekli işletmeler (KOBİ&#39;ler) ile sivil toplum kuruluşlarını (STK&#39;lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
+    aboutCardTitleTwo: "Ekibimiz",
+    aboutCardTextTwo:
+      "Ekibimiz, sektörde geniş deneyime sahip yetenekli profesyonellerden oluşmaktadır. Yenilikçilik, uyum sağlama ve stratejik düşünme konusundaki tutkumuzla, üstlendiğimiz her projede müşterilerimiz için somut başarılar yaratıyoruz.",
   },
 };

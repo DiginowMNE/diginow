@@ -58,6 +58,12 @@
   gap: 1rem;
 }
 
+.serviceContentText {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
 .serviceTitleDigitalization {
   font-size: 2.5rem;
   font-weight: 800;

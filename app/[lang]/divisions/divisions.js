@@ -2,6 +2,9 @@ import styles from "../shared.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import Footer from "../../utils/Footer";
 import Navigation from "../../utils/navigation";
+import { MdWeb } from "react-icons/md";
+import { IoMdChatboxes } from "react-icons/io";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const Divisions = () => {
   return (
@@ -36,7 +39,12 @@ const Divisions = () => {
               <div className={styles.divisionsItemContainer}>
                 <Fade cascade damping={0.2} direction="up" triggerOnce>
                   <div className={styles.divisionsItem}>
-                    <h3>Project Management Training</h3>
+                    <h3 className={styles.divisionsItemTitle}>
+                      <FaProjectDiagram
+                        className={styles.divisionsItemTitleIcon}
+                      />
+                      Project Management Training
+                    </h3>
                     <p className={styles.divisionsItemDescription}>
                       Providing comprehensive training programs designed to
                       equip professionals with essential project management
@@ -45,7 +53,12 @@ const Divisions = () => {
                     </p>
                   </div>
                   <div className={styles.divisionsItem}>
-                    <h3>Digitalization Consultancy</h3>
+                    <h3 className={styles.divisionsItemTitle}>
+                      <IoMdChatboxes
+                        className={styles.divisionsItemTitleIcon}
+                      />
+                      Digitalization Consultancy
+                    </h3>
                     <p className={styles.divisionsItemDescription}>
                       Helping organizations streamline operations, adopt
                       innovative digital tools, and create sustainable digital
@@ -53,7 +66,10 @@ const Divisions = () => {
                     </p>
                   </div>
                   <div className={styles.divisionsItem}>
-                    <h3>Web Development & Design</h3>
+                    <h3 className={styles.divisionsItemTitle}>
+                      <MdWeb className={styles.divisionsItemTitleIcon} />
+                      Web Development & Design
+                    </h3>
                     <p className={styles.divisionsItemDescription}>
                       Crafting user-friendly, high-performance websites that
                       align with business goals and enhance digital presence.

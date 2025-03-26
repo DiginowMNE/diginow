@@ -67,16 +67,18 @@ export default function ContactClient() {
                 >
                   Project Management Training
                 </h2>
-                <h3 className={styles.serviceTitle}>
-                  Master the Art of Project Management
-                </h3>
-                <p>
-                  Project management is one of the most critical skills in the
-                  business world. Diginow’s 35-hour PMP-focused training program
-                  is not only limited to exam preparation but also equips you
-                  with practical knowledge and techniques to succeed in
-                  real-world projects.
-                </p>
+                <div className={styles.serviceContentText}>
+                  <h3 className={styles.serviceTitle}>
+                    Master the Art of Project Management
+                  </h3>
+                  <p>
+                    Project management is one of the most critical skills in the
+                    business world. Diginow’s 35-hour PMP-focused training
+                    program is not only limited to exam preparation but also
+                    equips you with practical knowledge and techniques to
+                    succeed in real-world projects.
+                  </p>
+                </div>
               </Fade>
             </div>
             <Fade
@@ -141,30 +143,34 @@ export default function ContactClient() {
                 <h2 className={styles.serviceType}>
                   Digitalization Consultancy
                 </h2>
-                <h3
-                  className={`${styles.serviceTitle} ${styles.serviceTitleDigitalization}`}
-                >
-                  Digitalization is the key to the future success of businesses
-                  and NGOs.
-                </h3>
-                <p className={styles.digiText}>
-                  At Diginow, we analyze your processes, identify areas for
-                  improvement, and create digital transformation strategies
-                  tailored to your needs.
-                </p>
-                <p>
-                  All our digitalization projects are executed with a
-                  tailor-made approach, working closely with you to maximize the
-                  efficiency of your technological investments.
-                </p>
+                <div className={styles.serviceContentText}>
+                  <h3
+                    className={`${styles.serviceTitle} ${styles.serviceTitleDigitalization}`}
+                  >
+                    Digitalization is the key to the future success of
+                    businesses and NGOs.
+                  </h3>
+                  <div>
+                    <p className={styles.digiText}>
+                      At Diginow, we analyze your processes, identify areas for
+                      improvement, and create digital transformation strategies
+                      tailored to your needs.
+                    </p>
+                    <p>
+                      All our digitalization projects are executed with a
+                      tailor-made approach, working closely with you to maximize
+                      the efficiency of your technological investments.
+                    </p>
+                  </div>
+                </div>
               </Fade>
             </div>
             <div
               className={`${styles.serviceListContainer} ${styles.serviceListContainerDigitalization}`}
             >
               <Fade direction="up" cascade damping={0.2} triggerOnce>
-                <div className={styles.serviceList}>
-                  <div
+                <ul className={styles.serviceList}>
+                  <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
                     <div
@@ -181,8 +187,8 @@ export default function ContactClient() {
                         fundraising tools to operational efficiency strategies.
                       </span>
                     </div>
-                  </div>
-                  <div
+                  </li>
+                  <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
                     <div
@@ -199,8 +205,8 @@ export default function ContactClient() {
                         optimize your business processes.
                       </span>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </Fade>
             </div>
           </div>
