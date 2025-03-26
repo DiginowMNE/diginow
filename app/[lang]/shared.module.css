@@ -42,7 +42,6 @@
   text-transform: lowercase;
   display: inline-block;
   text-transform: capitalize;
-  border-bottom: 3px solid var(--background);
   color: var(--background);
 }
 
@@ -60,8 +59,9 @@
 .teamSubtitle {
   font-size: 3.5rem;
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--background);
+  line-height: 1.2;
 }
 
 .aboutUsSubtitle span,

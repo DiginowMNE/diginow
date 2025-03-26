@@ -1,17 +1,10 @@
-.subscription {
-  padding: 16rem 10rem;
-  padding: 16rem 10rem;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background-color: var(--background);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+.division {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
-.subscriptionTitle {
+.divisionTitle {
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -19,58 +12,55 @@
   color: var(--light-blue);
 }
 
-.subscriptionContent {
+.divisionContent {
   width: 100%;
 }
 
-.subscriptionTextContainer {
-  max-width: 40%;
+.divisionTextContainer {
+  width: 100%;
+  padding-left: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-right: 3rem;
 }
 
-.subscriptionSubtitle {
-  font-size: 4rem;
+.divisionSubtitle {
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1;
 }
 
-.subscriptionText {
+.divisionText {
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--text);
-  width: 60%;
   margin-bottom: 5rem;
-}
-
-.subscriptionImageContainer {
-  position: absolute;
-  top: 15%;
-  transform: translateY(-15%);
-  right: 0;
-  z-index: 2;
-  width: 50%;
-  will-change: transform;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.subscriptionImage {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  will-change: transform;
 }
+
+.divisionImageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.divisionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media (max-width: 768px) {
-  .subscription {
+  .division {
     padding: 4rem 2rem;
   }
 
-  .subscriptionContent {
+  .divisionContent {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .subscriptionTextContainer {
-    max-width: 100%;
   }
 }

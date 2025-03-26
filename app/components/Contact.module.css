@@ -1,6 +1,14 @@
+.contactContainer {
+  background-color: var(--text);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .contact {
-  padding: 13rem 10rem;
-  padding-top: 0rem;
+  padding-right: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 3rem;
 }
 
 .contactTitle {
@@ -8,13 +16,15 @@
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 3rem;
-  color: var(--light-blue);
+  color: var(--background);
 }
 
 .contactText {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 4rem;
+  line-height: 1.1;
+  color: var(--background);
 }
 
 .contactButton {
@@ -22,13 +32,13 @@
 }
 
 .contactButtonText {
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--background);
   padding: 1rem 2rem;
   border-radius: 1rem;
   font-size: 1.2rem;
   font-weight: 400;
   transition: all 0.4s ease;
-  color: var(--light-blue);
+  color: var(--background);
   display: flex;
   align-items: center;
   width: fit-content;
@@ -47,6 +57,21 @@
 }
 
 .contactButtonText:hover {
-  background-color: var(--light-blue);
-  color: var(--background);
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.contactImageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.contactImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

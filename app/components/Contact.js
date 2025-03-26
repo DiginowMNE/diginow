@@ -11,22 +11,34 @@ const Contact = () => {
   const { t, locale } = useTranslation();
 
   return (
-    <div className={styles.contact}>
-      <Fade direction="up" triggerOnce>
-        <h1 className={styles.contactTitle}>{t("contactTitle")}</h1>
-      </Fade>
-      <Fade direction="up" triggerOnce>
-        <p
-          className={styles.contactText}
-          dangerouslySetInnerHTML={{ __html: t("contactText") }}
+    <div className={styles.contactContainer}>
+      <div className={styles.contactImageContainer}>
+        <Image
+          src="/images/contact.jpg"
+          alt="Contact"
+          fill
+          priority
+          className={styles.contactImage}
         />
-      </Fade>
-      <Fade direction="up" triggerOnce className={styles.contactButton}>
-        <Link href={`/${locale}/contact`} className={styles.contactButtonText}>
-          {t("contact")}
-          <MdKeyboardArrowRight className={styles.contactButtonIcon} />
-        </Link>
-      </Fade>
+      </div>
+      <div className={styles.contact}>
+        <Fade cascade damping={0.2} direction="up" triggerOnce>
+          <h1 className={styles.contactTitle}>{t("contactTitle")}</h1>
+          <p
+            className={styles.contactText}
+            dangerouslySetInnerHTML={{ __html: t("contactText") }}
+          />
+          <div className={styles.contactButton}>
+            <Link
+              href={`/${locale}/contact`}
+              className={styles.contactButtonText}
+            >
+              {t("contact")}
+              <MdKeyboardArrowRight className={styles.contactButtonIcon} />
+            </Link>
+          </div>
+        </Fade>
+      </div>
     </div>
   );
 };
