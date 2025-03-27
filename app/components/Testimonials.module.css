@@ -175,8 +175,8 @@
 
 @media (max-width: 1600px) {
   .testimonials {
-    padding: 7rem 8rem;
-    padding-bottom: 10rem;
+    /* padding: 7rem 8rem;
+    padding-bottom: 10rem; */
   }
 
   .slide {
@@ -186,8 +186,8 @@
 
 @media (max-width: 1440px) {
   .testimonials {
-    padding: 6rem 8rem;
-    padding-bottom: 10rem;
+    /* padding: 6rem 8rem;
+    padding-bottom: 10rem; */
   }
 
   .testimonialsTitle {
@@ -216,8 +216,8 @@
 
 @media (max-width: 900px) {
   .testimonials {
-    padding: 5rem 5rem;
-    padding-bottom: 10rem;
+    /* padding: 5rem 5rem;
+    padding-bottom: 10rem; */
   }
 
   .testimonialsTitle {
@@ -245,8 +245,8 @@
 
 @media (max-width: 768px) {
   .testimonials {
-    padding: 4rem 4rem;
-    padding-bottom: 8rem;
+    /* padding: 4rem 4rem;
+    padding-bottom: 8rem; */
   }
 
   .testimonialsTitle {
@@ -266,8 +266,8 @@
 
 @media (max-width: 610px) {
   .testimonials {
-    padding: 5rem 3rem;
-    padding-bottom: 8rem;
+    /* padding: 5rem 3rem;
+    padding-bottom: 8rem; */
   }
 
   .button {
@@ -289,8 +289,8 @@
 
 @media (max-width: 485px) {
   .testimonials {
-    padding: 4rem 2rem;
-    padding-bottom: 6rem;
+    /* padding: 4rem 2rem;
+    padding-bottom: 6rem; */
   }
 
   .button {
@@ -310,8 +310,8 @@
 
 @media (max-width: 325px) {
   .testimonials {
-    padding: 3rem 1rem;
-    padding-bottom: 6rem;
+    /* padding: 3rem 1rem;
+    padding-bottom: 6rem; */
   }
 
   .text {
@@ -328,8 +328,8 @@
 @media (max-width: 1200px) and (min-height: 1920px),
   (max-width: 1024px) and (min-height: 1366px) {
   .testimonials {
-    padding: 10rem 5rem;
-    padding-bottom: 14rem;
+    /* padding: 10rem 5rem;
+    padding-bottom: 14rem; */
   }
 
   .testimonialsTitle {
@@ -363,8 +363,8 @@
 
 @media (max-width: 1024px) and (min-height: 1366px) {
   .testimonials {
-    padding: 8rem 5rem;
-    padding-bottom: 13rem;
+    /* padding: 8rem 5rem;
+    padding-bottom: 13rem; */
   }
 
   .text {

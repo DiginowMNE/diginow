@@ -31,7 +31,7 @@ const Solutions = () => {
         <Image
           src={"/images/laptop.png"}
           alt="solutions"
-          width={1200}
+          width={1500}
           height={500}
           className={styles.imageLaptop}
         />
@@ -46,7 +46,7 @@ const Solutions = () => {
         <Image
           src={"/images/phone.png"}
           alt="solutions"
-          width={350}
+          width={450}
           height={500}
           className={styles.imagePhone}
         />

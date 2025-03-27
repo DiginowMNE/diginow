@@ -110,7 +110,7 @@ const Services = () => {
           </div>
         </Fade>
       </Fade>
-      <Fade direction="up" triggerOnce>
+      <Fade direction="up" delay={1000} triggerOnce>
         <div className={styles.servicesButton}>
           <Link
             href={`/${locale}/services`}
