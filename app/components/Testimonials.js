@@ -133,7 +133,7 @@ const Testimonials = () => {
 
   return (
     <div className={styles.testimonials} ref={ref}>
-      <motion.div
+      {/* <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -170,7 +170,7 @@ const Testimonials = () => {
             ))}
           </Slider>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

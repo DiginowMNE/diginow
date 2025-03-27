@@ -1,9 +1,11 @@
 .testimonials {
-  padding: 12rem 10rem;
+  /* padding: 12rem 10rem;
   padding-top: 7rem;
   background-color: var(--text);
   color: var(--background);
-  position: relative;
+  position: relative; */
+  height: 10px;
+  background: var(--light-blue);
 }
 
 .testimonialsTitle {

@@ -37,6 +37,7 @@ const AboutClient = () => {
                 dangerouslySetInnerHTML={{
                   __html: t("aboutSubtitle"),
                 }}
+                className={styles.aboutUsContentTextParagraph}
               />
               <div className={styles.aboutUsContentTextItem}>
                 <div className={styles.aboutUsContentTextItemTitle}>

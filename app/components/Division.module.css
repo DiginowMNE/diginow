@@ -22,6 +22,8 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   padding-right: 3rem;
+  display: grid;
+  max-width: 900px;
 }
 
 .divisionSubtitle {
@@ -35,7 +37,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   width: 100%;
 }
 
@@ -52,6 +54,40 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.divisionButton {
+  display: flex;
+}
+
+.divisionButtonText {
+  border: 1px solid var(--light-blue);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: all 0.4s ease;
+  color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.divisionButtonIcon {
+  display: inline;
+  transition: transform 0.4s ease;
+  margin-left: 0.5rem;
+}
+
+.divisionButtonText:hover .divisionButtonIcon {
+  transform: translateX(10px);
+}
+
+.divisionButtonText:hover {
+  background-color: var(--light-blue);
+  color: var(--background);
 }
 
 @media (max-width: 768px) {

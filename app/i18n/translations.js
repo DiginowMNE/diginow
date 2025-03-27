@@ -39,6 +39,7 @@ export const translations = {
     divisionSubtitle: "Discover the Diginow Family",
     divisionText:
       "Diginow offers a comprehensive range of solutions through its specialized subsidiaries. Each division focuses on providing the best services in its area of expertise. Explore the wide range of services under the Diginow umbrella.",
+    divisionButtonText: "Learn more about our divisions",
     contactTitle: "Get in Touch",
     contactText:
       "Whether you want to inquire about a project or have a question, we are happy to talk to you. We are here to provide solutions that meet your needs. Reach out and let’s start working together.",
@@ -108,6 +109,7 @@ export const translations = {
     divisionSubtitle: "Otkrijte Diginow porodicu",
     divisionText:
       "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane odjele. Svaki odjel se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
+    divisionButtonText: "Saznajte više o našim odjelima",
     contactTitle: "Kontaktirajte nas",
     contactText:
       "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. <span class='highlight'>Obratite nam se i počnimo saradnju!</span>",
@@ -176,9 +178,10 @@ export const translations = {
     divisionSubtitle: "Diginow Ailesini Keşfedin",
     divisionText:
       "Diginow, farklı alanlarda uzmanlaşmış alt şirketleriyle, müşterilerine kapsamlı çözümler sunar. Her şirket, kendi uzmanlık alanında en iyi hizmeti vermek için çalışır. Diginow çatısı altındaki geniş hizmet yelpazemizi keşfedin.",
+    divisionButtonText: "Hizmetler hakkında daha fazla bilgi edinin",
     contactTitle: "Bize Ulaşın",
     contactText:
-      "İster bir proje hakkında bilgi almak isteyin, ister bir sorunuz olsun, sizinle konuşmaktan mutluluk duyarız. İhtiyaçlarınıza uygun çözümler sunmak için buradayız. Bize ulaşın, birlikte çalışmaya başlayalım.",
+      "İster bir proje hakkında bilgi almak isteyin, ister bir sorunuz olsun, sizinle konuşmaktan mutluluk duyarız. İhtiyaçlarınıza uygun çözümler sunmak için buradayız. <span class='highlight'>Bize ulaşın, birlikte çalışmaya başlayalım.</span>",
     contactName: "İsim",
     contactLastName: "Soyisim",
     contactEmail: "Email",

@@ -34,7 +34,6 @@ const Hero = () => {
         >
           <h1>
             <span dangerouslySetInnerHTML={{ __html: t("herotitle") }} />
-            <span className={styles.dot}>.</span>
           </h1>
         </Fade>
         <Fade

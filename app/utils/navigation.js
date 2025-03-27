@@ -6,9 +6,8 @@ import Link from "next/link";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useTranslation } from "../hooks/useTranslation";
 import { Fade } from "react-awesome-reveal";
-
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Navigation = ({ customClassName, customClassName2 }) => {
   const { t, locale } = useTranslation();
@@ -18,32 +17,41 @@ const Navigation = ({ customClassName, customClassName2 }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrolled]);
+  }, []);
 
   useEffect(() => {
-    if (isMobileNavOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isMobileNavOpen ? "hidden" : "";
   }, [isMobileNavOpen]);
+
+  const navClasses = `${styles.nav} ${scrolled ? styles.scrolled : ""} ${
+    customClassName2 || ""
+  }`;
+  const containerClasses = `${styles.navContainer} ${customClassName || ""}`;
+  const mobileNavClasses = `${styles.mobileNavItemsContainer} ${
+    isMobileNavOpen ? styles.open : styles.closed
+  }`;
+  const mobileDropdownClasses = `${styles.mobileDropdown} ${
+    isMobileDropdownActive ? styles.mobileDropdownActive : ""
+  }`;
+  const mobileArrowClasses = `${styles.mobileNavArrow} ${
+    isMobileDropdownActive ? styles.openMobileIcon : ""
+  }`;
+
+  const handleMobileNavToggle = () => setIsMobileNavOpen(!isMobileNavOpen);
+  const handleMobileDropdownToggle = () =>
+    setIsMobileDropdownActive(!isMobileDropdownActive);
+
+  const closeMobileNav = () => setIsMobileNavOpen(false);
 
   return (
     <div>
-      <nav className={`${styles.navContainer} ${customClassName}`}>
-        <div
-          className={`${styles.nav} ${
-            scrolled ? styles.scrolled : ""
-          } ${customClassName2}`}
-        >
+      <nav className={containerClasses}>
+        <div className={navClasses}>
           <Fade direction="left" triggerOnce className={styles.navLogo}>
             <Link href={`/${locale}`}>
               <Image
@@ -55,6 +63,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
               />
             </Link>
           </Fade>
+
           <Fade cascade damping={0.2} triggerOnce>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
@@ -89,18 +98,20 @@ const Navigation = ({ customClassName, customClassName2 }) => {
               </li>
             </ul>
           </Fade>
+
           <Fade direction="right" triggerOnce>
             <LanguageSwitcher
               containerClassName={styles.desktopLanguageSwitcher}
             />
           </Fade>
+
           <Fade
             direction="right"
             triggerOnce
             className={styles.mobileNavToggle}
           >
             <button
-              onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+              onClick={handleMobileNavToggle}
               aria-label="Toggle navigation"
             >
               <div
@@ -113,34 +124,21 @@ const Navigation = ({ customClassName, customClassName2 }) => {
             </button>
           </Fade>
         </div>
-        <div
-          className={`${styles.mobileNavItemsContainer} ${
-            isMobileNavOpen ? styles.open : styles.closed
-          }`}
-        >
+
+        <div className={mobileNavClasses}>
           <Fade>
             <ul className={styles.mobileNavItems}>
               <li
                 className={styles.mobileNavItem}
-                onClick={() =>
-                  setIsMobileDropdownActive(!isMobileDropdownActive)
-                }
+                onClick={handleMobileDropdownToggle}
               >
                 <span className={styles.mobileNavLinks}>
                   {t("about")}
-                  <span
-                    className={`${styles.mobileNavArrow} ${
-                      isMobileDropdownActive ? styles.openMobileIcon : ""
-                    }`}
-                  >
+                  <span className={mobileArrowClasses}>
                     <MdKeyboardArrowRight />
                   </span>
                 </span>
-                <div
-                  className={`${styles.mobileDropdown} ${
-                    isMobileDropdownActive ? styles.mobileDropdownActive : ""
-                  }`}
-                >
+                <div className={mobileDropdownClasses}>
                   <div className={styles.mobileDropdownItem}>
                     <Link href={`/${locale}/about`}>About Diginow</Link>
                   </div>
@@ -158,7 +156,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
               <li className={styles.mobileNavItem}>
                 <Link
                   href={`/${locale}/services`}
-                  onClick={() => setIsMobileNavOpen(false)}
+                  onClick={closeMobileNav}
                   className={styles.mobileNavLinks}
                 >
                   {t("services")}
@@ -167,7 +165,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
               <li className={styles.mobileNavItem}>
                 <Link
                   href={`/${locale}/contact`}
-                  onClick={() => setIsMobileNavOpen(false)}
+                  onClick={closeMobileNav}
                   className={styles.mobileNavLinks}
                 >
                   {t("contact")}
@@ -175,6 +173,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
               </li>
             </ul>
           </Fade>
+
           <div className={styles.mobileNavBottom}>
             <Fade>
               <LanguageSwitcher />

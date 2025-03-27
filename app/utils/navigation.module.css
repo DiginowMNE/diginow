@@ -45,7 +45,7 @@
   color: var(--text);
   text-decoration: none;
   padding: 0.5rem 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .navItem .navLink::before {
@@ -71,7 +71,6 @@
   transform: rotate(360deg);
 }
 
-/* Mobile navigation styles */
 .mobileNavToggle {
   display: none;
   background: transparent;
@@ -140,18 +139,20 @@
   font-size: 0.9rem;
 }
 
-/* Utility classes */
 .block {
   display: block;
 }
+
 .hidden {
   display: none;
 }
+
 .no-scroll {
   overflow: hidden;
   height: 100vh;
 }
 
+/* Responsive styles */
 @media (max-width: 3200px) {
   .nav {
     padding: 1rem 5rem;
@@ -171,22 +172,23 @@
   .image {
     width: 120px;
   }
-
   .navItem .navLink {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
-/* Media Queries */
 @media (max-width: 1920px) {
   .nav {
     padding: 1rem 5rem;
+  }
+  .navItem .navLink {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 1680px) {
   .navItem .navLink {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .image {
     width: 100px;
@@ -201,7 +203,7 @@
     width: 90px;
   }
   .navItem .navLink {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -209,13 +211,11 @@
   .nav {
     padding: 1rem 3.5rem;
   }
-
   .image {
     width: 90px;
   }
-
-  .navItems .navLink {
-    font-size: 0.7rem;
+  .navItem .navLink {
+    font-size: 0.9rem;
   }
 }
 
@@ -243,12 +243,15 @@
   .navItems {
     display: none;
   }
+
   .mobileNavToggle {
     display: block;
   }
+
   .navLogo:hover {
     transform: none;
   }
+
   .image {
     width: 110px;
   }
@@ -284,11 +287,12 @@
 
   .mobileNavItems {
     margin-top: 2rem;
+    padding: 0 4rem;
   }
 
-  .mobileNavItems,
   .mobileNavBottom {
     padding: 0 4rem;
+    margin-top: 3rem;
   }
 
   .mobileNavItem {
@@ -312,10 +316,6 @@
 
   .mobileNavArrow.openMobileIcon {
     transform: rotate(90deg);
-  }
-
-  .mobileNavBottom {
-    margin-top: 3rem;
   }
 
   .mobileNavToggleIcon {
@@ -360,9 +360,11 @@
   .image {
     width: 140px;
   }
+
   .mobileNavToggleIcon {
     font-size: 2rem;
   }
+
   .mobileNavItem {
     font-size: 1.2rem;
   }
@@ -377,6 +379,7 @@
   .mobileNavItemsContainer {
     height: 92vh;
   }
+
   .image {
     width: 120px;
   }
@@ -384,20 +387,6 @@
   .mobileNavItems,
   .mobileNavBottom {
     padding: 0 2.5rem;
-  }
-
-  .mobileNavBottom {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav {
-    height: 10vh;
-  }
-
-  .mobileNavItemsContainer {
-    height: 90vh;
   }
 }
 
@@ -409,6 +398,7 @@
   .image {
     width: 100px;
   }
+
   .mobileNavItem {
     font-size: 1rem;
   }
@@ -428,12 +418,15 @@
   .nav {
     height: 12vh;
   }
+
   .mobileNavItemsContainer {
     height: 88vh;
   }
+
   .mobileNavItem {
     font-size: 0.9rem;
   }
+
   .mobileNavBottom {
     margin-top: 1.5rem;
   }
