@@ -259,12 +259,12 @@
   }
 
   .aboutButtonText:active .aboutButtonIcon {
-    transform: translateX(10px);
+    transform: none;
   }
 
   .aboutButtonText:active {
-    background-color: var(--light-blue);
-    color: var(--background);
+    background-color: transparnt;
+    color: var(--light-blue);
   }
 }
 

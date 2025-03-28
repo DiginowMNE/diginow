@@ -16,10 +16,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
   const [isMobileDropdownActive, setIsMobileDropdownActive] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,8 +42,20 @@ const Navigation = ({ customClassName, customClassName2 }) => {
   const handleMobileNavToggle = () => setIsMobileNavOpen(!isMobileNavOpen);
   const handleMobileDropdownToggle = () =>
     setIsMobileDropdownActive(!isMobileDropdownActive);
-
   const closeMobileNav = () => setIsMobileNavOpen(false);
+
+  const dropdownItems = [
+    { href: `/${locale}/about`, label: "About Diginow" },
+    { href: `/${locale}/divisions`, label: "Our Divisions" },
+    { href: `/${locale}/team`, label: "Our Team" },
+    { href: `/${locale}/projects`, label: "Our Projects" },
+  ];
+
+  const navLinks = [
+    { href: `/${locale}/about`, label: t("about"), hasDropdown: true },
+    { href: `/${locale}/services`, label: t("services") },
+    { href: `/${locale}/contact`, label: t("contact") },
+  ];
 
   return (
     <div>
@@ -66,36 +75,28 @@ const Navigation = ({ customClassName, customClassName2 }) => {
 
           <Fade cascade damping={0.2} triggerOnce>
             <ul className={styles.navItems}>
-              <li className={styles.navItem}>
-                <Link href={`/${locale}/about`} className={styles.navLink}>
-                  {t("about")}
-                </Link>
-                <div
-                  className={`${styles.dropdown} ${
-                    scrolled ? styles.scrolledDropdown : ""
-                  }`}
-                >
-                  <Link href={`/${locale}/divisions`}>
-                    <div className={styles.dropdownItem}>{t("divisions")}</div>
+              {navLinks.map((link, index) => (
+                <li key={index} className={styles.navItem}>
+                  <Link href={link.href} className={styles.navLink}>
+                    {link.label}
                   </Link>
-                  <Link href={`/${locale}/team`}>
-                    <div className={styles.dropdownItem}>{t("team")}</div>
-                  </Link>
-                  <Link href={`/${locale}/projects`}>
-                    <div className={styles.dropdownItem}>{t("projects")}</div>
-                  </Link>
-                </div>
-              </li>
-              <li className={styles.navItem}>
-                <Link href={`/${locale}/services`} className={styles.navLink}>
-                  {t("services")}
-                </Link>
-              </li>
-              <li className={styles.navItem}>
-                <Link href={`/${locale}/contact`} className={styles.navLink}>
-                  {t("contact")}
-                </Link>
-              </li>
+                  {link.hasDropdown && (
+                    <div
+                      className={`${styles.dropdown} ${
+                        scrolled ? styles.scrolledDropdown : ""
+                      }`}
+                    >
+                      {dropdownItems.map((item, idx) => (
+                        <Link key={idx} href={item.href}>
+                          <div className={styles.dropdownItem}>
+                            {item.label}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              ))}
             </ul>
           </Fade>
 
@@ -128,49 +129,38 @@ const Navigation = ({ customClassName, customClassName2 }) => {
         <div className={mobileNavClasses}>
           <Fade>
             <ul className={styles.mobileNavItems}>
-              <li
-                className={styles.mobileNavItem}
-                onClick={handleMobileDropdownToggle}
-              >
-                <span className={styles.mobileNavLinks}>
-                  {t("about")}
-                  <span className={mobileArrowClasses}>
-                    <MdKeyboardArrowRight />
-                  </span>
-                </span>
-                <div className={mobileDropdownClasses}>
-                  <div className={styles.mobileDropdownItem}>
-                    <Link href={`/${locale}/about`}>About Diginow</Link>
-                  </div>
-                  <div className={styles.mobileDropdownItem}>
-                    <Link href={`/${locale}/divisions`}>Our Divisions</Link>
-                  </div>
-                  <div className={styles.mobileDropdownItem}>
-                    <Link href={`/${locale}/team`}>Our Team</Link>
-                  </div>
-                  <div className={styles.mobileDropdownItem}>
-                    <Link href={`/${locale}/projects`}>Our Projects</Link>
-                  </div>
-                </div>
-              </li>
-              <li className={styles.mobileNavItem}>
-                <Link
-                  href={`/${locale}/services`}
-                  onClick={closeMobileNav}
-                  className={styles.mobileNavLinks}
-                >
-                  {t("services")}
-                </Link>
-              </li>
-              <li className={styles.mobileNavItem}>
-                <Link
-                  href={`/${locale}/contact`}
-                  onClick={closeMobileNav}
-                  className={styles.mobileNavLinks}
-                >
-                  {t("contact")}
-                </Link>
-              </li>
+              {navLinks.map((link, index) => (
+                <li key={index} className={styles.mobileNavItem}>
+                  {link.hasDropdown ? (
+                    <>
+                      <span
+                        className={styles.mobileNavLinks}
+                        onClick={handleMobileDropdownToggle}
+                      >
+                        {link.label}
+                        <span className={mobileArrowClasses}>
+                          <MdKeyboardArrowRight />
+                        </span>
+                      </span>
+                      <div className={mobileDropdownClasses}>
+                        {dropdownItems.map((item, idx) => (
+                          <div key={idx} className={styles.mobileDropdownItem}>
+                            <Link href={item.href}>{item.label}</Link>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={closeMobileNav}
+                      className={styles.mobileNavLinks}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
           </Fade>
 

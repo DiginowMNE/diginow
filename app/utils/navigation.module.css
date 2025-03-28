@@ -30,9 +30,9 @@
 .image {
   width: 150px;
   height: 100%;
+  transition: width 0.3s ease;
 }
 
-/* Navigation item styles */
 .navItem {
   margin: 0 1rem;
   position: relative;
@@ -157,9 +157,6 @@
   .nav {
     padding: 1rem 5rem;
   }
-  .image {
-    width: 140px;
-  }
 }
 
 @media (max-width: 2560px) {
@@ -172,17 +169,11 @@
   .image {
     width: 120px;
   }
-  .navItem .navLink {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 1920px) {
   .nav {
     padding: 1rem 5rem;
-  }
-  .navItem .navLink {
-    font-size: 1.1rem;
   }
 }
 
@@ -210,12 +201,6 @@
 @media (max-width: 1280px) {
   .nav {
     padding: 1rem 3.5rem;
-  }
-  .image {
-    width: 90px;
-  }
-  .navItem .navLink {
-    font-size: 0.9rem;
   }
 }
 
@@ -331,7 +316,6 @@
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     opacity: 0;
-    will-change: transform;
     transform: translateX(-100%);
   }
 
@@ -346,7 +330,6 @@
     opacity: 1;
     transform: translateY(0);
     transition: all 0.3s ease-in-out;
-    will-change: transform;
   }
 }
 

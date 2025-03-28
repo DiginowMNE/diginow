@@ -11,9 +11,7 @@
 }
 
 .footerMain {
-  padding: 6rem 10rem 8rem 10rem;
-  display: flex;
-  justify-content: space-between;
+  padding: 6rem 10rem 8rem;
 }
 
 .footerBrand {
@@ -96,9 +94,10 @@
   transition: all 0.3s ease;
 }
 
+/* Media Queries */
 @media (max-width: 3200px) {
   .footerMain {
-    padding: 5rem 8rem 7rem 8rem;
+    padding: 5rem 8rem 7rem;
   }
   .footerBottom {
     padding: 2rem 8rem;
@@ -107,7 +106,7 @@
 
 @media (max-width: 2560px) {
   .footerMain {
-    padding: 4rem 7rem 6rem 7rem;
+    padding: 4rem 7rem 6rem;
   }
   .footerBottom {
     padding: 2rem 7rem;
@@ -116,7 +115,7 @@
 
 @media (max-width: 2240px) {
   .footerMain {
-    padding: 4rem 6rem 6rem 6rem;
+    padding: 4rem 6rem 6rem;
   }
   .footerBottom {
     padding: 2rem 6rem;
@@ -131,7 +130,7 @@
 
 @media (max-width: 1920px) {
   .footerMain {
-    padding: 4rem 5rem 6rem 5rem;
+    padding: 4rem 5rem 6rem;
   }
   .footerBottom {
     padding: 2rem 5rem;
@@ -140,7 +139,7 @@
 
 @media (max-width: 1680px) {
   .footerMain {
-    padding: 3rem 4rem 5rem 4rem;
+    padding: 3rem 4rem 5rem;
   }
   .footerBottom {
     padding: 2rem 4rem;
@@ -155,7 +154,7 @@
 
 @media (max-width: 1370px) {
   .footerMain {
-    padding: 3rem 3.5rem 5rem 3.5rem;
+    padding: 3rem 3.5rem 5rem;
   }
   .footerBottom {
     padding: 2rem 3.5rem;
@@ -167,7 +166,7 @@
 
 @media (max-width: 1280px) {
   .footerMain {
-    padding: 3rem 3rem 5rem 3rem;
+    padding: 3rem 3rem 5rem;
   }
   .footerBottom {
     padding: 2rem 3rem;
@@ -192,7 +191,7 @@
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
-    padding: 0rem 3rem 2rem 3rem;
+    padding: 0 3rem 2rem;
   }
   .socialLinks {
     justify-content: center;
@@ -204,7 +203,7 @@
     padding: 3rem 2.5rem;
   }
   .footerBottom {
-    padding: 0rem 2.5rem 2rem 2.5rem;
+    padding: 0 2.5rem 2rem;
   }
 }
 
@@ -219,7 +218,7 @@
     padding: 3rem 2rem;
   }
   .footerBottom {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 0 2rem 2rem;
   }
   .footerLinks {
     gap: 1.5rem;
@@ -231,14 +230,12 @@
     padding: 2.5rem 1.5rem;
   }
   .footerBottom {
-    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
   }
   .footerTitle {
     font-size: 0.8rem;
   }
-  .footerNav a {
-    font-size: 0.7rem;
-  }
+  .footerNav a,
   .copyright,
   .socialLinks a {
     font-size: 0.7rem;
@@ -250,7 +247,7 @@
     padding: 2rem 1rem;
   }
   .footerBottom {
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0 1rem 1rem;
   }
   .footerLinks {
     gap: 1rem;
