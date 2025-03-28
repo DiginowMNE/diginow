@@ -377,6 +377,10 @@
   }
 
   .mobileNavItemsContainer {
+    top: 8vh;
+  }
+
+  .mobileNavItemsContainer.open {
     height: 92vh;
   }
 
@@ -420,6 +424,10 @@
   }
 
   .mobileNavItemsContainer {
+    top: 12vh;
+  }
+
+  .mobileNavItemsContainer.open {
     height: 88vh;
   }
 
@@ -441,7 +449,11 @@
   }
 
   .mobileNavItemsContainer {
-    height: 90vh;
+    top: 10vh;
+  }
+
+  .mobileNavItemsContainer.open {
+    height: 80vh;
   }
 
   .image {
