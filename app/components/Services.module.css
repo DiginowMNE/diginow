@@ -527,14 +527,6 @@
     border: none;
     padding: 0;
     text-decoration: underline;
-    font-weight: 400;
-    transition: all 0.4s ease;
-    color: var(--light-blue);
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    justify-content: center;
-    max-width: 800px;
   }
 }
 
