@@ -153,7 +153,7 @@ export const translations = {
     aboutButtonText: "Hakkımızda daha fazla bilgi alın",
     servicesTitle: "Hizmetlerimiz",
     servicesSubtitle: "Hizmetlerimiz hakkında daha fazla bilgi alın.",
-    servicesButtonText: "Hakkımızda daha fazla bilgi alın",
+    servicesButtonText: "Hizmetler hakkında daha fazla bilgi edinin",
     serviceCardTitleOne: "Proje Yönetimi Eğitimi",
     serviceCardSubtitleOne: "Proje Yönetiminde Ustalık Kazanın",
     serviceCardTitleTwo: "Dijitalleşme Danışmanlığı ",
@@ -178,7 +178,7 @@ export const translations = {
     divisionSubtitle: "Diginow Ailesini Keşfedin",
     divisionText:
       "Diginow, farklı alanlarda uzmanlaşmış alt şirketleriyle, müşterilerine kapsamlı çözümler sunar. Her şirket, kendi uzmanlık alanında en iyi hizmeti vermek için çalışır. Diginow çatısı altındaki geniş hizmet yelpazemizi keşfedin.",
-    divisionButtonText: "Hizmetler hakkında daha fazla bilgi edinin",
+    divisionButtonText: "Alt şirketlerimiz hakkında daha fazla bilgi edinin",
     contactTitle: "Bize Ulaşın",
     contactText:
       "İster bir proje hakkında bilgi almak isteyin, ister bir sorunuz olsun, sizinle konuşmaktan mutluluk duyarız. İhtiyaçlarınıza uygun çözümler sunmak için buradayız. <span class='highlight'>Bize ulaşın, birlikte çalışmaya başlayalım.</span>",

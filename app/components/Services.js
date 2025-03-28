@@ -7,8 +7,10 @@ import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdAccountTree } from "react-icons/md";
-import { LiaDigitalTachographSolid } from "react-icons/lia";
-import { FaCode } from "react-icons/fa6";
+import { LiaProjectDiagramSolid } from "react-icons/lia";
+
+import { MdWeb } from "react-icons/md";
+import { IoMdChatboxes } from "react-icons/io";
 
 const Services = () => {
   const { t, locale } = useTranslation();
@@ -51,8 +53,10 @@ const Services = () => {
         <Fade cascade damping={0.2} direction="up" triggerOnce>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <MdAccountTree className={styles.cardIcon} />
               <div className={styles.cardTitleContainer}>
+                <MdAccountTree
+                  className={`${styles.cardIcon} ${styles.cardIconOne}`}
+                />
                 <h2 className={styles.cardTitle}>{t("serviceCardTitleOne")}</h2>
               </div>
               <div className={styles.cardText}>
@@ -70,8 +74,8 @@ const Services = () => {
           </div>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <LiaDigitalTachographSolid className={styles.cardIcon} />
               <div className={styles.cardTitleContainer}>
+                <IoMdChatboxes className={styles.cardIcon} />
                 <h2 className={styles.cardTitle}>{t("serviceCardTitleTwo")}</h2>
               </div>
               <div className={styles.cardText}>
@@ -89,8 +93,8 @@ const Services = () => {
           </div>
           <div className={styles.servicesCard}>
             <div className={styles.cardContent}>
-              <FaCode className={styles.cardIcon} />
               <div className={styles.cardTitleContainer}>
+                <MdWeb className={styles.cardIcon} />
                 <h2 className={styles.cardTitle}>
                   {t("serviceCardTitleThree")}
                 </h2>
