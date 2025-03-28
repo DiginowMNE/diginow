@@ -16,7 +16,7 @@ export default function Home({ params }) {
       <Logos />
       <Services />
       <Solutions />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Division />
       <Contact />
       <Footer />

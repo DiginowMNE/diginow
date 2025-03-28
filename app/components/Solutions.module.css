@@ -299,6 +299,11 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .solutionsSubtitle {
+    font-size: 5rem;
+  }
+}
 /* Tablet */
 @media (max-width: 900px) {
   .solutions {
@@ -325,7 +330,7 @@
   }
 
   .solutionsSubtitle {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .solutionsDescription {
@@ -484,7 +489,7 @@
   }
 
   .solutionsSubtitle {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 
   .solutions::before {

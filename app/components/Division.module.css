@@ -5,38 +5,33 @@
 }
 
 .divisionTitle {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 3rem;
-  color: var(--light-blue);
+  color: var(--background);
 }
 
 .divisionContent {
   width: 100%;
+  background-color: var(--text);
+  color: var(--background);
 }
 
 .divisionTextContainer {
   width: 100%;
-  padding-left: 8rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-right: 3rem;
-  display: grid;
-  max-width: 900px;
+  padding: 10rem 15rem;
+  color: var(--background);
 }
 
 .divisionSubtitle {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 6rem;
   margin-bottom: 1.5rem;
   line-height: 1;
 }
 
 .divisionText {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--text);
+  font-size: 1.8rem;
+  color: var(--background);
   margin-bottom: 3rem;
   width: 100%;
 }
@@ -61,13 +56,13 @@
 }
 
 .divisionButtonText {
-  border: 1px solid var(--light-blue);
+  border: 2px solid var(--background);
   padding: 1rem 2rem;
   border-radius: 1rem;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 500;
   transition: all 0.4s ease;
-  color: var(--light-blue);
+  color: var(--background);
   display: flex;
   align-items: center;
   width: fit-content;
@@ -86,26 +81,97 @@
 }
 
 .divisionButtonText:hover {
-  background-color: var(--light-blue);
-  color: var(--background);
+  background-color: var(--background);
+  color: var(--text);
 }
 
 @media (max-width: 3200px) {
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.6rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 2560px) {
+  .divisionTextContainer {
+    padding: 8rem 12rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.4rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 2310px) {
+  .divisionTextContainer {
+    padding: 8rem 10rem;
+  }
+
+  .divisionTitle {
+    font-size: 1.8rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 2240px) {
+  .divisionTextContainer {
+    padding: 8rem 8rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 4rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 1920px) {
+  .divisionTextContainer {
+  }
+
+  .divisionSubtitle {
+    font-size: 3.5rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 1680px) {
+  .divisionTextContainer {
+    padding: 6rem 6rem;
+  }
+
+  .divisionTitle {
+    font-size: 1.6rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 3rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -115,18 +181,98 @@
 }
 
 @media (max-width: 1440px) {
+  .divisionTextContainer {
+    padding: 6rem 6rem;
+  }
+
+  .divisionTitle {
+    font-size: 1.4rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 1370px) {
+  .divisionTextContainer {
+    padding: 6rem 5rem;
+  }
+
+  .divisionTitle {
+    font-size: 1.2rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1280px) {
+  .divisionTextContainer {
+    padding: 6rem 4rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 2.7rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  .division {
+    grid-template-columns: 1fr;
+  }
+
+  .divisionImageContainer {
+    display: none;
+  }
+
+  .divisionTextContainer {
+    padding: 6rem 4rem;
+  }
+
+  .divisionTitle {
+    font-size: 1.5rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 4.5rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 900px) {
+  .divisionSubtitle {
+    font-size: 4rem;
+  }
+
+  .divisionTextContainer {
+    padding: 6rem 4rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -139,23 +285,83 @@
 }
 
 @media (max-width: 485px) {
-}
+  .divisionTextContainer {
+    padding: 4rem 2rem;
+  }
 
+  .divisionTitle {
+    font-size: 1.2rem;
+  }
+
+  .divisionSubtitle {
+    font-size: 3.3rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1.1rem;
+  }
+
+  .divisionButtonText {
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+    color: var(--background);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+  }
+}
 @media (max-width: 460px) {
-}
+  .divisionSubtitle {
+    font-size: 3rem;
+  }
 
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 440px) {
-}
+  .divisionSubtitle {
+    font-size: 2.9rem;
+  }
 
+  .divisionText,
+  .divisionButtonText {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 415px) {
-}
+  .divisionSubtitle {
+    font-size: 2.7rem;
+  }
 
+  .divisionText,
+  .divisionButtonText {
+    font-size: 0.9rem;
+  }
+}
 @media (max-width: 405px) {
 }
 
 @media (max-width: 395px) {
-}
+  .divisionTextContainer {
+    padding: 4rem 1.5rem;
+  }
 
+  .divisionSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .divisionText,
+  .divisionButtonText {
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 376px) {
 }
 

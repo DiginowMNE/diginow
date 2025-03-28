@@ -109,11 +109,10 @@
 }
 
 .aboutButtonText {
-  border: 1px solid var(--light-blue);
+  border: 2px solid var(--light-blue);
   padding: 1rem 2rem;
   border-radius: 1rem;
   font-size: 1.2rem;
-  font-weight: 400;
   transition: all 0.4s ease;
   color: var(--light-blue);
   display: flex;
@@ -330,6 +329,19 @@
 
   .aboutButtonText {
     font-size: 0.9rem;
+  }
+
+  .aboutButtonText {
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    transition: all 0.4s ease;
+    color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    will-change: transform;
   }
 }
 

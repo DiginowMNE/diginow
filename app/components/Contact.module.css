@@ -5,10 +5,7 @@
 }
 
 .contact {
-  padding-right: 8rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-left: 3rem;
+  padding: 10rem 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,20 +14,18 @@
 }
 
 .contactTitle {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 3rem;
   color: var(--background);
 }
 
 .contactText {
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   line-height: 1.1;
   color: var(--background);
-  max-width: 900px;
 }
 
 .contactButton {
@@ -38,11 +33,10 @@
 }
 
 .contactButtonText {
-  border: 1px solid var(--background);
+  border: 2px solid var(--background);
   padding: 1rem 2rem;
   border-radius: 1rem;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
   transition: all 0.4s ease;
   color: var(--background);
   display: flex;
@@ -80,4 +74,307 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 3200px) {
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+  .contactText {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 2560px) {
+  .contact {
+    padding: 10rem 12rem;
+  }
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactText {
+    font-size: 3rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 2310px) {
+  .contact {
+    padding: 8rem 10rem;
+  }
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 2240px) {
+  .contact {
+    padding: 8rem 10rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactText {
+    font-size: 2.8rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .contact {
+    padding: 8rem 9rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactText {
+    font-size: 2.5rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1680px) {
+  .contact {
+    padding: 6rem 7rem;
+  }
+
+  .contactTitle {
+    font-size: 1.5rem;
+  }
+
+  .contactText {
+    font-size: 2rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1540px) {
+}
+
+@media (max-width: 1440px) {
+  .contact {
+    padding: 6rem 6rem;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactText {
+    font-size: 1.8rem;
+  }
+
+  .contactButtonText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1370px) {
+}
+
+@media (max-width: 1280px) {
+  .contact {
+    padding: 5rem 4rem;
+  }
+
+  .contactTitle {
+    font-size: 1.2rem;
+  }
+
+  .contactText {
+    font-size: 1.6rem;
+  }
+
+  .contactButtonText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .contactImageContainer {
+    display: none;
+  }
+
+  .contact {
+    padding: 5rem 5rem;
+    padding-top: 0;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactText {
+    font-size: 3rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 5rem 5rem;
+    padding-top: 0;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactText {
+    font-size: 2.5rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .contact {
+    padding: 5rem 4rem;
+    padding-top: 0;
+  }
+
+  .contactTitle {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    padding: 5rem 5rem;
+    padding-top: 0;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactText {
+    font-size: 2.2rem;
+  }
+
+  .contactButtonText {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 610px) {
+}
+
+@media (max-width: 485px) {
+  .contact {
+    padding: 5rem 2rem;
+    padding-top: 0;
+  }
+
+  .contactTitle {
+    font-size: 1.2rem;
+  }
+
+  .contactText {
+    font-size: 1.5rem;
+  }
+
+  .contactButtonText {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    text-decoration: underline;
+    border-radius: 0;
+    font-size: 1.1rem;
+  }
+
+  .contactButtonText:hover .contactButtonIcon {
+    transform: none;
+  }
+
+  .contactButtonText:hover {
+    background-color: transparent;
+    color: var(--background);
+  }
+}
+
+@media (max-width: 460px) {
+  .contactTitle {
+    font-size: 1.1rem;
+  }
+
+  .contactText {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .contactText {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .contactText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 405px) {
+}
+
+@media (max-width: 395px) {
+}
+
+@media (max-width: 376px) {
+  .contactTitle {
+    font-size: 1rem;
+  }
+
+  .contactText {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+}
+
+@media (max-width: 325px) {
+}
+
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
+}
+
+@media (max-width: 1200px) and (min-height: 1920px) {
+}
+
+@media (max-width: 1024px) and (min-height: 1366px) {
 }
