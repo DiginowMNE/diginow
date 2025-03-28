@@ -7,6 +7,8 @@
   --text: #ededed;
   --light-blue: #66bbe3;
   --blue: #2275b1;
+  --dark-gray: #282827;
+  --gray: #474646;
 }
 
 @media (prefers-color-scheme: dark) {

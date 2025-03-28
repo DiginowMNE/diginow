@@ -63,7 +63,7 @@ export const translations = {
       "<span class='highlight-font'>Diginow</span> is a dynamic and innovative company committed to empowering small and medium-sized enterprises (SMEs) and non-governmental organizations (NGOs) through cutting-edge digital solutions, strategic consultancy, and specialized training. With a firm foundation in engineering and technology, we bridge the gap between traditional business models and the digital future, ensuring that our clients stay ahead in an ever-evolving marketplace.",
     aboutCardTitleOne: "Our mission",
     aboutCardTextOne:
-      "Our mission is to simplify digital transformation, enhance project management efficiency, and provide seamless web solutions that align with our clients&#39; objectives. Whether it&#39;s through expert-led training, consultancy, or technical implementation, we are dedicated to delivering excellence and driving sustainable growth for our partners.",
+      "Our mission is to simplify digital transformation, enhance project management efficiency, and provide seamless web solutions that align with our clients objectives. Whether it's through expert-led training, consultancy, or technical implementation, we are dedicated to delivering excellence and driving sustainable growth for our partners.",
     aboutCardTitleTwo: "Our team",
     aboutCardTextTwo:
       "Our team is composed of highly skilled professionals with extensive industry experience. We are passionate about innovation, adaptability, and strategic thinking, ensuring that every project we undertake results in tangible success for our clients.",
@@ -199,10 +199,10 @@ export const translations = {
     aboutTitle:
       "Diginow olarak uzun vadeli iş ortaklıkları kurmaya inanıyoruz.<span class='highlight'> Hizmetlerimizi her organizasyonun benzersiz </span>ihtiyaçlarına göre özelleştirerek.",
     aboutSubtitle:
-      "<span class='highlight-font'>Diginow</span> küçük ve orta ölçekli işletmeler (KOBİ&#39;ler) ile sivil toplum kuruluşlarını (STK&#39;lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
+      "<span class='highlight-font'>Diginow</span> küçük ve orta ölçekli işletmeler (KOBİ'ler) ile sivil toplum kuruluşlarını (STK'lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
     aboutCardTitleOne: "Misyonumuz",
     aboutCardTextOne:
-      "Misyonumuz, küçük ve orta ölçekli işletmeler (KOBİ&#39;ler) ile sivil toplum kuruluşlarını (STK&#39;lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
+      "Misyonumuz, küçük ve orta ölçekli işletmeler (KOBİ'ler) ile sivil toplum kuruluşlarını (STK'lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
     aboutCardTitleTwo: "Ekibimiz",
     aboutCardTextTwo:
       "Ekibimiz, sektörde geniş deneyime sahip yetenekli profesyonellerden oluşmaktadır. Yenilikçilik, uyum sağlama ve stratejik düşünme konusundaki tutkumuzla, üstlendiğimiz her projede müşterilerimiz için somut başarılar yaratıyoruz.",

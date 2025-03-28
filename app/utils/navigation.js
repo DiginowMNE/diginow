@@ -44,15 +44,16 @@ const Navigation = ({ customClassName, customClassName2 }) => {
     setIsMobileDropdownActive(!isMobileDropdownActive);
   const closeMobileNav = () => setIsMobileNavOpen(false);
 
-  const dropdownItems = [
-    { href: `/${locale}/about`, label: t("about") },
-    { href: `/${locale}/divisions`, label: t("divisions") },
-    { href: `/${locale}/team`, label: t("team") },
-    { href: `/${locale}/projects`, label: t("projects") },
-  ];
+  // const dropdownItems = [
+  //   { href: `/${locale}/about`, label: t("about") },
+  //   { href: `/${locale}/divisions`, label: t("divisions") },
+  //   { href: `/${locale}/team`, label: t("team") },
+  //   { href: `/${locale}/projects`, label: t("projects") },
+  // ];
 
   const navLinks = [
-    { href: `/${locale}/about`, label: t("about"), hasDropdown: true },
+    { href: `/${locale}/about`, label: t("about") },
+    { href: `/${locale}/divisions`, label: t("divisions") },
     { href: `/${locale}/services`, label: t("services") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];
@@ -80,7 +81,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                   <Link href={link.href} className={styles.navLink}>
                     {link.label}
                   </Link>
-                  {link.hasDropdown && (
+                  {/* {link.hasDropdown && (
                     <div
                       className={`${styles.dropdown} ${
                         scrolled ? styles.scrolledDropdown : ""
@@ -94,7 +95,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                         </Link>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </li>
               ))}
             </ul>
@@ -138,17 +139,17 @@ const Navigation = ({ customClassName, customClassName2 }) => {
                         onClick={handleMobileDropdownToggle}
                       >
                         {link.label}
-                        <span className={mobileArrowClasses}>
+                        {/* <span className={mobileArrowClasses}>
                           <MdKeyboardArrowRight />
-                        </span>
+                        </span> */}
                       </span>
-                      <div className={mobileDropdownClasses}>
+                      {/* <div className={mobileDropdownClasses}>
                         {dropdownItems.map((item, idx) => (
                           <div key={idx} className={styles.mobileDropdownItem}>
                             <Link href={item.href}>{item.label}</Link>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </>
                   ) : (
                     <Link
