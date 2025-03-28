@@ -45,10 +45,10 @@ const Navigation = ({ customClassName, customClassName2 }) => {
   const closeMobileNav = () => setIsMobileNavOpen(false);
 
   const dropdownItems = [
-    { href: `/${locale}/about`, label: "About Diginow" },
-    { href: `/${locale}/divisions`, label: "Our Divisions" },
-    { href: `/${locale}/team`, label: "Our Team" },
-    { href: `/${locale}/projects`, label: "Our Projects" },
+    { href: `/${locale}/about`, label: t("about") },
+    { href: `/${locale}/divisions`, label: t("divisions") },
+    { href: `/${locale}/team`, label: t("team") },
+    { href: `/${locale}/projects`, label: t("projects") },
   ];
 
   const navLinks = [
