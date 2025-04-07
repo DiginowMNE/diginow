@@ -14,7 +14,7 @@ const Contact = () => {
     <div className={styles.contactContainer}>
       <div className={styles.contactImageContainer}>
         <Image
-          src="/images/contact.jpg"
+          src="/ContactUs.jpg"
           alt="Contact"
           fill
           priority

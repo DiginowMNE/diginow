@@ -33,10 +33,9 @@ const Division = () => {
       </div>
       <div className={styles.divisionImageContainer}>
         <Image
-          src="/images/subscriptions2.jpg"
+          src="/OurDivisions.jpg"
           alt="subscription"
           fill
-          sizes="50vw"
           priority
           className={styles.divisionImage}
         />

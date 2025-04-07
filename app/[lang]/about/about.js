@@ -8,6 +8,7 @@ import { useTranslation } from "../../hooks/useTranslation";
 
 import { GoGoal } from "react-icons/go";
 import { FaUsers } from "react-icons/fa";
+import { LuEye } from "react-icons/lu";
 
 const AboutClient = () => {
   const { t } = useTranslation();
@@ -51,12 +52,22 @@ const AboutClient = () => {
               <div className={styles.aboutUsContentTextItem}>
                 <div className={styles.aboutUsContentTextItemTitle}>
                   {" "}
-                  <FaUsers />
+                  <LuEye />
                   <span className={styles.highlight}>
                     {t("aboutCardTitleTwo")}
                   </span>
                 </div>
                 {t("aboutCardTextTwo")}
+              </div>
+              <div className={styles.aboutUsContentTextItem}>
+                <div className={styles.aboutUsContentTextItemTitle}>
+                  {" "}
+                  <FaUsers />
+                  <span className={styles.highlight}>
+                    {t("aboutCardTitleThree")}
+                  </span>
+                </div>
+                {t("aboutCardTextThree")}
               </div>
             </div>
           </Fade>

@@ -14,10 +14,17 @@
 }
 
 .contactTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
   text-transform: uppercase;
-  margin-bottom: 3rem;
-  color: var(--background);
+  color: var(--light-blue);
+  background: linear-gradient(130deg, var(--dark-gray), var(--gray));
+  border-color: var(--light-blue);
 }
 
 .contactText {

@@ -2,14 +2,17 @@ import styles from "../shared.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import Footer from "../../utils/Footer";
 import Navigation from "../../utils/navigation";
+import { useTranslation } from "../../hooks/useTranslation.js";
 
 const Projects = () => {
+  const { t, locale } = useTranslation();
+
   return (
     <>
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.aboutUsContainer}>
         <h1 className={styles.title}>
-          <Slide triggerOnce>Our Projects</Slide>
+          <Slide triggerOnce>{t("projects")}</Slide>
         </h1>
         <div className={styles.aboutUsContent}>
           {" "}

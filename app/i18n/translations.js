@@ -42,7 +42,7 @@ export const translations = {
     divisionButtonText: "Learn more about our divisions",
     contactTitle: "Get in Touch",
     contactText:
-      "Whether you want to inquire about a project or have a question, we are happy to talk to you. We are here to provide solutions that meet your needs. Reach out and let’s start working together.",
+      "Whether you want to inquire about a project or have a question, we are happy to talk to you. We are here to provide solutions that meet your needs. <span class='highlight'>Reach out and let’s start working together.</span>",
     contactName: "Name",
     contactLastName: "Last Name",
     contactEmail: "Email",
@@ -63,17 +63,59 @@ export const translations = {
       "<span class='highlight-font'>Diginow</span> is a dynamic and innovative company committed to empowering small and medium-sized enterprises (SMEs) and non-governmental organizations (NGOs) through cutting-edge digital solutions, strategic consultancy, and specialized training. With a firm foundation in engineering and technology, we bridge the gap between traditional business models and the digital future, ensuring that our clients stay ahead in an ever-evolving marketplace.",
     aboutCardTitleOne: "Our mission",
     aboutCardTextOne:
-      "Our mission is to simplify digital transformation, enhance project management efficiency, and provide seamless web solutions that align with our clients objectives. Whether it's through expert-led training, consultancy, or technical implementation, we are dedicated to delivering excellence and driving sustainable growth for our partners.",
-    aboutCardTitleTwo: "Our team",
+      "To empower businesses and organizations by bridging the gap between traditional methods and the digital age. We are dedicated to providing tailored training, consultancy, and web solutions that drive innovation, efficiency, and long-term success for our partners.",
+    aboutCardTitleTwo: "Our vision",
     aboutCardTextTwo:
+      "To become a leading force in digital transformation for SMEs and NGOs worldwide — where technology meets purpose, and every organization has the tools to thrive in a rapidly evolving world.",
+    aboutCardTitleThree: "Our team",
+    aboutCardTextThree:
       "Our team is composed of highly skilled professionals with extensive industry experience. We are passionate about innovation, adaptability, and strategic thinking, ensuring that every project we undertake results in tangible success for our clients.",
+    divisionPageSubtitle:
+      "Each division operates <span class='highlight'>with a commitment to excellence</span>, ensuring that our clients receive customized and effective solutions to their unique challenges.",
+    divisionPageText:
+      "Diginow is structured into specialized divisions to provide focused expertise in key areas of digital transformation, consultancy, and training. Our divisions include:",
+    divisionPageCardTitleOne: "Project Management Training",
+    divisionPageCardTextOne:
+      "Providing comprehensive training programs designed to equip professionals with essential project management skills, including PMP certification courses tailored for NGOs and businesses.",
+    divisionPageCardTitleTwo: "Digitalization Consultancy",
+    divisionPageCardTextTwo:
+      "Helping organizations streamline operations, adopt innovative digital tools, and create sustainable digital transformation strategies.",
+    divisionPageCardTitleThree: "Web Development & Design",
+    divisionPageCardTextThree:
+      "Crafting user-friendly, high-performance websites that align with business goals and enhance digital presence.",
+    servicePageProject: "Project Management Training",
+    servicePageProjectTitle: "Master the Art of Project Management",
+    servicePageProjectText:
+      "Project management is one of the most critical skills in the business world. Diginow’s 35-hour PMP-focused training program is not only limited to exam preparation but also equips you with practical knowledge and techniques to succeed in real-world projects. Our training is divided into two main categories:",
+    servicePageProjectCardTitleOne: "Training Set for NGOs",
+    servicePageProjectCardTextOne:
+      "Specifically designed to meet the unique needs of non-profit organizations, covering all aspects from project cycle management to fundraising strategies.",
+    servicePageProjectCardTitleTwo: "Training Set for For-Profit Companies",
+    servicePageProjectCardTextTwo:
+      "Tailored to meet the competitive dynamics of the business world, focusing on time management, risk analysis, and team coordination. Moreover, all our training sessions are tailor-made to suit your individual and organizational needs. We work with you to deliver the most effective learning experience.",
+    servicePageDigitalization: "Digitalization Consultancy",
+    servicePageDigitalizationTitle: "Simplify Your Digital Transformation",
+    servicePageDigitalizationText:
+      "Digitalization is the key to the future success of businesses and NGOs. All our digitalization projects are executed with a tailor-made approach, working closely with you to maximize the efficiency of your technological investments. At Diginow, we analyze your processes, identify areas for improvement, and create digital transformation strategies tailored to your needs. Our services include:",
+    servicePageDigitalizationCardTitleOne: "Digitalization Solutions for NGOs",
+    servicePageDigitalizationCardTextOne:
+      "Providing technological tools tailored to NGOs, from fundraising tools to operational efficiency strategies.",
+    servicePageDigitalizationCardTitleTwo: "Digitalization Strategies for SMEs",
+    servicePageDigitalizationCardTextTwo:
+      "Developing systems to enhance your competitiveness and optimize your business processes.",
+    servicePageWeb: "Web Development & Design",
+    servicePageWebTitle: "Web solutions that reflect your goals",
+    servicePageWebTextOne:
+      "Your website is your face in the digital world, and we are committed to designing it in the best possible way. We develop fast, secure, and performance-oriented web solutions. Our goal is to create websites that align with your business objectives and resonate with your audience.",
+    servicePageWebTextTwo:
+      "We create creative and modern designs that reflect the unique identity of your company. Our design process prioritizes both aesthetic elements and user experience. We aim to create a visual language that captivates your visitors at first glance and drives them to action.",
   },
   sr: {
     about: "O nama",
-    services: "Naše Usluge",
-    divisions: "Naši Odjeli",
-    projects: "Naši Projekti",
-    team: "Naš Tim",
+    services: "Naše usluge",
+    divisions: "Naši odjeli",
+    projects: "Naši projekti",
+    team: "Naš tim",
     contact: "Kontaktirajte nas",
     herotitle:
       "<span class='highlight-font'>Iskusite </span>Budućnost <span class='highlight-font'>Sada</span>",
@@ -82,17 +124,17 @@ export const translations = {
     herotext:
       "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva. Naš cilj nije samo da budemo pružalac usluga, već i dugoročni partner. Sa našim inovativnim pristupom, spremni smo da unaprijedimo vaše poslovanje i napravimo razliku.",
     aboutButtonText: "Saznajte više o nama",
-    servicesTitle: "Naše Usluge",
+    servicesTitle: "Naše usluge",
     servicesSubtitle: "Naše znanje za vaše bolje danas. Svaki dan.",
     servicesButtonText: "Saznajte više o servisima",
-    serviceCardTitleOne: "Obuka za Upravljanje Projektima",
-    serviceCardSubtitleOne: "Ovladajte Umjetnošću Upravljanja Projektima",
-    serviceCardTitleTwo: "Konsultacije za Digitalizaciju",
+    serviceCardTitleOne: "Obuka za upravljanje projektima",
+    serviceCardSubtitleOne: "Ovladajte umjetnošću upravljanja projektima",
+    serviceCardTitleTwo: "Konsultacije za digitalizaciju",
     serviceCardSubtitleTwo: "Olakšajte Svoju Digitalnu Transformaciju",
-    serviceCardTitleThree: "Veb Razvoj i Dizajn",
-    serviceCardSubtitleThree: "Veb Rješenja Koja Odražavaju Vaše Ciljeve",
+    serviceCardTitleThree: "Veb razvoj i dizajn",
+    serviceCardSubtitleThree: "Veb rješenja koja odražavaju vaše ciljeve",
     serviceCardTextOne:
-      "Diginow-ov 35-satni program obuke fokusiran na PMP ne samo da priprema za ispite, već vas oprema praktičnim znanjima i tehnikama potrebnim za uspjeh u stvarnim projektima.",
+      "Projektni menadžment je jedna od najvažnijih vještina u poslovnom svijetu. Diginow-ov 35-satni program obuke fokusiran na PMP ne samo da priprema za ispite, već vas oprema praktičnim znanjima i tehnikama potrebnim za uspjeh u stvarnim projektima.",
     serviceCardTextTwo:
       "U Diginow-u analiziramo vaše procese, identifikujemo prostor za unapređenje i kreiramo strategije digitalne transformacije prilagođene vašim potrebama.",
     serviceCardTextThree:
@@ -133,10 +175,53 @@ export const translations = {
       "<span class='highlight-font'>Diginow</span> je dinamična i inovativna kompanija posvećena osnaživanju malih i srednjih preduzeća (MSP) i nevladinih organizacija (NVO) kroz najsavremenija digitalna rješenja, strateške konsultacije i specijalizovane obuke. Sa snažnim temeljima u inženjerstvu i tehnologiji, spajamo tradicionalne poslovne modele sa digitalnom budućnošću, osiguravajući da naši klijenti budu korak ispred u stalno promjenjivom tržištu.",
     aboutCardTitleOne: "Naša misija",
     aboutCardTextOne:
-      "Naša misija je da pojednostavimo digitalnu transformaciju, povećamo efikasnost upravljanja projektima i pružimo besprijekorna web rješenja koja su usklađena sa ciljevima naših klijenata. Bilo kroz stručne obuke, konsultacije ili tehničku implementaciju, posvećeni smo pružanju vrhunskih rješenja i podsticanju održivog rasta naših partnera.",
-    aboutCardTitleTwo: "Naš tim",
+      "Da osnažimo preduzeća i organizacije spajajući tradicionalne metode sa digitalnim dobom. Posvećeni smo pružanju prilagođene obuke, konsultacija i web rješenja koja podstiču inovacije, efikasnost i dugoročni uspjeh naših partnera.",
+    aboutCardTitleTwo: "Naša vizija",
     aboutCardTextTwo:
+      "Da postanemo vodeća snaga digitalne transformacije za MSP i NVO širom svijeta — gdje se tehnologija susreće sa svrhom, i gdje svaka organizacija ima alate potrebne za uspjeh u brzo mijenjajućem svijetu.",
+    aboutCardTitleThree: "Naš tim",
+    aboutCardTextThree:
       "Naš tim čine visoko kvalifikovani profesionalci sa bogatim industrijskim iskustvom. Strastveni smo u pogledu inovacija, prilagodljivosti i strateškog razmišljanja, osiguravajući da svaki projekat koji preuzmemo rezultira opipljivim uspjehom za naše klijente.",
+    divisionPageSubtitle:
+      "Svaki sektor <span class='highlight'>posluje s posvećenošću izvrsnosti</span>, osiguravajući da naši klijenti dobiju prilagođena i efikasna rješenja za svoje jedinstvene izazove.",
+    divisionPageText:
+      "Diginow je organizovan u specijalizovane sektore kako bi pružio fokusiranu stručnost u ključnim oblastima digitalne transformacije, konsultacija i obuke:",
+    divisionPageCardTitleOne: "Obuka za upravljanje projektima",
+    divisionPageCardTextOne:
+      "Nudimo sveobuhvatne programe obuke osmišljene da profesionalcima pruže ključne vještine upravljanja projektima, uključujući kurseve za PMP sertifikaciju prilagođene NVO-ima i preduzećima.",
+    divisionPageCardTitleTwo: "Konsultacije o digitalizaciji",
+    divisionPageCardTextTwo:
+      "Pomažemo organizacijama da optimizuju poslovne procese, usvoje inovativne digitalne alate i razviju održive strategije digitalne transformacije.",
+    divisionPageCardTitleThree: "Razvoj i dizajn veb sajtova",
+    divisionPageCardTextThree:
+      "Kreiramo korisnički orijentisane, visokoperformantne web stranice koje su u skladu s poslovnim ciljevima i poboljšavaju digitalnu prisutnost.",
+    servicePageProject: "Obuka za upravljanje projektima",
+    servicePageProjectTitle: "Ovladajte vještinama upravljanja projektima",
+    servicePageProjectText:
+      "Upravljanje projektima je jedna od najvažnijih vještina u poslovnom svijetu. Diginow- ov 35-časovni PMP kurs nije samo priprema za ispit već i praktična obuka koja vas osposobljava za uspjeh u realnim projektima. Naša obuka podijeljena je u dvije glavne kategorije:",
+    servicePageProjectCardTitleOne: "Obuka prilagođena NVO-ima",
+    servicePageProjectCardTextOne:
+      "Fokusira se na specifične potrebe neprofitnih organizacija, uključujući upravljanje projektnim ciklusom i strategije prikupljanja sredstava.",
+    servicePageProjectCardTitleTwo: "Obuka za profitne kompanije",
+    servicePageProjectCardTextTwo:
+      "Prilagođena poslovnom okruženju, s naglaskom na upravljanje vremenom, analizu rizika i koordinaciju timova. Sve naše obuke su prilagođene vašim individualnim i organizacijskim potrebama. Radimo s vama kako bismo osigurali najefikasnije iskustvo učenja.",
+    servicePageDigitalization: "Konsultacije o digitalizaciji",
+    servicePageDigitalizationTitle:
+      "Pojednostavite svoju digitalnu transformaciju",
+    servicePageDigitalizationText:
+      "Digitalizacija je ključ budućeg uspjeha preduzeća i nevladinih organizacija. Svi naši projekti digitalizacije se sprovode s individualnim pristupom, osiguravajući maksimalnu efikasnost vaših tehnoloških investicija. U Diginow-u analiziramo vaše procese, identifikujemo područja za poboljšanje i kreiramo strategije digitalne transformacije prilagođene vašim potrebama. Naše usluge uključuju:",
+    servicePageDigitalizationCardTitleOne: "Digitalna rješenja za NVO-e",
+    servicePageDigitalizationCardTextOne:
+      "Tehnološki alati prilagođeni nevladinim organizacijama, od alata za prikupljanje sredstava do strategija operativne efikasnosti.",
+    servicePageDigitalizationCardTitleTwo: "Digitalizacija za MSP-a",
+    servicePageDigitalizationCardTextTwo:
+      "Razvoj sistema koji povećavaju konkurentnost i optimizuju poslovne procese.",
+    servicePageWeb: "Razvoj i dizajn web sajtova",
+    servicePageWebTitle: "Web rješenja koja odražavaju vaše ciljeve",
+    servicePageWebTextOne:
+      "Vaša web stranica je vaše lice u digitalnom svijetu, a mi se trudimo da je oblikujemo na najbolji mogući način. Razvijamo brza, sigurna i visokoperformantna web rješenja koja su usklađena s vašim poslovnim ciljevima.",
+    servicePageWebTextTwo:
+      "Kreiramo kreativne i moderne dizajne koji odražavaju jedinstveni identitet vaše kompanije. Naš dizajnerski proces daje prioritet i estetskim elementima i korisničkom iskustvu. Cilj nam je stvoriti vizuelni jezik koji očarava vaše posjetioce na prvi pogled i podstiče ih na akciju.",
   },
   tr: {
     about: "Hakkımızda",
@@ -202,9 +287,53 @@ export const translations = {
       "<span class='highlight-font'>Diginow</span> küçük ve orta ölçekli işletmeler (KOBİ'ler) ile sivil toplum kuruluşlarını (STK'lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
     aboutCardTitleOne: "Misyonumuz",
     aboutCardTextOne:
-      "Misyonumuz, küçük ve orta ölçekli işletmeler (KOBİ'ler) ile sivil toplum kuruluşlarını (STK'lar) en son dijital çözümler, stratejik danışmanlık ve özel eğitim programları ile güçlendirmeye odaklanan dinamik ve yenilikçi bir şirkettir. Mühendislik ve teknoloji alanındaki güçlü temellerimiz sayesinde, geleneksel iş modellerini dijital gelecekle birleştiriyor ve müşterilerimizin sürekli değişen pazarda bir adım önde olmasını sağlıyoruz.",
-    aboutCardTitleTwo: "Ekibimiz",
+      "Geleneksel yöntemlerle dijital çağ arasındaki köprüyü kurarak işletmeleri ve organizasyonları güçlendirmek. İş ortaklarımıza inovasyon, verimlilik ve sürdürülebilir başarı sağlayan özel eğitim, danışmanlık ve web çözümleri sunmaya kendimizi adadık.",
+    aboutCardTitleTwo: "Vizyonumuz",
     aboutCardTextTwo:
+      "KOBİ’ler ve STK’lar için dijital dönüşüm alanında dünya çapında öncü bir güç olmak — teknolojinin amaca hizmet ettiği, her organizasyonun değişen dünyada gelişim için ihtiyaç duyduğu araçlara sahip olduğu bir gelecek yaratmak.",
+    aboutCardTitleThree: "Ekibimiz",
+    aboutCardTextThree:
       "Ekibimiz, sektörde geniş deneyime sahip yetenekli profesyonellerden oluşmaktadır. Yenilikçilik, uyum sağlama ve stratejik düşünme konusundaki tutkumuzla, üstlendiğimiz her projede müşterilerimiz için somut başarılar yaratıyoruz.",
+    divisionPageSubtitle:
+      "Her bölüm, müşterilerimize özel ve etkili çözümler sunarak mükemmeliyet anlayışıyla çalışmaktadır.",
+    divisionPageText:
+      "Diginow, dijital dönüşüm, danışmanlık ve eğitim alanlarında uzmanlaşmış bölümlerden oluşur:",
+    divisionPageCardTitleOne: "Proje Yönetimi Eğitimi",
+    divisionPageCardTextOne:
+      "PMP sertifikasyon kursları da dahil olmak üzere profesyonellere yönelik kapsamlı eğitim programları sunuyoruz. STK&#39;lar ve işletmeler için özel olarak hazırlanmış eğitimlerle proje yönetimi becerilerini geliştiriyoruz.",
+    divisionPageCardTitleTwo: "Dijitalleşme Danışmanlığı",
+    divisionPageCardTextTwo:
+      "İş süreçlerini optimize ederek, yenilikçi dijital araçlar benimsemelerine ve sürdürülebilir dijital dönüşüm stratejileri geliştirmelerine yardımcı oluyoruz.",
+    divisionPageCardTitleThree: "Web Geliştirme ve Tasarım",
+    divisionPageCardTextThree:
+      "Kullanıcı dostu, yüksek performanslı web siteleri oluşturarak işletmelerin dijital dünyadaki varlıklarını güçlendiriyoruz.",
+    servicePageProject: "Proje Yönetimi Eğitimi",
+    servicePageProjectTitle: "Proje Yönetiminde Uzmanlaşın",
+    servicePageProjectText:
+      "Proje yönetimi, iş dünyasında en kritik becerilerden biridir. Diginow’un 35 saatlik PMP odaklı eğitim programı, sadece sınav hazırlığına yönelik değil, aynı zamanda gerçek dünyadaki projelerde başarıya ulaşmanızı sağlayacak pratik bilgi ve teknikleri de içerir. Eğitimlerimiz iki ana kategoriye ayrılır:",
+    servicePageProjectCardTitleOne: "STK’lara Özel Eğitim Seti",
+    servicePageProjectCardTextOne:
+      "Proje döngüsü yönetiminden fon bulma stratejilerine kadar sivil toplum kuruluşlarının özel ihtiyaçlarını karşılayan eğitimler.",
+    servicePageProjectCardTitleTwo: "Şirketler İçin Eğitim Seti",
+    servicePageProjectCardTextTwo:
+      "Zaman yönetimi, risk analizi ve ekip koordinasyonu gibi konulara odaklanan, rekabetçi iş dünyasına uygun eğitimler. Tüm eğitimlerimiz, bireysel ve kurumsal ihtiyaçlarınıza göre özel olarak şekillendirilir. Size en uygun öğrenme deneyimini sunmak için birlikte çalışıyoruz.",
+    servicePageDigitalization: "Dijitalleşme Danışmanlığı",
+    servicePageDigitalizationTitle: "Dijital Dönüşümünüzü Kolaylaştırın",
+    servicePageDigitalizationText:
+      "Dijitalleşme, işletmelerin ve STK'ların gelecekte başarılı olmasının anahtarıdır. Diginow olarak süreçlerinizi analiz ediyor, iyileştirme alanlarını belirliyor ve ihtiyaçlarınıza özel dijital dönüşüm stratejileri oluşturuyoruz. Hizmetlerimiz şunları içerir:",
+    servicePageDigitalizationCardTitleOne:
+      "STK’lar İçin Dijitalleşme Çözümleri",
+    servicePageDigitalizationCardTextOne:
+      "Fon toplama araçlarından operasyonel verimlilik stratejilerine kadar STK&#39;lara özel teknolojik çözümler.",
+    servicePageDigitalizationCardTitleTwo:
+      "KOBİ’ler İçin Dijitalleşme Stratejileri",
+    servicePageDigitalizationCardTextTwo:
+      "Rekabet gücünüzü artıracak ve iş süreçlerinizi optimize edecek sistemler geliştirme.",
+    servicePageWeb: "Web Geliştirme & Tasarım",
+    servicePageWebTitle: "Hedeflerinize Uygun Web Çözümleri",
+    servicePageWebTextOne:
+      "Web siteniz, dijital dünyadaki yüzünüzdür ve onu en iyi şekilde tasarlamayı taahhüt ediyoruz. Hızlı, güvenli ve performans odaklı web çözümleri geliştiriyoruz.",
+    servicePageWebTextTwo:
+      "Şirketinizin benzersiz kimliğini yansıtan yaratıcı ve modern tasarımlar oluşturuyoruz. Tasarım sürecimiz, estetik unsurların yanı sıra kullanıcı deneyimini de ön planda tutar. Amacımız, ziyaretçilerinizi ilk bakışta etkileyen ve onları harekete geçiren bir görsel dil oluşturmaktır.",
   },
 };

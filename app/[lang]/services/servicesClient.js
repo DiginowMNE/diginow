@@ -55,7 +55,7 @@ export default function ContactClient() {
       <div className={styles.container}>
         <div className={styles.title}>
           <Slide triggerOnce>
-            <h1>Services</h1>
+            <h1>{t("services")}</h1>
           </Slide>
         </div>
         <div className={styles.servicesContainer}>
@@ -65,19 +65,13 @@ export default function ContactClient() {
                 <h2
                   className={`${styles.serviceType} ${styles.serviceTypeBlue}`}
                 >
-                  Project Management Training
+                  {t("servicePageProject")}
                 </h2>
                 <div className={styles.serviceContentText}>
                   <h3 className={styles.serviceTitle}>
-                    Master the Art of Project Management
+                    {t("servicePageProjectTitle")}
                   </h3>
-                  <p>
-                    Project management is one of the most critical skills in the
-                    business world. Diginow’s 35-hour PMP-focused training
-                    program is not only limited to exam preparation but also
-                    equips you with practical knowledge and techniques to
-                    succeed in real-world projects.
-                  </p>
+                  <p>{t("servicePageProjectText")}</p>
                 </div>
               </Fade>
             </div>
@@ -90,45 +84,40 @@ export default function ContactClient() {
             >
               <div className={styles.serviceList}>
                 <div className={styles.serviceListItem}>
-                  <div
-                    className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
-                  >
-                    <HiSpeakerphone />
+                  <div className={styles.serviceListItemTitleContainer}>
+                    <div
+                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
+                    >
+                      <HiSpeakerphone />
+                    </div>
+                    <p className={styles.serviceListItemTitle}>
+                      <span>{t("servicePageProjectCardTitleOne")}</span>
+                    </p>
                   </div>
                   <div
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}
                   >
-                    <p className={styles.serviceListItemTitle}>
-                      <span>Training Set for NGOs</span>
-                    </p>
                     <span className={styles.serviceListContent}>
-                      Specifically designed to meet the unique needs of
-                      non-profit organizations, covering all aspects from
-                      project cycle management to fundraising strategies.
+                      {t("servicePageProjectCardTextOne")}
                     </span>
                   </div>
                 </div>
                 <div className={styles.serviceListItem}>
-                  <div
-                    className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
-                  >
-                    <FaSuitcase />
+                  <div className={styles.serviceListItemTitleContainer}>
+                    <div
+                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberProject}`}
+                    >
+                      <FaSuitcase />
+                    </div>
+                    <p className={styles.serviceListItemTitle}>
+                      <span>{t("servicePageProjectCardTitleTwo")}</span>
+                    </p>
                   </div>
                   <div
                     className={`${styles.serviceListItemContent} ${styles.serviceListItemContentProject}`}
                   >
-                    <p className={styles.serviceListItemTitle}>
-                      <span>
-                        Training Set for <br /> For-Profit Companies
-                      </span>
-                    </p>
                     <span className={styles.serviceListContent}>
-                      Tailored to meet the competitive dynamics of the business
-                      world, focusing on time management, risk analysis, and
-                      team coordination. Moreover, all our training sessions are
-                      tailor-made to suit your individual and organizational
-                      needs. We work with you to deliver the most effective
-                      learning experience.
+                      {t("servicePageProjectCardTextTwo")}
                     </span>
                   </div>
                 </div>
@@ -141,25 +130,17 @@ export default function ContactClient() {
             >
               <Fade triggerOnce direction="up" cascade damping={0.2}>
                 <h2 className={styles.serviceType}>
-                  Digitalization Consultancy
+                  {t("servicePageDigitalization")}
                 </h2>
                 <div className={styles.serviceContentText}>
                   <h3
                     className={`${styles.serviceTitle} ${styles.serviceTitleDigitalization}`}
                   >
-                    Digitalization is the key to the future success of
-                    businesses and NGOs.
+                    {t("servicePageDigitalizationTitle")}
                   </h3>
                   <div>
                     <p className={styles.digiText}>
-                      At Diginow, we analyze your processes, identify areas for
-                      improvement, and create digital transformation strategies
-                      tailored to your needs.
-                    </p>
-                    <p>
-                      All our digitalization projects are executed with a
-                      tailor-made approach, working closely with you to maximize
-                      the efficiency of your technological investments.
+                      {t("servicePageDigitalizationText")}
                     </p>
                   </div>
                 </div>
@@ -173,36 +154,38 @@ export default function ContactClient() {
                   <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
-                    <div
-                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
-                    >
-                      <HiServer />
+                    <div className={styles.serviceListItemTitleContainer}>
+                      <div
+                        className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
+                      >
+                        <HiServer />
+                      </div>
+                      <p className={styles.serviceListItemTitle}>
+                        {t("servicePageDigitalizationCardTitleOne")}
+                      </p>
                     </div>
                     <div className={styles.serviceListItemContent}>
-                      <p className={styles.serviceListItemTitle}>
-                        Digitalization Solutions for NGOs
-                      </p>
                       <span className={styles.serviceListContent}>
-                        Providing technological tools tailored to NGOs, from
-                        fundraising tools to operational efficiency strategies.
+                        {t("servicePageDigitalizationCardTextOne")}
                       </span>
                     </div>
                   </li>
                   <li
                     className={`${styles.serviceListItem} ${styles.serviceListItemDigitalization}`}
                   >
-                    <div
-                      className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
-                    >
-                      <HiTemplate />
+                    <div className={styles.serviceListItemTitleContainer}>
+                      <div
+                        className={`${styles.serviceListItemNumber} ${styles.serviceListItemNumberDigitalization}`}
+                      >
+                        <HiTemplate />
+                      </div>
+                      <p className={styles.serviceListItemTitle}>
+                        {t("servicePageDigitalizationCardTitleTwo")}
+                      </p>
                     </div>
                     <div className={styles.serviceListItemContent}>
-                      <p className={styles.serviceListItemTitle}>
-                        Digitalization Strategies for SMEs
-                      </p>
                       <span className={styles.serviceListContent}>
-                        Developing systems to enhance your competitiveness and
-                        optimize your business processes.
+                        {t("servicePageDigitalizationCardTextTwo")}
                       </span>
                     </div>
                   </li>
@@ -213,27 +196,15 @@ export default function ContactClient() {
           <div className={styles.serviceWeb}>
             <Fade triggerOnce direction="up" cascade damping={0.2}>
               <h2 className={`${styles.serviceType} ${styles.serviceTypeBlue}`}>
-                Web Development & Design
+                {t("servicePageWeb")}
               </h2>
               <h3 className={styles.serviceTitle}>
                 <HiTerminal />
-                Web Solutions That Reflect Your Goals
+                {t("servicePageWebTitle")}
               </h3>
               <div className={styles.webText}>
-                <p>
-                  Your website is your face in the digital world, and we are
-                  committed to designing it in the best possible way. We develop
-                  fast, secure, and performance-oriented web solutions. Our goal
-                  is to create websites that align with your business objectives
-                  and resonate with your audience.
-                </p>
-                <p>
-                  We create creative and modern designs that reflect the unique
-                  identity of your company. Our design process prioritizes both
-                  aesthetic elements and user experience. We aim to create a
-                  visual language that captivates your visitors at first glance
-                  and drives them to action.
-                </p>
+                <p>{t("servicePageWebTextOne")}</p>
+                <p>{t("servicePageWebTextTwo")}</p>
               </div>
             </Fade>
             <div className={styles.webIcons}>
