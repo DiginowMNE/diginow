@@ -236,7 +236,7 @@ export const translations = {
     herotext:
       "Diginow, değişen iş dünyasının dinamiklerini anlayarak küçük ve orta ölçekli işletmeler ile sivil toplum kuruluşlarına özel çözümler sunmak için kuruldu. Projelerinizi başarıya ulaştıracak eğitimler, iş süreçlerinizi optimize edecek danışmanlık hizmetleri ve dijital dünyadaki varlığınızı güçlendirecek modern web çözümleri sunuyoruz. Hedefimiz, yalnızca bir hizmet sağlayıcı değil, aynı zamanda uzun vadeli bir çözüm ortağı olmaktır. Yenilikçi yaklaşımımızla işinizi büyütmeye ve fark yaratmaya hazırız.",
     aboutButtonText: "Hakkımızda daha fazla bilgi alın",
-    servicesTitle: "Hizmetlerimiz",
+    servicesTitle: "HİZMETLERİMİZ",
     servicesSubtitle: "Hizmetlerimiz hakkında daha fazla bilgi alın.",
     servicesButtonText: "Hizmetler hakkında daha fazla bilgi edinin",
     serviceCardTitleOne: "Proje Yönetimi Eğitimi",
@@ -307,7 +307,7 @@ export const translations = {
     divisionPageCardTitleThree: "Web Geliştirme ve Tasarım",
     divisionPageCardTextThree:
       "Kullanıcı dostu, yüksek performanslı web siteleri oluşturarak işletmelerin dijital dünyadaki varlıklarını güçlendiriyoruz.",
-    servicePageProject: "Proje Yönetimi Eğitimi",
+    servicePageProject: "Proje Yönetİmİ Eğİtİmİ",
     servicePageProjectTitle: "Proje Yönetiminde Uzmanlaşın",
     servicePageProjectText:
       "Proje yönetimi, iş dünyasında en kritik becerilerden biridir. Diginow’un 35 saatlik PMP odaklı eğitim programı, sadece sınav hazırlığına yönelik değil, aynı zamanda gerçek dünyadaki projelerde başarıya ulaşmanızı sağlayacak pratik bilgi ve teknikleri de içerir. Eğitimlerimiz iki ana kategoriye ayrılır:",
@@ -317,7 +317,7 @@ export const translations = {
     servicePageProjectCardTitleTwo: "Şirketler İçin Eğitim Seti",
     servicePageProjectCardTextTwo:
       "Zaman yönetimi, risk analizi ve ekip koordinasyonu gibi konulara odaklanan, rekabetçi iş dünyasına uygun eğitimler. Tüm eğitimlerimiz, bireysel ve kurumsal ihtiyaçlarınıza göre özel olarak şekillendirilir. Size en uygun öğrenme deneyimini sunmak için birlikte çalışıyoruz.",
-    servicePageDigitalization: "Dijitalleşme Danışmanlığı",
+    servicePageDigitalization: "Dİjİtalleşme Danışmanlığı",
     servicePageDigitalizationTitle: "Dijital Dönüşümünüzü Kolaylaştırın",
     servicePageDigitalizationText:
       "Dijitalleşme, işletmelerin ve STK'ların gelecekte başarılı olmasının anahtarıdır. Diginow olarak süreçlerinizi analiz ediyor, iyileştirme alanlarını belirliyor ve ihtiyaçlarınıza özel dijital dönüşüm stratejileri oluşturuyoruz. Hizmetlerimiz şunları içerir:",
@@ -329,7 +329,7 @@ export const translations = {
       "KOBİ’ler İçin Dijitalleşme Stratejileri",
     servicePageDigitalizationCardTextTwo:
       "Rekabet gücünüzü artıracak ve iş süreçlerinizi optimize edecek sistemler geliştirme.",
-    servicePageWeb: "Web Geliştirme & Tasarım",
+    servicePageWeb: "Web Gelİştİrme & Tasarım",
     servicePageWebTitle: "Hedeflerinize Uygun Web Çözümleri",
     servicePageWebTextOne:
       "Web siteniz, dijital dünyadaki yüzünüzdür ve onu en iyi şekilde tasarlamayı taahhüt ediyoruz. Hızlı, güvenli ve performans odaklı web çözümleri geliştiriyoruz.",

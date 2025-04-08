@@ -84,13 +84,13 @@
 
 .socialLinks {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .socialLinks a {
   font-weight: 500;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.7rem;
   transition: all 0.3s ease;
 }
 

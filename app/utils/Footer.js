@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useTranslation } from "../hooks/useTranslation";
 import Image from "next/image";
 
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
   const { t, locale } = useTranslation();
 
@@ -25,7 +28,6 @@ const Footer = () => {
               />
             </Link>
           </div>
-
           <div className={styles.footerLinks}>
             <div className={styles.footerSection}>
               <h3 className={styles.footerTitle}>{t("navigation")}</h3>
@@ -53,19 +55,19 @@ const Footer = () => {
           </p>
           <div className={styles.socialLinks}>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/diginow/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <FaLinkedin />
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/diginowmne/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <FaInstagram />
             </a>
           </div>
         </div>

@@ -55,7 +55,7 @@ export default function ContactClient() {
       <div className={styles.container}>
         <div className={styles.title}>
           <Slide triggerOnce>
-            <h1>{t("services")}</h1>
+            <h1>{t("servicesTitle")}</h1>
           </Slide>
         </div>
         <div className={styles.servicesContainer}>
