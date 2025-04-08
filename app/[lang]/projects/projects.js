@@ -1,3 +1,4 @@
+"use client";
 import styles from "../shared.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import Footer from "../../utils/Footer";

@@ -329,7 +329,7 @@ export const translations = {
       "KOBİ’ler İçin Dijitalleşme Stratejileri",
     servicePageDigitalizationCardTextTwo:
       "Rekabet gücünüzü artıracak ve iş süreçlerinizi optimize edecek sistemler geliştirme.",
-    servicePageWeb: "Web Gelİştİrme & Tasarım",
+    servicePageWeb: "Web Gelİşİrme & Tasarım",
     servicePageWebTitle: "Hedeflerinize Uygun Web Çözümleri",
     servicePageWebTextOne:
       "Web siteniz, dijital dünyadaki yüzünüzdür ve onu en iyi şekilde tasarlamayı taahhüt ediyoruz. Hızlı, güvenli ve performans odaklı web çözümleri geliştiriyoruz.",
