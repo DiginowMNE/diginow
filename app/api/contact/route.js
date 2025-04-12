@@ -162,48 +162,18 @@ export async function POST(req) {
 
     // Email content
     const mailOptions = {
-      from: `"Diginow Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.RECEIVING_EMAIL,
-      subject: `New Contact Form Submission from ${sanitizedData.name} ${sanitizedData.lastName}`,
+      from: process.env.EMAIL_USER,
+      to: process.env.RECEIVER_EMAIL,
+      subject: `New Website Message Submission from ${sanitizedData.name} ${sanitizedData.lastName}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px;">New Contact Form Submission</h2>
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin-top: 20px;">
-            <p style="margin: 10px 0;"><strong style="color: #555;">Name:</strong> ${
-              sanitizedData.name
-            } ${sanitizedData.lastName}</p>
-            <p style="margin: 10px 0;"><strong style="color: #555;">Company:</strong> ${
-              sanitizedData.company || "Not provided"
-            }</p>
-            <p style="margin: 10px 0;"><strong style="color: #555;">Email:</strong> ${
-              sanitizedData.email
-            }</p>
-            <p style="margin: 10px 0;"><strong style="color: #555;">Reason for Contact:</strong> ${
-              sanitizedData.reasonForContact || "Not specified"
-            }</p>
-            <div style="margin-top: 20px;">
-              <strong style="color: #555;">Message:</strong>
-              <div style="background-color: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
-                <p style="margin: 0; line-height: 1.5;">${
-                  sanitizedData.message
-                }</p>
-              </div>
-            </div>
-          </div>
-          <p style="color: #666; font-size: 12px; margin-top: 20px; text-align: center;">
-            This email was sent from the contact form on diginow.me
-          </p>
-        </div>
+        <h2>New Website Inquiry from ${sanitizedData.name} ${sanitizedData.lastName}</h2>
+        <p><strong>Name:</strong> ${sanitizedData.name} ${sanitizedData.lastName}</p>
+        <p><strong>Company:</strong> ${sanitizedData.company}</p>
+        <p><strong>Email:</strong> ${sanitizedData.email}</p>
+        <p><strong>Reason for Contact:</strong> ${sanitizedData.reasonForContact}</p>
+        <p><strong>Message:</strong></p>
+        <p>${sanitizedData.message}</p>
       `,
-      text: `New Contact Form Submission\n\nName: ${sanitizedData.name} ${
-        sanitizedData.lastName
-      }\nCompany: ${sanitizedData.company || "Not provided"}\nEmail: ${
-        sanitizedData.email
-      }\nReason: ${
-        sanitizedData.reasonForContact || "Not specified"
-      }\n\nMessage:\n${
-        sanitizedData.message
-      }\n\nThis email was sent from the contact form on diginow.me`,
     };
 
     // Send email
