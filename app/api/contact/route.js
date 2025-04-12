@@ -163,10 +163,10 @@ export async function POST(req) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
+      to: process.env.RECEIVER_EMAIL,
       subject: `New Website Message Submission from ${sanitizedData.name} ${sanitizedData.lastName}`,
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>New Website Inquiry from ${sanitizedData.name} ${sanitizedData.lastName}</h2>
         <p><strong>Name:</strong> ${sanitizedData.name} ${sanitizedData.lastName}</p>
         <p><strong>Company:</strong> ${sanitizedData.company}</p>
         <p><strong>Email:</strong> ${sanitizedData.email}</p>
