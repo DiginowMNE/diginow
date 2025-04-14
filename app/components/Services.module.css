@@ -99,7 +99,6 @@
 
 .cardIcon {
   color: var(--light-blue);
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,8 +265,6 @@
 
   .cardIcon {
     font-size: 5rem;
-    margin-bottom: 0rem;
-    margin-top: -1rem;
   }
 
   .cardTitle {
@@ -346,7 +343,6 @@
 
   .cardIcon {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
   }
 
   .cardText {
@@ -383,9 +379,12 @@
     padding: 8rem 5rem;
   }
 
+  .servicesCard {
+    padding: 3rem;
+  }
+
   .title {
     font-size: 1.4rem;
-    padding-bottom: 2.5rem;
   }
 
   .servicesSubtitle {
@@ -488,7 +487,7 @@
   }
 
   .servicesCard {
-    padding: 2rem 0;
+    padding: 2rem;
   }
 
   .cardTitle {
@@ -532,19 +531,27 @@
   }
 
   .servicesCard {
-    padding: 1.5rem;
+    padding: 3rem 2rem;
+  }
+
+  .cardTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .cardTitle {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .cardText {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .cardIcon {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .servicesButtonText {
@@ -563,6 +570,10 @@
     font-size: 1.1rem;
   }
 
+  .cardText {
+    font-size: 0.9rem;
+  }
+
   .servicesButton {
     margin-top: 1rem;
     width: 100%;
@@ -579,8 +590,8 @@
   }
 
   .cardTitle {
-    font-size: 1.7rem;
     font-weight: 500;
+    margin-bottom: 0.2rem;
   }
 
   .cardTextShown {
@@ -597,8 +608,9 @@
   }
 
   .cardTitle {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 0.2rem;
   }
 
   .servicesCard {
@@ -621,16 +633,21 @@
     font-size: 2.2rem;
   }
 
+  .servicesCard {
+    padding: 2.5rem 2rem;
+  }
+
   .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
   }
 
   .cardText {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .cardIcon {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -644,7 +661,8 @@
   }
 
   .cardTitle {
-    font-size: 1.4rem;
+    font-size: 2.1rem;
+    margin-bottom: 0.2rem;
   }
 
   .cardTextShown {
@@ -666,15 +684,12 @@
   }
 
   .cardTitle {
-    font-size: 1.3rem;
-  }
-
-  .cardText {
-    font-size: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
   }
 
   .cardIcon {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .servicesButtonText {
@@ -693,20 +708,24 @@
   }
 
   .cardTitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.1rem;
   }
 
   .servicesTitleLine {
     font-size: 0.8rem;
   }
 
+  .cardText {
+    font-size: 0.7rem;
+  }
+
   .servicesButtonText {
     font-size: 0.8rem;
   }
 
-  .cardTextShown {
-    font-size: 0.8rem;
-    padding-top: 0.5rem;
+  .cardIcon {
+    font-size: 4rem;
   }
 }
 
@@ -723,7 +742,6 @@
 
   .title {
     font-size: 1.5rem;
-    padding-bottom: 3rem;
   }
 
   .servicesTitleLine {
@@ -758,11 +776,15 @@
   }
 
   .servicesCard {
-    padding: 2rem;
+    padding: 3rem;
+  }
+
+  .cardTitleContainer {
+    grid-template-columns: 1fr 5fr;
   }
 
   .cardTitle {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .cardText {
@@ -770,7 +792,7 @@
   }
 
   .cardIcon {
-    font-size: 4rem;
+    font-size: 7rem;
   }
 }
 
