@@ -154,7 +154,7 @@
 
 @media (max-width: 2560px) {
   .nav {
-    padding: 2.5rem 10rem;
+    padding: 2rem 10rem;
   }
 
   .image {
@@ -178,7 +178,7 @@
 
 @media (max-width: 1920px) {
   .nav {
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
   }
 
   .image {

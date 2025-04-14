@@ -196,150 +196,159 @@ export default function ContactClient() {
             </div>
           </Fade>
         </div>
-        <Slide
-          direction="right"
+        <Fade
+          direction="up"
+          delay={500}
           triggerOnce
           className={styles.contactFormContainer}
         >
           <div className={styles.contactForm}>
             <form onSubmit={handleSubmit} ref={formRef}>
-              {/* Honeypot field - hidden from real users */}
-              <input
-                type="text"
-                name="website"
-                style={{ display: "none" }}
-                tabIndex={-1}
-                autoComplete="off"
-              />
-              <div className={styles.contactFormInputName}>
-                <div className={styles.contactFormInput}>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder={t("contactName")}
-                    required
-                    minLength={2}
-                    maxLength={50}
-                  />
-                </div>
-                <div className={styles.contactFormInput}>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder={t("contactLastName")}
-                    required
-                    minLength={2}
-                    maxLength={50}
-                  />
-                </div>
-              </div>
-              <div className={styles.entityTypeSelect}>
-                <Select
-                  labelId="entityType-label"
-                  id="entityType"
-                  name="entityType"
-                  className={styles.contactFormInputSelect}
-                  value={entityType}
-                  onChange={handleEntityTypeChange}
-                  displayEmpty
-                  required
-                >
-                  <MenuItem disabled value="">
-                    <em>{t("contactEntityType")}</em>
-                  </MenuItem>
-                  <MenuItem value="ngo">{t("contactNgo")}</MenuItem>
-                  <MenuItem value="company">{t("contactCompany")}</MenuItem>
-                </Select>
-              </div>
-              <div className={styles.contactFormInputCompanyEmail}>
-                <div className={styles.contactFormInput}>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder={t("contactEntityName")}
-                    required
-                    maxLength={100}
-                    pattern="[A-Za-z0-9\s\-\.]+"
-                  />
-                </div>
-                <div className={styles.contactFormInput}>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder={t("contactEmail")}
-                    required
-                    maxLength={100}
-                  />
-                </div>
-              </div>
-              <div className={styles.contactFormInputSelect}>
-                <Select
-                  labelId="reasonForContact-label"
-                  id="reasonForContact"
-                  name="reasonForContact"
-                  className={styles.contactFormInputSelect}
-                  value={reasonForContact}
-                  onChange={handleReasonChange}
-                  displayEmpty
-                  required
-                >
-                  <MenuItem disabled value="">
-                    <em>{t("contactReason")}</em>
-                  </MenuItem>
-                  <MenuItem value="Web Development">
-                    {t("contactReasonWebDevelopment")}
-                  </MenuItem>
-                  <MenuItem value="Project Management">
-                    {t("contactReasonProjectManagement")}
-                  </MenuItem>
-                  <MenuItem value="Digitalization Consultancy">
-                    {t("contactReasonDigitalizationConsultancy")}
-                  </MenuItem>
-                  <MenuItem value="Other">{t("contactReasonOther")}</MenuItem>
-                </Select>
-              </div>
-              <div className={styles.contactFormInputMessage}>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  placeholder={t("contactMessage")}
-                  required
-                  minLength={10}
-                  maxLength={1000}
-                ></textarea>
-              </div>
-              <div className={styles.recaptcha}>
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  onChange={(value) => setCaptchaValue(value)}
-                />
-              </div>
-              <button
-                type="submit"
-                className={styles.contactFormButton}
-                disabled={isSubmitting}
+              <Fade
+                cascade
+                damping={0.2}
+                delay={500}
+                direction="up"
+                triggerOnce
               >
-                {isSubmitting ? "Sending..." : t("contactSend")}
-              </button>
-              {submitStatus === "success" && (
-                <p style={{ color: "green", marginTop: "10px" }}>
-                  Message sent successfully!
-                </p>
-              )}
-              {(submitStatus === "error" || errorMessage) && (
-                <p style={{ color: "red", marginTop: "10px" }}>
-                  {errorMessage}
-                </p>
-              )}
+                {/* Honeypot field - hidden from real users */}
+                <input
+                  type="text"
+                  name="website"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+                <div className={styles.contactFormInputName}>
+                  <div className={styles.contactFormInput}>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder={t("contactName")}
+                      required
+                      minLength={2}
+                      maxLength={50}
+                    />
+                  </div>
+                  <div className={styles.contactFormInput}>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder={t("contactLastName")}
+                      required
+                      minLength={2}
+                      maxLength={50}
+                    />
+                  </div>
+                </div>
+                <div className={styles.entityTypeSelect}>
+                  <Select
+                    labelId="entityType-label"
+                    id="entityType"
+                    name="entityType"
+                    className={styles.contactFormInputSelect}
+                    value={entityType}
+                    onChange={handleEntityTypeChange}
+                    displayEmpty
+                    required
+                  >
+                    <MenuItem disabled value="">
+                      <em>{t("contactEntityType")}</em>
+                    </MenuItem>
+                    <MenuItem value="ngo">{t("contactNgo")}</MenuItem>
+                    <MenuItem value="company">{t("contactCompany")}</MenuItem>
+                  </Select>
+                </div>
+                <div className={styles.contactFormInputCompanyEmail}>
+                  <div className={styles.contactFormInput}>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      placeholder={t("contactEntityName")}
+                      required
+                      maxLength={100}
+                      pattern="[A-Za-z0-9\s\-\.]+"
+                    />
+                  </div>
+                  <div className={styles.contactFormInput}>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder={t("contactEmail")}
+                      required
+                      maxLength={100}
+                    />
+                  </div>
+                </div>
+                <div className={styles.contactFormInputSelect}>
+                  <Select
+                    labelId="reasonForContact-label"
+                    id="reasonForContact"
+                    name="reasonForContact"
+                    className={styles.contactFormInputSelect}
+                    value={reasonForContact}
+                    onChange={handleReasonChange}
+                    displayEmpty
+                    required
+                  >
+                    <MenuItem disabled value="">
+                      <em>{t("contactReason")}</em>
+                    </MenuItem>
+                    <MenuItem value="Web Development">
+                      {t("contactReasonWebDevelopment")}
+                    </MenuItem>
+                    <MenuItem value="Project Management">
+                      {t("contactReasonProjectManagement")}
+                    </MenuItem>
+                    <MenuItem value="Digitalization Consultancy">
+                      {t("contactReasonDigitalizationConsultancy")}
+                    </MenuItem>
+                    <MenuItem value="Other">{t("contactReasonOther")}</MenuItem>
+                  </Select>
+                </div>
+                <div className={styles.contactFormInputMessage}>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    placeholder={t("contactMessage")}
+                    required
+                    minLength={10}
+                    maxLength={1000}
+                  ></textarea>
+                </div>
+                <div className={styles.recaptcha}>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    onChange={(value) => setCaptchaValue(value)}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className={styles.contactFormButton}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : t("contactSend")}
+                </button>
+                {submitStatus === "success" && (
+                  <p style={{ color: "green", marginTop: "10px" }}>
+                    Message sent successfully!
+                  </p>
+                )}
+                {(submitStatus === "error" || errorMessage) && (
+                  <p style={{ color: "red", marginTop: "10px" }}>
+                    {errorMessage}
+                  </p>
+                )}
+              </Fade>
             </form>
           </div>
-        </Slide>
+        </Fade>
       </div>
       <Footer />
     </main>
