@@ -81,6 +81,15 @@
 }
 
 @media (max-width: 1024px) {
+  .flag {
+    width: 20px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+
+  .button {
+    margin: 0 0.2rem;
+  }
 }
 
 @media (max-width: 960px) {
@@ -115,20 +124,4 @@
 }
 
 @media (max-width: 325px) {
-}
-
-@media (max-width: 1200px) and (min-height: 1920px) {
-  .flag {
-    width: 30px;
-    height: auto;
-    margin-right: 1.5rem;
-  }
-}
-
-@media (max-width: 1024px) and (min-height: 1366px) {
-  .flag {
-    width: 25px;
-    height: auto;
-    margin-right: 1rem;
-  }
 }

@@ -6,7 +6,7 @@
   background-color: var(--text);
   z-index: 0;
   color: var(--background);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .servicesContainer {
@@ -15,10 +15,10 @@
 }
 
 .title {
-  font-size: 6rem;
+  font-size: 12rem;
   font-weight: 800;
   text-transform: uppercase;
-  padding: 6rem 10rem 2rem 10rem;
+  padding: 16rem 20rem 4rem 20rem;
   background-color: var(--light-blue);
   color: var(--background);
 }
@@ -33,19 +33,19 @@
 
 .service,
 .serviceWeb {
-  padding: 6rem 10rem;
+  padding: 15rem 20rem;
   overflow: hidden;
 }
 
 .serviceType {
-  font-size: 1.5rem;
-  margin-bottom: 4rem;
+  font-size: 3rem;
+  margin-bottom: 6rem;
   font-weight: 800;
   line-height: 1.1;
   color: var(--background);
   display: inline-block;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
   text-transform: uppercase;
   background: var(--light-blue);
 }
@@ -57,24 +57,23 @@
 }
 
 .serviceTitle {
-  font-size: 3rem;
+  font-size: 7rem;
   font-weight: 800;
-  margin-bottom: 1rem;
   line-height: 1.1;
   display: flex;
   align-items: flex-end;
-  gap: 1rem;
 }
 
 .serviceContentText {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 6rem;
   align-items: flex-start;
+  font-size: 2rem;
+  margin-bottom: 4rem;
 }
 
 .serviceTitleDigitalization {
-  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.1;
@@ -84,10 +83,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: flex-start;
+  gap: 6rem;
 }
 
 .serviceContent {
@@ -100,10 +99,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 0.5rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 4rem;
   border: 2px solid var(--background);
-  width: 50%;
   transition: all 0.3s ease;
 }
 
@@ -130,7 +128,7 @@
 }
 
 .serviceListItemContent {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   line-height: 1;
 }
 
@@ -139,50 +137,33 @@
 }
 
 .serviceListItemTitleContainer {
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .serviceListItemNumber {
-  font-size: 3rem;
+  font-size: 8rem;
   line-height: 1;
   color: var(--light-blue);
   margin-bottom: 1rem;
+}
+
+.serviceListItemTitle {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1;
 }
 
 .serviceListItemNumberDigitalization {
   color: var(--text);
 }
 
-.serviceSubtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.1;
-  border: 1px solid var(--background);
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.serviceSubtitleDigitalization {
-  border-color: var(--light-blue);
-  color: var(--light-blue);
-}
-
-.serviceListItemTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1;
-}
-
 .serviceListContent {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.digiText {
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 
 .digitalization {
@@ -190,10 +171,18 @@
   color: var(--text);
 }
 
-.webText {
-  margin-top: 3rem;
+.serviceTitleWeb {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.webText {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  font-size: 2rem;
 }
 
 .webIcons {
@@ -201,20 +190,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4rem;
-}
-
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 768px) {
-  .webIcons {
-  }
-}
-
-@media (max-width: 480px) {
-  .webIcons {
-  }
+  margin-top: 8rem;
 }
 
 .webIconItem {
@@ -223,4 +199,648 @@
 
 .webIconItem:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 3200px) {
+  .title {
+    font-size: 10rem;
+    padding: 15rem 16rem 4rem 16rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 10rem 16rem;
+  }
+
+  .serviceType {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    padding: 1.4rem 1.8rem;
+  }
+
+  .serviceTitle {
+    font-size: 6rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .serviceListItem {
+    padding: 3rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 6rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 4rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.8rem;
+  }
+
+  .webText {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 2560px) {
+  .title {
+    font-size: 9rem;
+    padding: 10rem 14rem 3rem 14rem;
+  }
+
+  .service {
+    gap: 2rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 10rem 14rem;
+  }
+
+  .serviceType {
+    font-size: 2.2rem;
+    margin-bottom: 5rem;
+    padding: 1.4rem 1.8rem;
+  }
+
+  .serviceTitle {
+    font-size: 5rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.8rem;
+    gap: 4rem;
+  }
+
+  .serviceListItem {
+    padding: 3rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 6rem;
+  }
+
+  .serviceListItemTitleContainer {
+    grid-template-columns: 1fr 6fr;
+    margin-bottom: 1.5rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 3.7rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.8rem;
+  }
+
+  .webText {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+
+  .webIcons {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 2340px) {
+  .title {
+    font-size: 8rem;
+    padding: 10rem 14rem 3rem 14rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 10rem 14rem;
+  }
+
+  .serviceType {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    padding: 1.4rem 1.8rem;
+  }
+
+  .serviceTitle {
+    font-size: 4.5rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 6rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 3.8rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.6rem;
+  }
+
+  .webText {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+  }
+
+  .webIcons {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .title {
+    font-size: 8rem;
+    padding: 8rem 10rem 3rem 10rem;
+  }
+
+  .service {
+    gap: 1.5rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 10rem 10rem;
+  }
+
+  .serviceType {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    padding: 1.4rem 1.8rem;
+  }
+
+  .serviceTitle {
+    font-size: 3.8rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.4rem;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .serviceList {
+    gap: 4rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 5rem;
+  }
+
+  .serviceListItemContainer {
+    margin-bottom: rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2.5rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.4rem;
+  }
+
+  .webText {
+    font-size: 1.4rem;
+  }
+
+  .webIcons {
+    margin-top: 4rem;
+  }
+
+  .serviceListItemTitleContainer {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1680px) {
+  .title {
+    font-size: 6rem;
+    padding: 6rem 8rem 2rem 8rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 6rem 8rem;
+  }
+
+  .serviceType {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    padding: 1.4rem 1.8rem;
+  }
+
+  .serviceTitle {
+    font-size: 3.2rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.2rem;
+    gap: 2rem;
+  }
+
+  .serviceList {
+    gap: 2rem;
+  }
+
+  .serviceListItem {
+    padding: 2.5rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 4rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2.5rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.2rem;
+  }
+
+  .webText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1540px) {
+  .title {
+    font-size: 5rem;
+    padding: 6rem 6rem 2rem 6rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 5rem 6rem;
+  }
+
+  .serviceType {
+    font-size: 1.2rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .serviceTitle {
+    font-size: 3rem;
+  }
+
+  .serviceContentText {
+    font-size: 1rem;
+  }
+
+  .serviceListItemTitleContainer {
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2.2rem;
+  }
+
+  .serviceListContent {
+    font-size: 1rem;
+  }
+
+  .webText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .title {
+    font-size: 5rem;
+    padding: 6rem 8rem 2rem 6rem;
+  }
+}
+
+@media (max-width: 1370px) {
+  .service {
+    gap: 1rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 5rem 6rem;
+  }
+
+  .serviceTitle {
+    font-size: 2.5rem;
+  }
+
+  .serviceContentText {
+    font-size: 0.9rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2rem;
+  }
+
+  .serviceListContent {
+    font-size: 0.9rem;
+  }
+
+  .webText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 5rem;
+    padding: 8rem 0rem 2rem 0rem;
+    text-align: center;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .serviceType {
+    font-size: 1.2rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .serviceTitle {
+    font-size: 3.5rem;
+  }
+
+  .serviceContentText {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  .serviceList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .serviceListItem {
+    padding: 2rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 4rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2.5rem;
+  }
+
+  .serviceListContent {
+    font-size: 1.2rem;
+  }
+
+  .serviceListItem:hover {
+    transform: none;
+    background-color: transparent;
+    color: var(--background);
+  }
+
+  .serviceListItemDigitalization:hover {
+    background-color: var(--background);
+    color: var(--light-blue);
+  }
+
+  .serviceTitleWeb svg {
+    display: none;
+  }
+
+  .webText {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    gap: 2rem;
+  }
+
+  .webIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem 7rem;
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 4rem;
+    padding: 8rem 0rem 2rem 0rem;
+    text-align: center;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 4rem 4rem;
+  }
+
+  .serviceType {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+
+  .serviceTitle {
+    font-size: 3.3rem;
+  }
+
+  .serviceListItem {
+    padding: 2rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 3.5rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 835px) {
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+    padding: 7rem 0rem 2rem 0rem;
+    text-align: center;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 4rem 2.5rem;
+  }
+
+  .serviceType {
+    padding: 0;
+    background: transparent;
+    margin-bottom: 2rem;
+  }
+
+  .serviceTypeBlue {
+    color: var(--light-blue);
+    background: transparent;
+  }
+
+  .serviceTitle {
+    font-size: 2rem;
+  }
+
+  .serviceContentText {
+    font-size: 1.2rem;
+  }
+
+  .serviceList {
+    gap: 3rem;
+  }
+
+  .serviceListItemTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border-top: 2px solid var(--light-blue);
+    padding-top: 2rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 4rem;
+  }
+
+  .serviceListItem {
+    padding: 0rem;
+    border: none;
+  }
+
+  .serviceListContent {
+    font-size: 1.2rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 1.9rem;
+  }
+
+  .webText {
+    font-size: 1.2rem;
+  }
+
+  .webIcons {
+    margin-top: 5rem;
+    gap: 3rem 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 4rem 2rem;
+  }
+
+  .serviceType {
+    font-size: 1.2rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.8rem;
+  }
+
+  .serviceContentText {
+    font-size: 1rem;
+  }
+
+  .serviceList {
+    gap: 2rem;
+  }
+
+  .serviceListItemTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .serviceListItemNumber {
+    font-size: 4rem;
+  }
+
+  .serviceListItemTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceListContent {
+    font-size: 1rem;
+  }
+
+  .webText {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .webIcons {
+    margin-top: 3rem;
+    gap: 2rem 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 4rem 1.5rem;
+  }
+
+  .serviceType {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 395px) {
+  .title {
+    padding: 6rem 0rem 2rem 0rem;
+  }
+
+  .service,
+  .serviceWeb {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .service,
+  .serviceWeb {
+    padding: 4rem 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .webIcons {
+    margin-top: 3rem;
+    gap: 2rem 1rem;
+  }
+}
+
+/* Tablet/iPad specific styles */
+@media (max-width: 1200px) and (min-height: 1920px),
+  (max-width: 1024px) and (min-height: 1366px) {
 }

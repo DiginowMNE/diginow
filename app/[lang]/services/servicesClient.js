@@ -32,15 +32,26 @@ export default function ContactClient() {
       if (vw < 480) {
         // mobile
         setIconSize("50");
-      } else if (vw < 768) {
+      } else if (vw <= 768) {
         // tablet
         setIconSize("75");
-      } else if (vw < 1024) {
+      } else if (vw <= 1024) {
         // small laptop
         setIconSize("85");
-      } else {
+      } else if (vw <= 1440) {
         // desktop
         setIconSize("100");
+      } else if (vw <= 1920) {
+        // large desktop
+        setIconSize("120");
+      } else if (vw <= 2560) {
+        // extra large desktop
+        setIconSize("140");
+      } else if (vw <= 3200) {
+        // extra extra large desktop
+        setIconSize("160");
+      } else {
+        setIconSize("180");
       }
     };
 
@@ -129,7 +140,9 @@ export default function ContactClient() {
               className={`${styles.serviceContent} ${styles.serviceContentDigitalization}`}
             >
               <Fade triggerOnce direction="up" cascade damping={0.2}>
-                <h2 className={styles.serviceType}>
+                <h2
+                  className={`${styles.serviceType} ${styles.serviceTypeBlue}`}
+                >
                   {t("servicePageDigitalization")}
                 </h2>
                 <div className={styles.serviceContentText}>
@@ -198,7 +211,9 @@ export default function ContactClient() {
               <h2 className={`${styles.serviceType} ${styles.serviceTypeBlue}`}>
                 {t("servicePageWeb")}
               </h2>
-              <h3 className={styles.serviceTitle}>
+              <h3
+                className={`${styles.serviceTitle} ${styles.serviceTitleWeb}`}
+              >
                 <HiTerminal />
                 {t("servicePageWebTitle")}
               </h3>
