@@ -744,6 +744,7 @@
 @media (max-width: 460px) {
   .title {
     font-size: 3rem;
+    padding: 6rem 0rem 2rem 0rem;
   }
 
   .service,
@@ -798,7 +799,7 @@
 
 @media (max-width: 430px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   .service,
@@ -823,6 +824,11 @@
 }
 
 @media (max-width: 375px) {
+  .title {
+    font-size: 2.5rem;
+    padding: 5.5rem 0rem 2rem 0rem;
+  }
+
   .service,
   .serviceWeb {
     padding: 4rem 0.5rem;
