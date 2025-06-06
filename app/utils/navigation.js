@@ -55,7 +55,7 @@ const Navigation = ({ customClassName, customClassName2 }) => {
     { href: `/${locale}/about`, label: t("about") },
     { href: `/${locale}/divisions`, label: t("divisions") },
     { href: `/${locale}/services`, label: t("services") },
-    { href: `/${locale}/contact`, label: t("contact") },
+    { href: `/${locale}/contact`, label: t("contactNav") },
   ];
 
   return (
