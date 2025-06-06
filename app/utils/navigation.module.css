@@ -154,7 +154,7 @@
 
 @media (max-width: 3200px) {
   .nav {
-    padding: 3rem 10rem;
+    padding: 2rem 10rem;
   }
 
   .image {
@@ -168,15 +168,15 @@
 
 @media (max-width: 2560px) {
   .nav {
-    padding: 2rem 10rem;
+    padding: 1.5rem 10rem;
   }
 
   .image {
-    width: 150px;
+    width: 130px;
   }
 
   .navItem .navLink {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 

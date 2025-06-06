@@ -300,7 +300,7 @@ export const translations = {
       "Diginow, dijital dönüşüm, danışmanlık ve eğitim alanlarında uzmanlaşmış bölümlerden oluşur:",
     divisionPageCardTitleOne: "Proje Yönetimi Eğitimi",
     divisionPageCardTextOne:
-      "PMP sertifikasyon kursları da dahil olmak üzere profesyonellere yönelik kapsamlı eğitim programları sunuyoruz. STK&#39;lar ve işletmeler için özel olarak hazırlanmış eğitimlerle proje yönetimi becerilerini geliştiriyoruz.",
+      "PMP sertifikasyon kursları da dahil olmak üzere profesyonellere yönelik kapsamlı eğitim programları sunuyoruz. STK'lar ve işletmeler için özel olarak hazırlanmış eğitimlerle proje yönetimi becerilerini geliştiriyoruz.",
     divisionPageCardTitleTwo: "Dijitalleşme Danışmanlığı",
     divisionPageCardTextTwo:
       "İş süreçlerini optimize ederek, yenilikçi dijital araçlar benimsemelerine ve sürdürülebilir dijital dönüşüm stratejileri geliştirmelerine yardımcı oluyoruz.",
@@ -324,7 +324,7 @@ export const translations = {
     servicePageDigitalizationCardTitleOne:
       "STK’lar İçin Dijitalleşme Çözümleri",
     servicePageDigitalizationCardTextOne:
-      "Fon toplama araçlarından operasyonel verimlilik stratejilerine kadar STK&#39;lara özel teknolojik çözümler.",
+      "Fon toplama araçlarından operasyonel verimlilik stratejilerine kadar STK'lara özel teknolojik çözümler.",
     servicePageDigitalizationCardTitleTwo:
       "KOBİ’ler İçin Dijitalleşme Stratejileri",
     servicePageDigitalizationCardTextTwo:

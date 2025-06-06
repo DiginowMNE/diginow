@@ -55,7 +55,7 @@ const Footer = () => {
           </p>
           <div className={styles.socialLinks}>
             <a
-              href="https://www.linkedin.com/in/diginow/"
+              href="https://www.linkedin.com/company/diginowmne/"
               target="_blank"
               rel="noopener noreferrer"
             >

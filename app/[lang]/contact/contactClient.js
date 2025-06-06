@@ -177,7 +177,7 @@ export default function ContactClient() {
                   delay={1000}
                 >
                   <a
-                    href="https://www.linkedin.com/in/diginow/"
+                    href="https://www.linkedin.com/company/diginowmne/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
