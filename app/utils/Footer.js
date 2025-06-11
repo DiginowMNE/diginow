@@ -42,7 +42,7 @@ const Footer = () => {
             <div className={styles.footerSection}>
               <h3 className={styles.footerTitle}>{t("contact")}</h3>
               <div className={styles.footerContact}>
-                <p>diginowmne@gmail.com</p>
+                <p>info@diginow.me</p>
                 <p>Podgorica, Montenegro</p>
               </div>
             </div>

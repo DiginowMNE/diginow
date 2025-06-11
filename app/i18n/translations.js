@@ -22,6 +22,9 @@ export const translations = {
     serviceCardSubtitleTwo: "Simplify Your Digital Transformation",
     serviceCardTitleThree: "Web Development & Design",
     serviceCardSubtitleThree: "Web Solutions That Reflect Your Goals",
+    serviceCardTitleFour: "Graphic Design & Branding",
+    serviceCardSubtitleFour:
+      "Transform your vision into captivating visuals. Build a brand that speaks clearly, professionally, and elegantly.",
     serviceCardTextOne:
       "Diginow’s 35-hour PMP-focused training program is not only limited to exam preparation but also equips you with practical knowledge and techniques to succeed in real-world projects.",
     serviceCardTextTwo:
@@ -84,6 +87,8 @@ export const translations = {
     divisionPageCardTitleThree: "Web Development & Design",
     divisionPageCardTextThree:
       "Crafting user-friendly, high-performance websites that align with business goals and enhance digital presence.",
+    divisionPageCardTextFour:
+      "Our creative team designs visual identities that resonate. From logos and branding guidelines to promotional and digital materials, we strategically shape your brand’s voice and visibility.",
     servicePageProject: "Project Management Training",
     servicePageProjectTitle: "Master the Art of Project Management",
     servicePageProjectText:
@@ -114,7 +119,7 @@ export const translations = {
   sr: {
     about: "O nama",
     services: "Naše usluge",
-    divisions: "Naši odjeli",
+    divisions: "Naši sektori",
     projects: "Naši projekti",
     team: "Naš tim",
     contact: "Kontaktirajte nas",
@@ -135,6 +140,9 @@ export const translations = {
     serviceCardSubtitleTwo: "Olakšajte Svoju Digitalnu Transformaciju",
     serviceCardTitleThree: "Veb razvoj i dizajn",
     serviceCardSubtitleThree: "Veb rješenja koja odražavaju vaše ciljeve",
+    serviceCardTitleFour: "Grafički dizajn i brendiranje",
+    serviceCardSubtitleFour:
+      "Vašu viziju pretvaramo u upečatljive vizuale. Izgradite brend koji jasno, profesionalno i elegantno komunicira.",
     serviceCardTextOne:
       "Projektni menadžment je jedna od najvažnijih vještina u poslovnom svijetu. Diginow-ov 35-satni program obuke fokusiran na PMP ne samo da priprema za ispite, već vas oprema praktičnim znanjima i tehnikama potrebnim za uspjeh u stvarnim projektima.",
     serviceCardTextTwo:
@@ -149,11 +157,11 @@ export const translations = {
     testimonialSubtitle: "Šta naši klijenti kažu",
     testimonialText:
       "Otkrijte priče o uspjehu postignute uz pomoć Diginow rješenja. Zadovoljstvo naših klijenata je naša najveća motivacija. Doživite razliku uz Diginow.",
-    divisionTitle: "Nasi odjeli",
+    divisionTitle: "Naši sektori",
     divisionSubtitle: "Otkrijte Diginow porodicu",
     divisionText:
-      "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane odjele. Svaki odjel se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
-    divisionButtonText: "Saznajte više o našim odjelima",
+      "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane sektore. Svaki sektor se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
+    divisionButtonText: "Saznajte više o našim sektorima",
     contactTitle: "Kontaktirajte nas",
     contactText:
       "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. <span class='highlight'>Obratite nam se i počnimo saradnju!</span>",
@@ -197,6 +205,8 @@ export const translations = {
     divisionPageCardTitleThree: "Razvoj i dizajn veb sajtova",
     divisionPageCardTextThree:
       "Kreiramo korisnički orijentisane, visokoperformantne web stranice koje su u skladu s poslovnim ciljevima i poboljšavaju digitalnu prisutnost.",
+    divisionPageCardTextFour:
+      "Naš kreativni tim oblikuje vizuelne identitete koji ostavljaju utisak. Od logotipa i smjernica za brend do promotivnih i digitalnih materijala, strateški gradimo glas i vidljivost vašeg brenda.",
     servicePageProject: "Obuka za upravljanje projektima",
     servicePageProjectTitle: "Ovladajte vještinama upravljanja projektima",
     servicePageProjectText:
@@ -212,10 +222,10 @@ export const translations = {
       "Pojednostavite svoju digitalnu transformaciju",
     servicePageDigitalizationText:
       "Digitalizacija je ključ budućeg uspjeha preduzeća i nevladinih organizacija. Svi naši projekti digitalizacije se sprovode s individualnim pristupom, osiguravajući maksimalnu efikasnost vaših tehnoloških investicija. U Diginow-u analiziramo vaše procese, identifikujemo područja za poboljšanje i kreiramo strategije digitalne transformacije prilagođene vašim potrebama. Naše usluge uključuju:",
-    servicePageDigitalizationCardTitleOne: "Digitalna rješenja za NVO-e",
+    servicePageDigitalizationCardTitleOne: "Digitalna rješenja za NVO",
     servicePageDigitalizationCardTextOne:
       "Tehnološki alati prilagođeni nevladinim organizacijama, od alata za prikupljanje sredstava do strategija operativne efikasnosti.",
-    servicePageDigitalizationCardTitleTwo: "Digitalizacija za MSP-a",
+    servicePageDigitalizationCardTitleTwo: "Digitalizacija za MSP",
     servicePageDigitalizationCardTextTwo:
       "Razvoj sistema koji povećavaju konkurentnost i optimizuju poslovne procese.",
     servicePageWeb: "Razvoj i dizajn web sajtova",
@@ -248,6 +258,9 @@ export const translations = {
     serviceCardSubtitleTwo: "Dijital Dönüşümünüzü Kolaylaştırıyoruz",
     serviceCardTitleThree: "Web Geliştirme",
     serviceCardSubtitleThree: "Hedeflerinizi Yansıtan Web Çözümleri",
+    serviceCardTitleFour: "Grafik Tasarım ve Marka Yönetimi",
+    serviceCardSubtitleFour:
+      "Vizyonunuzu etkileyici görsellere dönüştürün. Markanızı net, profesyonel ve zarif bir dille konuşturun.",
     serviceCardTextOne:
       "Diginow’un sunduğu 35 saatlik PMP odaklı eğitim programı, yalnızca sınava hazırlıkla sınırlı kalmaz; aynı zamanda sizi gerçek dünyadaki projelerde başarıya taşıyacak pratik bilgiler ve tekniklerle donatır.",
     serviceCardTextTwo:
@@ -310,6 +323,8 @@ export const translations = {
     divisionPageCardTitleThree: "Web Geliştirme ve Tasarım",
     divisionPageCardTextThree:
       "Kullanıcı dostu, yüksek performanslı web siteleri oluşturarak işletmelerin dijital dünyadaki varlıklarını güçlendiriyoruz.",
+    divisionPageCardTextFour:
+      "Kreatif ekibimiz, yankı uyandıran görsel kimlikler tasarlar. Logodan marka rehberlerine, promosyon ve dijital materyallere kadar markanızın sesini ve görünürlüğünü stratejik olarak şekillendiriyoruz.",
     servicePageProject: "Proje Yönetİmİ Eğİtİmİ",
     servicePageProjectTitle: "Proje Yönetiminde Uzmanlaşın",
     servicePageProjectText:

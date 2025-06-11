@@ -6,6 +6,8 @@ import Footer from "../../utils/Footer";
 import Navigation from "../../utils/navigation";
 import { MdWeb } from "react-icons/md";
 import { IoMdChatboxes } from "react-icons/io";
+import { MdDesignServices } from "react-icons/md";
+
 import { FaProjectDiagram } from "react-icons/fa";
 import { useTranslation } from "../../hooks/useTranslation.js";
 
@@ -89,6 +91,24 @@ const Divisions = () => {
                       className={styles.divisionsItemDescription}
                       dangerouslySetInnerHTML={{
                         __html: t("divisionPageCardTextThree"),
+                      }}
+                    />
+                  </div>
+                  <div className={styles.divisionsItem}>
+                    <div className={styles.divisionsItemTitle}>
+                      <MdDesignServices
+                        className={styles.divisionsItemTitleIcon}
+                      />
+                      <h2
+                        dangerouslySetInnerHTML={{
+                          __html: t("serviceCardTitleFour"),
+                        }}
+                      />
+                    </div>
+                    <p
+                      className={styles.divisionsItemDescription}
+                      dangerouslySetInnerHTML={{
+                        __html: t("divisionPageCardTextFour"),
                       }}
                     />
                   </div>

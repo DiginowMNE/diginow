@@ -153,17 +153,19 @@ export async function POST(req) {
 
     // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
-      service: "gmail", // or your preferred email service
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // This should be info@diginow.me
+        pass: process.env.EMAIL_PASS, // Your Hostinger email password
       },
     });
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.RECEIVER_EMAIL,
+      from: process.env.EMAIL_USER, // This will be info@diginow.me
+      to: process.env.EMAIL_USER, // Sending to the same address
       subject: `New Website Message Submission from ${sanitizedData.name} ${sanitizedData.lastName}`,
       html: `
         <h2>New Website Inquiry from ${sanitizedData.name} ${sanitizedData.lastName}</h2>

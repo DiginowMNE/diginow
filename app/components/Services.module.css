@@ -70,7 +70,7 @@
   border-radius: 1rem;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
 
@@ -80,7 +80,6 @@
   border-radius: 1rem;
   border: 2px solid var(--light-blue);
   height: 100%;
-  height: fit-content;
 }
 
 .servicesCard:hover {
@@ -228,6 +227,10 @@
   .servicesButton {
     margin-top: 4rem;
   }
+
+  .servicesCards {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -249,10 +252,6 @@
     padding: 1rem 2rem;
     border-radius: 1rem;
     font-size: 1.3rem;
-  }
-
-  .servicesCards {
-    gap: 2rem;
   }
 
   .servicesCard {

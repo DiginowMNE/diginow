@@ -163,7 +163,7 @@ export default function ContactClient() {
                   triggerOnce
                   delay={500}
                 >
-                  <p className={styles.contactEmail}>diginowmne@gmail.com</p>
+                  <p className={styles.contactEmail}>info@diginow.me</p>
                   <p className={styles.contactAddress}>Podgorica, Montenegro</p>
                 </Fade>
               </div>

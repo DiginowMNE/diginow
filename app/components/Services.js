@@ -7,8 +7,7 @@ import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdAccountTree } from "react-icons/md";
-import { LiaProjectDiagramSolid } from "react-icons/lia";
-
+import { MdDesignServices } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
 import { IoMdChatboxes } from "react-icons/io";
 
@@ -32,6 +31,7 @@ const Services = () => {
     card1: false,
     card2: false,
     card3: false,
+    card4: false,
   });
 
   const toggleCard = (cardId) => {
@@ -108,6 +108,27 @@ const Services = () => {
                   }
                 >
                   {t("serviceCardTextThree")}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.servicesCard}>
+            <div className={styles.cardContent}>
+              <div className={styles.cardTitleContainer}>
+                <MdDesignServices className={styles.cardIcon} />
+                <h2 className={styles.cardTitle}>
+                  {t("serviceCardTitleFour")}
+                </h2>
+              </div>
+              <div className={styles.cardText}>
+                <p
+                  className={
+                    openCards.card4
+                      ? styles.cardTextShown
+                      : styles.cardTextHidden
+                  }
+                >
+                  {t("serviceCardSubtitleFour")}
                 </p>
               </div>
             </div>
