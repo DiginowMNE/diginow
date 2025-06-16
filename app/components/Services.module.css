@@ -510,6 +510,10 @@
 
   .title {
     font-size: 1.2rem;
+    background: transparent;
+    color: var(--light-blue);
+    padding: 0;
+    margin-bottom: 3rem;
   }
 
   .servicesSubtitle {
@@ -530,19 +534,24 @@
   }
 
   .servicesCard {
-    padding: 3rem 2rem;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 2rem;
   }
 
   .cardTitleContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1rem;
   }
 
   .cardTitle {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .cardText {
@@ -550,7 +559,7 @@
   }
 
   .cardIcon {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .servicesButtonText {
@@ -612,8 +621,19 @@
     margin-bottom: 0.2rem;
   }
 
+  .cardTitleContainer {
+    grid-template-columns: 1fr 4fr;
+  }
+
   .servicesCard {
-    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.7rem;
+  }
+
+  .cardIcon {
+    font-size: 4rem;
   }
 
   .servicesButtonText {
@@ -633,20 +653,14 @@
   }
 
   .servicesCard {
-    padding: 2.5rem 2rem;
   }
 
   .cardTitle {
     font-size: 1.7rem;
-    margin-bottom: 0.2rem;
   }
 
   .cardText {
     font-size: 0.8rem;
-  }
-
-  .cardIcon {
-    font-size: 5.5rem;
   }
 }
 
@@ -660,12 +674,7 @@
   }
 
   .cardTitle {
-    font-size: 2.1rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .cardTextShown {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
   }
 
   .servicesButton {
@@ -683,12 +692,7 @@
   }
 
   .cardTitle {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .cardIcon {
-    font-size: 4rem;
+    font-size: 1.5rem;
   }
 
   .servicesButtonText {
@@ -706,8 +710,12 @@
     font-size: 1.8rem;
   }
 
+  .cardTitleContainer {
+    grid-template-columns: 1fr 5fr;
+  }
+
   .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.1rem;
   }
 
@@ -724,7 +732,7 @@
   }
 
   .cardIcon {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 

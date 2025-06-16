@@ -32,7 +32,8 @@
 }
 
 .service,
-.serviceWeb {
+.serviceWeb,
+.serviceGraphic {
   padding: 15rem 20rem;
   overflow: hidden;
 }
@@ -208,7 +209,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 10rem 16rem;
   }
 
@@ -259,7 +261,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 10rem 14rem;
   }
 
@@ -316,7 +319,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 10rem 14rem;
   }
 
@@ -368,7 +372,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 10rem 10rem;
   }
 
@@ -428,7 +433,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 6rem 8rem;
   }
 
@@ -479,7 +485,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 5rem 6rem;
   }
 
@@ -526,7 +533,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 5rem 6rem;
   }
 
@@ -642,7 +650,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 4rem;
   }
 
@@ -679,7 +688,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 2.5rem;
   }
 
@@ -748,7 +758,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 2rem;
   }
 
@@ -803,7 +814,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 1.5rem;
   }
 
@@ -818,7 +830,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 1rem;
   }
 }
@@ -830,7 +843,8 @@
   }
 
   .service,
-  .serviceWeb {
+  .serviceWeb,
+  .serviceGraphic {
     padding: 4rem 0.5rem;
   }
 }

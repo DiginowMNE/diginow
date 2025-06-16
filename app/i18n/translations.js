@@ -115,6 +115,11 @@ export const translations = {
       "Your website is your face in the digital world, and we are committed to designing it in the best possible way. We develop fast, secure, and performance-oriented web solutions. Our goal is to create websites that align with your business objectives and resonate with your audience.",
     servicePageWebTextTwo:
       "We create creative and modern designs that reflect the unique identity of your company. Our design process prioritizes both aesthetic elements and user experience. We aim to create a visual language that captivates your visitors at first glance and drives them to action.",
+    servicePageGraphicTitle: "Brand Your Future!",
+    servicePageGraphicText:
+      "Our Graphic Design & Branding services offer comprehensive visual solutions tailored to your specific business needs. Starting with custom logo concepts and detailed brand guidelines, we expand into professional corporate materials including business cards, letterheads, and envelopes.",
+    servicePageGraphicTextTwo:
+      "Our services extend further to sophisticated promotional materials, print-ready designs, and impactful social media visuals. For ongoing support, our subscription-based design retainers provide consistent, dedicated design hours each month, ensuring your brand maintains visual consistency and effectiveness across all platforms.",
   },
   sr: {
     about: "O nama",
@@ -234,6 +239,11 @@ export const translations = {
       "Vaša web stranica je vaše lice u digitalnom svijetu, a mi se trudimo da je oblikujemo na najbolji mogući način. Razvijamo brza, sigurna i visokoperformantna web rješenja koja su usklađena s vašim poslovnim ciljevima.",
     servicePageWebTextTwo:
       "Kreiramo kreativne i moderne dizajne koji odražavaju jedinstveni identitet vaše kompanije. Naš dizajnerski proces daje prioritet i estetskim elementima i korisničkom iskustvu. Cilj nam je stvoriti vizuelni jezik koji očarava vaše posjetioce na prvi pogled i podstiče ih na akciju.",
+    servicePageGraphicTitle: "Brendiraj svoju budućnost!",
+    servicePageGraphicText:
+      "Naše usluge grafičkog dizajna i brendinga pružaju sveobuhvatna vizuelna rješenja prilagođena specifičnim potrebama vašeg biznisa. Počevši od jedinstvenih logo koncepata i detaljnih smjernica za brend, nastavljamo s profesionalnim korporativnim materijalima kao što su vizit karte, memorandumi i koverte.",
+    servicePageGraphicTextTwo:
+      "Naše usluge uključuju i sofisticirane promotivne materijale, dizajn spreman za štampu i efektne vizuale za društvene mreže. Za kontinuiranu podršku nudimo pretplatničke pakete dizajnerskih usluga, osiguravajući dosljednost i efikasnost vašeg vizuelnog identiteta na svim platformama svakog mjeseca.",
   },
   tr: {
     about: "Hakkımızda",
@@ -353,5 +363,10 @@ export const translations = {
       "Web siteniz, dijital dünyadaki yüzünüzdür ve onu en iyi şekilde tasarlamayı taahhüt ediyoruz. Hızlı, güvenli ve performans odaklı web çözümleri geliştiriyoruz.",
     servicePageWebTextTwo:
       "Şirketinizin benzersiz kimliğini yansıtan yaratıcı ve modern tasarımlar oluşturuyoruz. Tasarım sürecimiz, estetik unsurların yanı sıra kullanıcı deneyimini de ön planda tutar. Amacımız, ziyaretçilerinizi ilk bakışta etkileyen ve onları harekete geçiren bir görsel dil oluşturmaktır.",
+    servicePageGraphicTitle: "Markan, Geleceğindir!",
+    servicePageGraphicText:
+      "Grafik Tasarım & Marka hizmetlerimiz, işletmenizin ihtiyaçlarına özel kapsamlı görsel çözümler sunar. Özgün logo tasarımları ve detaylı marka rehberleriyle başlayıp, kartvizit, antetli kağıt ve zarflar gibi profesyonel kurumsal materyallerle devam ediyoruz.",
+    servicePageGraphicTextTwo:
+      "Hizmetlerimiz; sofistike tanıtım materyalleri, baskıya hazır tasarımlar ve etkili sosyal medya görsellerini de kapsıyor. Sürekli destek için sunduğumuz abonelik bazlı tasarım hizmetleri ile her ay markanızın görsel tutarlılığını ve etkinliğini tüm platformlarda koruyoruz.",
   },
 };

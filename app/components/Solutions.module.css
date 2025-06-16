@@ -3,7 +3,9 @@
   padding-bottom: 0rem;
   overflow: hidden;
   position: relative;
-  min-height: 1200px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .solutions::before {
@@ -53,11 +55,17 @@
 .solutionsText {
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .solutionsTextContainer {
   text-align: right;
   width: 35%;
+  position: relative;
+  z-index: 2;
+  padding-right: 2rem;
 }
 
 .solutionsSubtitle {
@@ -77,11 +85,21 @@
 
 .solutionsImageLaptop {
   position: absolute;
-  bottom: 0%;
+  bottom: -20%;
   left: 10%;
   transform: translateX(-30%);
   z-index: 1;
   will-change: transform;
+  width: 80%;
+  max-width: 1700px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.imageLaptop {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .solutionsImagePhone {
@@ -91,6 +109,8 @@
   transform: translateY(20%);
   z-index: 2;
   will-change: transform;
+  width: 25%;
+  max-width: 450px;
 }
 
 @media (max-width: 3200px) {
@@ -119,7 +139,11 @@
   }
 
   .imageLaptop {
-    width: 73%;
+    width: 80%;
+  }
+
+  .imagePhone {
+    width: 90%;
   }
 
   .solutionsImageLaptop {
@@ -164,19 +188,36 @@
   }
 
   .solutionsImagePhone {
-    left: 43%;
+    left: 45%;
     width: 17%;
   }
 }
 @media (max-width: 2240px) {
+  .solutionsTextContainer {
+    width: 40%;
+  }
+
+  .solutionsImageLaptop {
+    left: 3%;
+    width: 60%;
+  }
+
+  .solutionsImagePhone {
+    left: 40%;
+    width: 15%;
+  }
 }
 
 /* Large Desktop */
 @media (max-width: 1920px) {
   .solutions {
-    padding: 10rem 10rem;
+    padding: 10rem 8rem;
     padding-bottom: 0rem;
-    min-height: 850px;
+    min-height: 100vh;
+  }
+
+  .solutionsTextContainer {
+    width: 35%;
   }
 
   .solutionsSubtitle {
@@ -188,11 +229,12 @@
   }
 
   .solutionsImageLaptop {
-    width: 50%;
+    width: 55%;
   }
 
   .solutionsImagePhone {
     width: 17%;
+    left: 45%;
   }
 
   .imageLaptop,
@@ -218,7 +260,7 @@
   }
 
   .solutionsSubtitle {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   .solutionsDescription {
@@ -288,7 +330,7 @@
 
 @media (max-width: 1280px) {
   .solutions {
-    min-height: 600px;
+    min-height: 700px;
   }
 
   .solutionsSubtitle {
@@ -300,7 +342,7 @@
   }
 
   .solutionsDescription {
-    font-size: 1.1rem;
+    font-size: 1 rem;
   }
 }
 
@@ -310,23 +352,30 @@
   }
 
   .solutions {
-    max-height: 1000px;
   }
 }
 /* Tablet */
 @media (max-width: 900px) {
   .solutions {
     padding: 5rem;
-    min-height: 1050px;
+    display: block;
+    padding-bottom: 0;
+    min-height: 400px;
   }
 
   .solutionsTextContainer {
     width: 100%;
+    padding-right: 0;
+    margin-bottom: 3rem;
   }
 
   .solutionsImageLaptop {
-    width: 90%;
-    left: 5%;
+    width: 100%;
+    position: relative;
+  }
+
+  .imageLaptop {
+    width: 100%;
   }
 
   .solutionsImagePhone {
@@ -335,7 +384,6 @@
 
   .solutionsTitle {
     font-size: 1.4rem;
-    padding-bottom: 2.5rem;
   }
 
   .solutionsSubtitle {
@@ -355,7 +403,7 @@
 @media (max-width: 769px) {
   .solutions {
     padding: 4rem;
-    min-height: 1000px;
+    padding-bottom: 0;
   }
 }
 
@@ -363,12 +411,11 @@
 @media (max-width: 610px) {
   .solutions {
     padding: 3rem;
-    min-height: 820px;
+    padding-bottom: 0;
   }
 
   .solutionsTitle {
     font-size: 1.2rem;
-    padding-bottom: 1.5rem;
   }
 
   .solutionsSubtitle {
@@ -384,15 +431,26 @@
 @media (max-width: 495px) {
   .solutions {
     padding: 2rem 2rem 0;
-    min-height: 730px;
+    padding-bottom: 0;
+  }
+
+  .solutionsTextContainer {
+    width: 100%;
+  }
+
+  .solutionsTitle {
+    background: transparent;
+    color: var(--light-blue);
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .solutionsDescription {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 405px) {
-  .solutions {
-    min-height: 700px;
-  }
-
   .solutionsSubtitle {
     font-size: 2.3rem;
   }
@@ -401,7 +459,7 @@
 /* Small Mobile */
 @media (max-width: 376px) {
   .solutions {
-    min-height: 670px;
+    padding-bottom: 0;
   }
 
   .solutionsSubtitle {
@@ -416,7 +474,7 @@
 /* Extra Small Mobile */
 @media (max-width: 360px) {
   .solutions {
-    min-height: 630px;
+    padding-bottom: 0;
   }
 
   .solutionsSubtitle {
@@ -432,7 +490,7 @@
 @media (max-width: 325px) {
   .solutions {
     padding: 1rem;
-    min-height: 550px;
+    padding-bottom: 0;
   }
 
   .solutionsSubtitle {
@@ -453,11 +511,13 @@
 
   .solutionsTextContainer {
     width: 100%;
+    margin-bottom: 6rem;
   }
 
   .solutionsImageLaptop {
     width: 75%;
     left: 10%;
+    bottom: -30%;
   }
 
   .solutionsImagePhone {
@@ -467,7 +527,6 @@
 
   .solutionsTitle {
     font-size: 1.5rem;
-    padding-bottom: 3rem;
   }
 
   .solutionsDescription {
@@ -478,30 +537,23 @@
 /* iPad Pro 12.9" */
 @media (max-width: 1200px) and (min-height: 1920px) {
   .solutions {
-    height: 1200px;
-  }
-
-  .solutionsSubtitle {
-    font-size: 5.5rem;
-  }
-
-  .solutions::before {
-    top: 60%;
+    padding-bottom: 0rem;
   }
 }
 
 /* iPad Pro 11" */
 @media (max-width: 1024px) and (min-height: 1366px) {
   .solutions {
-    height: 1100px;
-    padding: 0 5rem;
+    display: block;
   }
 
-  .solutionsSubtitle {
-    font-size: 5rem;
+  .solutionsTextContainer {
+    width: 100%;
+    margin-bottom: 3rem;
   }
 
-  .solutions::before {
-    top: 65%;
+  .solutionsImageLaptop {
+    width: 80%;
+    position: static;
   }
 }

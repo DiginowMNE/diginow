@@ -76,7 +76,7 @@
   grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1500px;
   gap: 3.5rem 4rem;
 }
 
@@ -137,9 +137,23 @@
   color: var(--background);
 }
 
+@media (max-width: 2560px) {
+  .heroContent {
+    max-width: 1400px;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+}
+
 @media (max-width: 1920px) {
   .heroContent {
     max-width: 1300px;
+  }
+
+  .title {
+    font-size: 5rem;
   }
 }
 
@@ -167,6 +181,13 @@
 }
 
 @media (max-width: 1600px) {
+  .heroContent p {
+    font-size: 1.3rem;
+  }
+
+  .title {
+    font-size: 4.2rem;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -176,7 +197,7 @@
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 3.9rem;
   }
 
   .subtitle {
@@ -195,7 +216,7 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
   }
 
   .subtitle {

@@ -236,6 +236,10 @@
 
   .contactTitle {
     font-size: 1.2rem;
+    background: transparent;
+    padding: 0;
+    color: var(--background);
+    margin-bottom: 3rem;
   }
 
   .contactText {

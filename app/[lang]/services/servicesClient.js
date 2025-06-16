@@ -252,6 +252,23 @@ export default function ContactClient() {
               </Fade>
             </div>
           </div>
+          <div className={styles.serviceGraphic}>
+            <Fade triggerOnce direction="up" cascade damping={0.2}>
+              <h2 className={`${styles.serviceType} ${styles.serviceTypeBlue}`}>
+                {t("serviceCardTitleFour")}
+              </h2>
+              <h3
+                className={`${styles.serviceTitle} ${styles.serviceTitleWeb}`}
+              >
+                <HiTerminal />
+                {t("servicePageGraphicTitle")}
+              </h3>
+              <div className={styles.webText}>
+                <p>{t("servicePageGraphicText")}</p>
+                <p>{t("servicePageGraphicTextTwo")}</p>
+              </div>
+            </Fade>
+          </div>
         </div>
       </div>
       <Footer />

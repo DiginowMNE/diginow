@@ -32,8 +32,9 @@ const Solutions = () => {
           src={"/images/laptop.png"}
           alt="solutions"
           width={1500}
-          height={500}
+          height={1000}
           className={styles.imageLaptop}
+          priority
         />
       </Slide>
 
