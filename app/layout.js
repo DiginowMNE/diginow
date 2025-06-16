@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -125,9 +126,10 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={params?.lang || "sr"} className={`${montserrat.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {children}
+        <LoadingSpinner />
+        <main>{children}</main>
       </body>
     </html>
   );

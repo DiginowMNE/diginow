@@ -643,7 +643,7 @@
 
 @media (max-width: 450px) {
   .contactText {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
 
@@ -660,27 +660,27 @@
   }
 
   .contactText {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 414px) {
   .contactText {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 375px) {
   .contactText {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 320px) {
   .contactText {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .contactEmail,

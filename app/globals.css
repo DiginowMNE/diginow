@@ -288,3 +288,34 @@ button {
   letter-spacing: 0;
   word-spacing: 0;
 }
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+.animate-fade-out {
+  animation: fade-out 2s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
