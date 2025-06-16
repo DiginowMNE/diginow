@@ -682,7 +682,7 @@
 
 @media (max-width: 480px) {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 7rem 0rem 2rem 0rem;
     text-align: center;
   }
@@ -690,7 +690,7 @@
   .service,
   .serviceWeb,
   .serviceGraphic {
-    padding: 4rem 2.5rem;
+    padding: 2.5rem 2.5rem;
   }
 
   .serviceType {
@@ -717,8 +717,8 @@
   }
 
   .serviceListItemTitleContainer {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
     gap: 1rem;
     border-top: 2px solid var(--light-blue);
     padding-top: 2rem;
@@ -757,14 +757,13 @@
 
 @media (max-width: 460px) {
   .title {
-    font-size: 3rem;
     padding: 6rem 0rem 2rem 0rem;
   }
 
   .service,
   .serviceWeb,
   .serviceGraphic {
-    padding: 4rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   .serviceType {
@@ -781,12 +780,6 @@
 
   .serviceList {
     gap: 2rem;
-  }
-
-  .serviceListItemTitleContainer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
   }
 
   .serviceListItemNumber {
@@ -818,13 +811,13 @@
 
 @media (max-width: 430px) {
   .title {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 
   .service,
   .serviceWeb,
   .serviceGraphic {
-    padding: 4rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .serviceType {
@@ -844,7 +837,7 @@
   .service,
   .serviceWeb,
   .serviceGraphic {
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .serviceWeb {
@@ -854,14 +847,14 @@
 
 @media (max-width: 375px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding: 5.5rem 0rem 2rem 0rem;
   }
 
   .service,
   .serviceWeb,
   .serviceGraphic {
-    padding: 4rem 0.5rem;
+    padding: 2.5rem 0.5rem;
   }
 
   .serviceWeb {
@@ -871,7 +864,7 @@
 
 @media (max-width: 320px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .webIcons {
