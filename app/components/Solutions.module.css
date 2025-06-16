@@ -436,6 +436,12 @@
 
   .solutionsTextContainer {
     width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .solutionsImageLaptop {
+    width: 100%;
+    position: static;
   }
 
   .solutionsTitle {
