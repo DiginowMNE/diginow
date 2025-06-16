@@ -386,6 +386,12 @@
 }
 
 @media (max-width: 460px) {
+  .mobileNavLinks {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 460px) {
   .nav {
     height: 8vh;
     padding: 0 2.5rem;

@@ -655,6 +655,10 @@
   .aboutUsContentText p:first-of-type {
     font-size: 1rem;
   }
+
+  .divisionsItemDescription {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 460px) {
