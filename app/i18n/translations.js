@@ -1,3 +1,5 @@
+import { green } from "@mui/material/colors";
+
 export const translations = {
   en: {
     about: "About Us",
@@ -120,6 +122,7 @@ export const translations = {
       "Our Graphic Design & Branding services offer comprehensive visual solutions tailored to your specific business needs. Starting with custom logo concepts and detailed brand guidelines, we expand into professional corporate materials including business cards, letterheads, and envelopes.",
     servicePageGraphicTextTwo:
       "Our services extend further to sophisticated promotional materials, print-ready designs, and impactful social media visuals. For ongoing support, our subscription-based design retainers provide consistent, dedicated design hours each month, ensuring your brand maintains visual consistency and effectiveness across all platforms.",
+    graphicTitle: "Graphic Design & Branding",
   },
   sr: {
     about: "O nama",
@@ -244,6 +247,7 @@ export const translations = {
       "Naše usluge grafičkog dizajna i brendinga pružaju sveobuhvatna vizuelna rješenja prilagođena specifičnim potrebama vašeg biznisa. Počevši od jedinstvenih logo koncepata i detaljnih smjernica za brend, nastavljamo s profesionalnim korporativnim materijalima kao što su vizit karte, memorandumi i koverte.",
     servicePageGraphicTextTwo:
       "Naše usluge uključuju i sofisticirane promotivne materijale, dizajn spreman za štampu i efektne vizuale za društvene mreže. Za kontinuiranu podršku nudimo pretplatničke pakete dizajnerskih usluga, osiguravajući dosljednost i efikasnost vašeg vizuelnog identiteta na svim platformama svakog mjeseca.",
+    graphicTitle: "Grafički dizajn i brendiranje",
   },
   tr: {
     about: "Hakkımızda",
@@ -368,5 +372,6 @@ export const translations = {
       "Grafik Tasarım & Marka hizmetlerimiz, işletmenizin ihtiyaçlarına özel kapsamlı görsel çözümler sunar. Özgün logo tasarımları ve detaylı marka rehberleriyle başlayıp, kartvizit, antetli kağıt ve zarflar gibi profesyonel kurumsal materyallerle devam ediyoruz.",
     servicePageGraphicTextTwo:
       "Hizmetlerimiz; sofistike tanıtım materyalleri, baskıya hazır tasarımlar ve etkili sosyal medya görsellerini de kapsıyor. Sürekli destek için sunduğumuz abonelik bazlı tasarım hizmetleri ile her ay markanızın görsel tutarlılığını ve etkinliğini tüm platformlarda koruyoruz.",
+    graphicTitle: "GRAFİK TASARIM VE MARKA YÖNETİMİ",
   },
 };

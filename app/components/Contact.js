@@ -33,7 +33,7 @@ const Contact = () => {
               href={`/${locale}/contact`}
               className={styles.contactButtonText}
             >
-              {t("contact")}
+              {t("contactNav")}
               <MdKeyboardArrowRight className={styles.contactButtonIcon} />
             </Link>
           </div>

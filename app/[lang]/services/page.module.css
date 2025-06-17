@@ -3,9 +3,9 @@
 }
 
 .container {
-  background-color: var(--text);
+  background-color: var(--background);
   z-index: 0;
-  color: var(--background);
+  color: var(--text);
   overflow: hidden;
 }
 
@@ -48,12 +48,12 @@
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   text-transform: uppercase;
-  background: var(--light-blue);
+  background: linear-gradient(130deg, var(--dark-gray), var(--gray));
 }
 
 .serviceTypeBlue {
-  color: var(--light-blue);
-  background: linear-gradient(130deg, var(--dark-gray), var(--gray));
+  color: var(--background);
+  background: var(--light-blue);
   border-color: var(--light-blue);
 }
 
@@ -102,7 +102,7 @@
   justify-content: center;
   border-radius: 1rem;
   padding: 4rem;
-  border: 2px solid var(--background);
+  border: 2px solid var(--light-blue);
   transition: all 0.3s ease;
 }
 
@@ -113,9 +113,9 @@
 }
 
 .serviceListItemDigitalization {
-  background-color: var(--background);
-  color: var(--light-blue);
-  border-color: var(--light-blue);
+  background-color: var(--text);
+  color: var(--background);
+  border-color: var(--background);
 }
 
 .serviceListItemDigitalization:hover {
@@ -125,7 +125,7 @@
 }
 
 .serviceListItemDigitalization:hover .serviceListItemNumber {
-  color: var(--text);
+  color: var(--background);
 }
 
 .serviceListItemContent {
@@ -159,7 +159,7 @@
 }
 
 .serviceListItemNumberDigitalization {
-  color: var(--text);
+  color: var(--background);
 }
 
 .serviceListContent {
@@ -168,8 +168,8 @@
 }
 
 .digitalization {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--text);
+  color: var(--background);
 }
 
 .serviceTitleWeb {
@@ -200,6 +200,11 @@
 
 .webIconItem:hover {
   transform: scale(1.1);
+}
+
+.serviceGraphic {
+  background-color: var(--text);
+  color: var(--background);
 }
 
 @media (max-width: 3200px) {
@@ -675,6 +680,16 @@
   .serviceListItemTitle {
     font-size: 2rem;
   }
+
+  .serviceListItemDigitalization:hover {
+    background-color: var(--text);
+    color: var(--background);
+    transform: translateY(0);
+  }
+
+  .serviceListItemDigitalization:hover .serviceListItemNumber {
+    color: var(--background);
+  }
 }
 
 @media (max-width: 835px) {
@@ -693,17 +708,17 @@
     padding: 2.5rem 2.5rem;
   }
 
+  .serviceTypeBlue {
+    color: var(--background);
+    background: transparent;
+  }
+
   .serviceType {
     padding: 0;
     background: transparent;
     margin-bottom: 2rem;
-  }
-
-  .serviceTypeBlue {
     color: var(--light-blue);
-    background: transparent;
   }
-
   .serviceTitle {
     font-size: 2rem;
   }
@@ -748,10 +763,6 @@
   .webIcons {
     margin-top: 5rem;
     gap: 3rem 2rem;
-  }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
   }
 }
 
@@ -803,10 +814,6 @@
     margin-top: 3rem;
     gap: 2rem 3rem;
   }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
-  }
 }
 
 @media (max-width: 430px) {
@@ -823,10 +830,6 @@
   .serviceType {
     font-size: 1.2rem;
   }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
-  }
 }
 
 @media (max-width: 395px) {
@@ -838,10 +841,6 @@
   .serviceWeb,
   .serviceGraphic {
     padding: 2.5rem 1rem;
-  }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
   }
 }
 
@@ -856,10 +855,6 @@
   .serviceGraphic {
     padding: 2.5rem 0.5rem;
   }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
-  }
 }
 
 @media (max-width: 320px) {
@@ -870,10 +865,6 @@
   .webIcons {
     margin-top: 3rem;
     gap: 2rem 1rem;
-  }
-
-  .serviceWeb {
-    padding-bottom: 0rem;
   }
 }
 

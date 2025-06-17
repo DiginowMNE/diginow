@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link href={`/${locale}`}>{t("home")}</Link>
                 <Link href={`/${locale}/about`}>{t("about")}</Link>
                 <Link href={`/${locale}/services`}>{t("services")}</Link>
-                <Link href={`/${locale}/contact`}>{t("contact")}</Link>
+                <Link href={`/${locale}/contact`}>{t("contactNav")}</Link>
               </nav>
             </div>
 

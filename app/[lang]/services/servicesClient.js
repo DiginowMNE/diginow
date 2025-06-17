@@ -18,6 +18,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { FaSuitcase } from "react-icons/fa";
 import { HiServer, HiTemplate } from "react-icons/hi";
 import { HiTerminal } from "react-icons/hi";
+import { MdDesignServices } from "react-icons/md";
 
 export default function ContactClient() {
   const { t } = useTranslation();
@@ -255,12 +256,12 @@ export default function ContactClient() {
           <div className={styles.serviceGraphic}>
             <Fade triggerOnce direction="up" cascade damping={0.2}>
               <h2 className={`${styles.serviceType} ${styles.serviceTypeBlue}`}>
-                {t("serviceCardTitleFour")}
+                {t("graphicTitle")}
               </h2>
               <h3
                 className={`${styles.serviceTitle} ${styles.serviceTitleWeb}`}
               >
-                <HiTerminal />
+                <MdDesignServices />
                 {t("servicePageGraphicTitle")}
               </h3>
               <div className={styles.webText}>

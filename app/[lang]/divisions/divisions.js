@@ -7,7 +7,6 @@ import Navigation from "../../utils/navigation";
 import { MdWeb } from "react-icons/md";
 import { IoMdChatboxes } from "react-icons/io";
 import { MdDesignServices } from "react-icons/md";
-
 import { FaProjectDiagram } from "react-icons/fa";
 import { useTranslation } from "../../hooks/useTranslation.js";
 
@@ -19,7 +18,7 @@ const Divisions = () => {
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.aboutUsContainer}>
         <h1 className={styles.title}>
-          <Slide triggerOnce>{t("divisions")}</Slide>
+          <Slide triggerOnce>{t("divisionTitle")}</Slide>
         </h1>
         <div className={styles.aboutUsContent}>
           <Fade
