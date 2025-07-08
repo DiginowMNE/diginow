@@ -5,9 +5,9 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "Naši sektori | Diginow - Specijalizovani sektori za digitalnu transformaciju u Crnoj Gori",
-    en: "Our Divisions | Diginow - Specialized Divisions for Digital Transformation in Montenegro",
-    tr: "Bölümlerimiz | Diginow - Karadağ'da Dijital Dönüşüm için Özelleşmiş Bölümler",
+    sr: "Sektori | Diginow",
+    en: "Divisions | Diginow",
+    tr: "Bölümler | Diginow",
   };
 
   const descriptions = {

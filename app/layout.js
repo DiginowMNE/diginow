@@ -188,6 +188,9 @@ export default function RootLayout({ children, params }) {
           href={`https://diginow.me/${lang}`}
         />
 
+        {/* Canonical URL for current page */}
+        <link rel="canonical" href={`https://diginow.me/${lang}`} />
+
         {/* Additional meta tags for better SEO */}
         <meta name="geo.region" content="ME" />
         <meta name="geo.placename" content="Montenegro" />

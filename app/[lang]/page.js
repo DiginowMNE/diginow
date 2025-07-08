@@ -13,9 +13,9 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "Diginow | Obuka za upravljanje projektima i digitalnu transformaciju",
-    en: "Diginow | Project Management Training & Digital Transformation",
-    tr: "Diginow | Proje Yönetimi Eğitimi ve Dijital Dönüşüm",
+    sr: "Diginow | PMP obuka",
+    en: "Diginow | PMP Training",
+    tr: "Diginow | PMP Eğitimi",
   };
 
   const descriptions = {

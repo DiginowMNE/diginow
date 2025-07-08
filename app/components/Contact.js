@@ -23,7 +23,7 @@ const Contact = () => {
       </div>
       <div className={styles.contact}>
         <Fade cascade damping={0.2} direction="up" triggerOnce>
-          <h1 className={styles.contactTitle}>{t("contactTitle")}</h1>
+          <h2 className={styles.contactTitle}>{t("contactTitle")}</h2>
           <p
             className={styles.contactText}
             dangerouslySetInnerHTML={{ __html: t("contactText") }}

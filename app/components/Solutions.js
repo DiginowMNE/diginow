@@ -13,7 +13,7 @@ const Solutions = () => {
       <div className={styles.solutionsText}>
         <div className={styles.solutionsTextContainer}>
           <Fade cascade damping={0.2} direction="up" triggerOnce>
-            <h1 className={styles.solutionsTitle}>{t("solutionTitle")}</h1>
+            <h2 className={styles.solutionsTitle}>{t("solutionTitle")}</h2>
             <h2 className={styles.solutionsSubtitle}>
               {t("solutionSubtitle")}
             </h2>
