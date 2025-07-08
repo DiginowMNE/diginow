@@ -8,6 +8,8 @@ import Footer from "../utils/Footer";
 import Logos from "../components/Logos";
 import Contact from "../components/Contact";
 
+import styles from "./shared.module.css";
+
 // Generate metadata for the home page
 export async function generateMetadata({ params }) {
   const { lang } = await params;
@@ -89,7 +91,12 @@ export default function Home({ params }) {
   return (
     <main>
       <Navigation />
-      <Hero />
+      <section>
+        <h1 className={styles.heroHidden}>
+          Diginow - Digital Transformation & Business Solutions
+        </h1>
+        <Hero />
+      </section>
       <Logos />
       <Services />
       <Solutions />

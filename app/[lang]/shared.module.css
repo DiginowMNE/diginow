@@ -245,6 +245,10 @@
   border-radius: 1rem;
 }
 
+.heroHidden {
+  display: none;
+}
+
 @media (max-width: 3200px) {
   .title {
     font-size: 10rem;

@@ -14,9 +14,7 @@ const Solutions = () => {
         <div className={styles.solutionsTextContainer}>
           <Fade cascade damping={0.2} direction="up" triggerOnce>
             <h2 className={styles.solutionsTitle}>{t("solutionTitle")}</h2>
-            <h2 className={styles.solutionsSubtitle}>
-              {t("solutionSubtitle")}
-            </h2>
+            <p className={styles.solutionsSubtitle}>{t("solutionSubtitle")}</p>
             <p className={styles.solutionsDescription}>{t("solutionText")}</p>
           </Fade>
         </div>
