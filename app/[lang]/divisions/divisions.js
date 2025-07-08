@@ -9,12 +9,17 @@ import { IoMdChatboxes } from "react-icons/io";
 import { MdDesignServices } from "react-icons/md";
 import { FaProjectDiagram } from "react-icons/fa";
 import { useTranslation } from "../../hooks/useTranslation.js";
+import Head from "next/head";
 
 const Divisions = () => {
   const { t, locale } = useTranslation();
 
   return (
     <>
+      <Head>
+        <title>{t("divisionTitle")}</title>
+        <link rel="icon" href="ico.ico" />
+      </Head>
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.aboutUsContainer}>
         <h1 className={styles.title}>

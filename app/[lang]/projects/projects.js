@@ -4,12 +4,17 @@ import { Fade, Slide } from "react-awesome-reveal";
 import Footer from "../../utils/Footer";
 import Navigation from "../../utils/navigation";
 import { useTranslation } from "../../hooks/useTranslation.js";
+import Head from "next/head";
 
 const Projects = () => {
   const { t, locale } = useTranslation();
 
   return (
     <>
+      <Head>
+        <title>{t("projects")}</title>
+        <link rel="icon" href="ico.ico" />
+      </Head>
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.aboutUsContainer}>
         <h1 className={styles.title}>

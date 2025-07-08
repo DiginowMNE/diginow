@@ -9,7 +9,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 import { useState, useRef, useEffect } from "react";
 import Footer from "../../utils/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Head from "next/head";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
@@ -154,77 +154,30 @@ export default function ContactClient() {
   };
 
   return (
-    <main>
-      <Navigation />
-      <div className={styles.container}>
-        <div className={styles.contactTextContainer}>
-          {shouldDisableAnimations ? (
-            <div className={styles.contactInfoContainer}>
-              <p
-                className={styles.contactText}
-                dangerouslySetInnerHTML={{ __html: t("contactText") }}
-              />
-              <div className={styles.contactInfo}>
-                <div className={styles.contactInfoContainer}>
-                  <p className={styles.contactEmail}>info@diginow.me</p>
-                  <p className={styles.contactAddress}>Podgorica, Montenegro</p>
-                </div>
-
-                <div className={styles.socials}>
-                  <a
-                    href="https://www.linkedin.com/company/diginowmne/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLinkedin className={styles.socialsIcon} />
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/diginowmne/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram className={styles.socialsIcon} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <Fade
-              direction="up"
-              cascade
-              damping={0.2}
-              triggerOnce
-              className={styles.contactInfoContainer}
-            >
-              <p
-                className={styles.contactText}
-                dangerouslySetInnerHTML={{ __html: t("contactText") }}
-              />
-              <div className={styles.contactInfo}>
-                <div className={styles.contactInfoContainer}>
-                  <Fade
-                    cascade
-                    damping={0.2}
-                    direction="up"
-                    triggerOnce
-                    delay={500}
-                  >
+    <>
+      <Head>
+        <title>{t("contactTitle")}</title>
+        <link rel="icon" href="ico.ico" />
+      </Head>
+      <main>
+        <Navigation />
+        <div className={styles.container}>
+          <div className={styles.contactTextContainer}>
+            {shouldDisableAnimations ? (
+              <div className={styles.contactInfoContainer}>
+                <p
+                  className={styles.contactText}
+                  dangerouslySetInnerHTML={{ __html: t("contactText") }}
+                />
+                <div className={styles.contactInfo}>
+                  <div className={styles.contactInfoContainer}>
                     <p className={styles.contactEmail}>info@diginow.me</p>
                     <p className={styles.contactAddress}>
                       Podgorica, Montenegro
                     </p>
-                  </Fade>
-                </div>
+                  </div>
 
-                <div className={styles.socials}>
-                  <Fade
-                    cascade
-                    damping={0.2}
-                    direction="up"
-                    triggerOnce
-                    delay={1000}
-                  >
+                  <div className={styles.socials}>
                     <a
                       href="https://www.linkedin.com/company/diginowmne/"
                       target="_blank"
@@ -240,169 +193,70 @@ export default function ContactClient() {
                     >
                       <FaInstagram className={styles.socialsIcon} />
                     </a>
-                  </Fade>
+                  </div>
                 </div>
               </div>
-            </Fade>
-          )}
-        </div>
-        {shouldDisableAnimations ? (
-          <div className={styles.contactFormContainer}>
-            <div className={styles.contactForm}>
-              <form onSubmit={handleSubmit} ref={formRef}>
-                {/* Honeypot field - hidden from real users */}
-                <input
-                  type="text"
-                  name="website"
-                  style={{ display: "none" }}
-                  tabIndex={-1}
-                  autoComplete="off"
+            ) : (
+              <Fade
+                direction="up"
+                cascade
+                damping={0.2}
+                triggerOnce
+                className={styles.contactInfoContainer}
+              >
+                <p
+                  className={styles.contactText}
+                  dangerouslySetInnerHTML={{ __html: t("contactText") }}
                 />
-                <div className={styles.contactFormInputName}>
-                  <div className={styles.contactFormInput}>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder={t("contactName")}
-                      required
-                      minLength={2}
-                      maxLength={50}
-                    />
+                <div className={styles.contactInfo}>
+                  <div className={styles.contactInfoContainer}>
+                    <Fade
+                      cascade
+                      damping={0.2}
+                      direction="up"
+                      triggerOnce
+                      delay={500}
+                    >
+                      <p className={styles.contactEmail}>info@diginow.me</p>
+                      <p className={styles.contactAddress}>
+                        Podgorica, Montenegro
+                      </p>
+                    </Fade>
                   </div>
-                  <div className={styles.contactFormInput}>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder={t("contactLastName")}
-                      required
-                      minLength={2}
-                      maxLength={50}
-                    />
-                  </div>
-                </div>
-                <div className={styles.entityTypeSelect}>
-                  <Select
-                    labelId="entityType-label"
-                    id="entityType"
-                    name="entityType"
-                    className={styles.contactFormInputSelect}
-                    value={entityType}
-                    onChange={handleEntityTypeChange}
-                    displayEmpty
-                    required
-                  >
-                    <MenuItem disabled value="">
-                      <em>{t("contactEntityType")}</em>
-                    </MenuItem>
-                    <MenuItem value="ngo">{t("contactNgo")}</MenuItem>
-                    <MenuItem value="company">{t("contactCompany")}</MenuItem>
-                  </Select>
-                </div>
-                <div className={styles.contactFormInputCompanyEmail}>
-                  <div className={styles.contactFormInput}>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      placeholder={t("contactEntityName")}
-                      required
-                      maxLength={100}
-                      pattern="[A-Za-z0-9\s\-\.]+"
-                    />
-                  </div>
-                  <div className={styles.contactFormInput}>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder={t("contactEmail")}
-                      required
-                      maxLength={100}
-                    />
+
+                  <div className={styles.socials}>
+                    <Fade
+                      cascade
+                      damping={0.2}
+                      direction="up"
+                      triggerOnce
+                      delay={1000}
+                    >
+                      <a
+                        href="https://www.linkedin.com/company/diginowmne/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedin className={styles.socialsIcon} />
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/diginowmne/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaInstagram className={styles.socialsIcon} />
+                      </a>
+                    </Fade>
                   </div>
                 </div>
-                <div className={styles.contactFormInputSelect}>
-                  <Select
-                    labelId="reasonForContact-label"
-                    id="reasonForContact"
-                    name="reasonForContact"
-                    className={styles.contactFormInputSelect}
-                    value={reasonForContact}
-                    onChange={handleReasonChange}
-                    displayEmpty
-                    required
-                  >
-                    <MenuItem disabled value="">
-                      <em>{t("contactReason")}</em>
-                    </MenuItem>
-                    <MenuItem value="Web Development">
-                      {t("contactReasonWebDevelopment")}
-                    </MenuItem>
-                    <MenuItem value="Project Management">
-                      {t("contactReasonProjectManagement")}
-                    </MenuItem>
-                    <MenuItem value="Digitalization Consultancy">
-                      {t("contactReasonDigitalizationConsultancy")}
-                    </MenuItem>
-                    <MenuItem value="Other">{t("contactReasonOther")}</MenuItem>
-                  </Select>
-                </div>
-                <div className={styles.contactFormInputMessage}>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder={t("contactMessage")}
-                    required
-                    minLength={10}
-                    maxLength={1000}
-                  ></textarea>
-                </div>
-                <div className={styles.recaptcha}>
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                    onChange={(value) => setCaptchaValue(value)}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className={styles.contactFormButton}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : t("contactSend")}
-                </button>
-                {submitStatus === "success" && (
-                  <p style={{ color: "green", marginTop: "10px" }}>
-                    Message sent successfully!
-                  </p>
-                )}
-                {(submitStatus === "error" || errorMessage) && (
-                  <p style={{ color: "red", marginTop: "10px" }}>
-                    {errorMessage}
-                  </p>
-                )}
-              </form>
-            </div>
+              </Fade>
+            )}
           </div>
-        ) : (
-          <Fade
-            direction="up"
-            delay={500}
-            triggerOnce
-            className={styles.contactFormContainer}
-          >
-            <div className={styles.contactForm}>
-              <form onSubmit={handleSubmit} ref={formRef}>
-                <Fade
-                  cascade
-                  damping={0.2}
-                  delay={500}
-                  direction="up"
-                  triggerOnce
-                >
+          {shouldDisableAnimations ? (
+            <div className={styles.contactFormContainer}>
+              <div className={styles.contactForm}>
+                <form onSubmit={handleSubmit} ref={formRef}>
                   {/* Honeypot field - hidden from real users */}
                   <input
                     type="text"
@@ -539,13 +393,171 @@ export default function ContactClient() {
                       {errorMessage}
                     </p>
                   )}
-                </Fade>
-              </form>
+                </form>
+              </div>
             </div>
-          </Fade>
-        )}
-      </div>
-      <Footer />
-    </main>
+          ) : (
+            <Fade
+              direction="up"
+              delay={500}
+              triggerOnce
+              className={styles.contactFormContainer}
+            >
+              <div className={styles.contactForm}>
+                <form onSubmit={handleSubmit} ref={formRef}>
+                  <Fade
+                    cascade
+                    damping={0.2}
+                    delay={500}
+                    direction="up"
+                    triggerOnce
+                  >
+                    {/* Honeypot field - hidden from real users */}
+                    <input
+                      type="text"
+                      name="website"
+                      style={{ display: "none" }}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <div className={styles.contactFormInputName}>
+                      <div className={styles.contactFormInput}>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder={t("contactName")}
+                          required
+                          minLength={2}
+                          maxLength={50}
+                        />
+                      </div>
+                      <div className={styles.contactFormInput}>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          placeholder={t("contactLastName")}
+                          required
+                          minLength={2}
+                          maxLength={50}
+                        />
+                      </div>
+                    </div>
+                    <div className={styles.entityTypeSelect}>
+                      <Select
+                        labelId="entityType-label"
+                        id="entityType"
+                        name="entityType"
+                        className={styles.contactFormInputSelect}
+                        value={entityType}
+                        onChange={handleEntityTypeChange}
+                        displayEmpty
+                        required
+                      >
+                        <MenuItem disabled value="">
+                          <em>{t("contactEntityType")}</em>
+                        </MenuItem>
+                        <MenuItem value="ngo">{t("contactNgo")}</MenuItem>
+                        <MenuItem value="company">
+                          {t("contactCompany")}
+                        </MenuItem>
+                      </Select>
+                    </div>
+                    <div className={styles.contactFormInputCompanyEmail}>
+                      <div className={styles.contactFormInput}>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          placeholder={t("contactEntityName")}
+                          required
+                          maxLength={100}
+                          pattern="[A-Za-z0-9\s\-\.]+"
+                        />
+                      </div>
+                      <div className={styles.contactFormInput}>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder={t("contactEmail")}
+                          required
+                          maxLength={100}
+                        />
+                      </div>
+                    </div>
+                    <div className={styles.contactFormInputSelect}>
+                      <Select
+                        labelId="reasonForContact-label"
+                        id="reasonForContact"
+                        name="reasonForContact"
+                        className={styles.contactFormInputSelect}
+                        value={reasonForContact}
+                        onChange={handleReasonChange}
+                        displayEmpty
+                        required
+                      >
+                        <MenuItem disabled value="">
+                          <em>{t("contactReason")}</em>
+                        </MenuItem>
+                        <MenuItem value="Web Development">
+                          {t("contactReasonWebDevelopment")}
+                        </MenuItem>
+                        <MenuItem value="Project Management">
+                          {t("contactReasonProjectManagement")}
+                        </MenuItem>
+                        <MenuItem value="Digitalization Consultancy">
+                          {t("contactReasonDigitalizationConsultancy")}
+                        </MenuItem>
+                        <MenuItem value="Other">
+                          {t("contactReasonOther")}
+                        </MenuItem>
+                      </Select>
+                    </div>
+                    <div className={styles.contactFormInputMessage}>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={5}
+                        placeholder={t("contactMessage")}
+                        required
+                        minLength={10}
+                        maxLength={1000}
+                      ></textarea>
+                    </div>
+                    <div className={styles.recaptcha}>
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        onChange={(value) => setCaptchaValue(value)}
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className={styles.contactFormButton}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : t("contactSend")}
+                    </button>
+                    {submitStatus === "success" && (
+                      <p style={{ color: "green", marginTop: "10px" }}>
+                        Message sent successfully!
+                      </p>
+                    )}
+                    {(submitStatus === "error" || errorMessage) && (
+                      <p style={{ color: "red", marginTop: "10px" }}>
+                        {errorMessage}
+                      </p>
+                    )}
+                  </Fade>
+                </form>
+              </div>
+            </Fade>
+          )}
+        </div>
+        <Footer />
+      </main>
+    </>
   );
 }

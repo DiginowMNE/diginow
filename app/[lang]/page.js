@@ -8,6 +8,79 @@ import Footer from "../utils/Footer";
 import Logos from "../components/Logos";
 import Contact from "../components/Contact";
 
+// Generate metadata for the home page
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+
+  const titles = {
+    sr: "Diginow | Digitalna transformacija i poslovna rješenja u Crnoj Gori",
+    en: "Diginow | Digital Transformation and Business Solutions in Montenegro",
+    tr: "Diginow | Karadağ'da Dijital Dönüşüm ve İş Çözümleri",
+  };
+
+  const descriptions = {
+    sr: "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije. Nudimo obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj u Crnoj Gori.",
+    en: "Diginow provides customized solutions for small and medium enterprises and NGOs. We offer project management training, digitalization consulting, and web development in Montenegro.",
+    tr: "Diginow, küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Karadağ'da proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme hizmetleri sunuyoruz.",
+  };
+
+  return {
+    title: titles[lang] || titles.sr,
+    description: descriptions[lang] || descriptions.sr,
+    keywords: [
+      "digitalna transformacija",
+      "konsultantske usluge",
+      "web razvoj",
+      "obuke",
+      "upravljanje projektima",
+      "PMP obuka",
+      "NVO konsultacije",
+      "digitalizacija",
+      "Crna Gora",
+      "Balkans",
+      "digital transformation",
+      "consulting services",
+      "web development",
+      "training",
+      "project management",
+      "PMP training",
+      "NGO consulting",
+      "digitalization",
+      "Montenegro",
+      "dijital dönüşüm",
+      "danışmanlık hizmetleri",
+      "web geliştirme",
+      "eğitim",
+      "proje yönetimi",
+      "PMP eğitimi",
+      "STK danışmanlığı",
+      "dijitalleşme",
+      "Karadağ",
+    ],
+    openGraph: {
+      title: titles[lang] || titles.sr,
+      description: descriptions[lang] || descriptions.sr,
+      url: `https://diginow.me/${lang}`,
+      siteName: "Diginow",
+      locale: lang === "sr" ? "sr_ME" : lang === "en" ? "en_US" : "tr_TR",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[lang] || titles.sr,
+      description: descriptions[lang] || descriptions.sr,
+    },
+    alternates: {
+      canonical: `https://diginow.me/${lang}`,
+      languages: {
+        "sr-ME": "https://diginow.me/sr",
+        "en-US": "https://diginow.me/en",
+        "tr-TR": "https://diginow.me/tr",
+      },
+    },
+  };
+}
+
 export default function Home({ params }) {
   return (
     <main>

@@ -3,10 +3,15 @@ import { Fade, Slide } from "react-awesome-reveal";
 import Image from "next/image";
 import Footer from "../../utils/Footer";
 import Navigation from "../../utils/navigation";
+import Head from "next/head";
 
 const Team = () => {
   return (
     <>
+      <Head>
+        <title>Our Team</title>
+        <link rel="icon" href="ico.ico" />
+      </Head>
       <Navigation customClassName={styles.nav} customClassName2={styles.nav2} />
       <div className={styles.aboutUsContainer}>
         <h1 className={styles.title}>
