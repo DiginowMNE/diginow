@@ -32,9 +32,9 @@ const Hero = () => {
           triggerOnce
           className={styles.title}
         >
-          <h1>
+          <h2>
             <span dangerouslySetInnerHTML={{ __html: t("herotitle") }} />
-          </h1>
+          </h2>
         </Fade>
         <Fade
           direction={isMobile ? {} : "right"}

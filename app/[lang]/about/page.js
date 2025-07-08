@@ -5,9 +5,9 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "O nama | Diginow - Digitalna transformacija i poslovna rješenja",
-    en: "About Us | Diginow - Digital Transformation & Business Solutions",
-    tr: "Hakkımızda | Diginow - Dijital Dönüşüm ve İş Çözümleri",
+    sr: "O nama | Diginow - Tim stručnjaka za digitalnu transformaciju",
+    en: "About Us | Diginow - Digital Transformation Experts Team",
+    tr: "Hakkımızda | Diginow - Dijital Dönüşüm Uzmanları Ekibi",
   };
 
   const descriptions = {

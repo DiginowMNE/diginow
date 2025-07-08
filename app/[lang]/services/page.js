@@ -5,9 +5,9 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "Naše usluge | Obuka za upravljanje projektima i web razvoj",
-    en: "Our Services | Project Management Training & Web Development",
-    tr: "Hizmetlerimiz | Proje Yönetimi Eğitimi ve Web Geliştirme",
+    sr: "Naše usluge | PMP obuka i konsultacije za digitalizaciju",
+    en: "Our Services | PMP Training & Digitalization Consulting",
+    tr: "Hizmetlerimiz | PMP Eğitimi ve Dijitalleşme Danışmanlığı",
   };
 
   const descriptions = {
