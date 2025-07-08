@@ -13,15 +13,15 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "Diginow | Digitalna transformacija i poslovna rješenja u Crnoj Gori",
-    en: "Diginow | Digital Transformation and Business Solutions in Montenegro",
-    tr: "Diginow | Karadağ'da Dijital Dönüşüm ve İş Çözümleri",
+    sr: "Diginow | Digitalna transformacija i poslovna rješenja",
+    en: "Diginow | Digital Transformation & Business Solutions",
+    tr: "Diginow | Dijital Dönüşüm ve İş Çözümleri",
   };
 
   const descriptions = {
-    sr: "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije. Nudimo obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj u Crnoj Gori.",
-    en: "Diginow provides customized solutions for small and medium enterprises and NGOs. We offer project management training, digitalization consulting, and web development in Montenegro.",
-    tr: "Diginow, küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Karadağ'da proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme hizmetleri sunuyoruz.",
+    sr: "Diginow pruža prilagođena rješenja za mala i srednja preduzeća i NVO. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj u Crnoj Gori.",
+    en: "Diginow provides customized solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development in Montenegro.",
+    tr: "Diginow küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Karadağ'da proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
   };
 
   return {

@@ -5,15 +5,15 @@ export async function generateMetadata({ params }) {
   const { lang } = await params;
 
   const titles = {
-    sr: "Naše usluge | Obuka za upravljanje projektima, konsultacije za digitalizaciju i web razvoj",
-    en: "Our Services | Project Management Training, Digitalization Consulting and Web Development",
-    tr: "Hizmetlerimiz | Proje Yönetimi Eğitimi, Dijitalleşme Danışmanlığı ve Web Geliştirme",
+    sr: "Naše usluge | Obuka za upravljanje projektima i web razvoj",
+    en: "Our Services | Project Management Training & Web Development",
+    tr: "Hizmetlerimiz | Proje Yönetimi Eğitimi ve Web Geliştirme",
   };
 
   const descriptions = {
-    sr: "Diginow nudi sveobuhvatne usluge: obuku za upravljanje projektima za NVO i preduzeća, konsultacije za digitalizaciju i web razvoj. Specijalizovani smo za PMP obuke i digitalnu transformaciju u Crnoj Gori.",
-    en: "Diginow offers comprehensive services: project management training for NGOs and businesses, digitalization consulting, and web development. We specialize in PMP training and digital transformation in Montenegro.",
-    tr: "Diginow kapsamlı hizmetler sunar: STK'lar ve işletmeler için proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme. Karadağ'da PMP eğitimi ve dijital dönüşüm konusunda uzmanız.",
+    sr: "Diginow nudi obuku za upravljanje projektima, konsultacije za digitalizaciju i web razvoj. Specijalizovani smo za PMP obuke i digitalnu transformaciju u Crnoj Gori.",
+    en: "Diginow offers project management training, digitalization consulting, and web development. We specialize in PMP training and digital transformation in Montenegro.",
+    tr: "Diginow proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme hizmetleri sunar. Karadağ'da PMP eğitimi ve dijital dönüşüm konusunda uzmanız.",
   };
 
   return {

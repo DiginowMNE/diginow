@@ -24,17 +24,15 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: {
-    default:
-      "Diginow | Digitalna transformacija i poslovna rješenja u Crnoj Gori",
+    default: "Diginow | Digitalna transformacija i poslovna rješenja",
     template: "%s | Diginow",
-    absolute:
-      "Diginow | Digital Transformation and Business Solutions in Montenegro",
+    absolute: "Diginow | Digital Transformation & Business Solutions",
   },
   description: {
     default:
-      "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva.",
-    en: "Diginow provides customized solutions for small and medium enterprises and NGOs, understanding the dynamics of an ever-changing business world. We offer training to ensure project success, consulting services for business process optimization, and modern web solutions to strengthen your digital presence.",
-    tr: "Diginow, sürekli değişen iş dünyasının dinamiklerini anlayarak küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Proje başarınızı sağlamak için eğitim, iş süreçlerini optimize etmek için danışmanlık hizmetleri ve dijital varlığınızı güçlendirmek için modern web çözümleri sunuyoruz.",
+      "Diginow pruža prilagođena rješenja za mala i srednja preduzeća i NVO. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj u Crnoj Gori.",
+    en: "Diginow provides customized solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development in Montenegro.",
+    tr: "Diginow küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Karadağ'da proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
   },
   metadataBase: new URL("https://diginow.me"),
   keywords: [
@@ -105,16 +103,15 @@ export const metadata = {
   },
   openGraph: {
     title: {
-      default:
-        "Diginow - Digitalna transformacija i poslovna rješenja u Crnoj Gori",
-      en: "Diginow - Digital Transformation and Business Solutions in Montenegro",
-      tr: "Diginow - Karadağ'da Dijital Dönüşüm ve İş Çözümleri",
+      default: "Diginow - Digitalna transformacija i poslovna rješenja",
+      en: "Diginow - Digital Transformation & Business Solutions",
+      tr: "Diginow - Dijital Dönüşüm ve İş Çözümleri",
     },
     description: {
       default:
-        "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj.",
-      en: "Customized digital solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development.",
-      tr: "KOBİ'ler ve STK'lar için özel dijital çözümler. Proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
+        "Diginow pruža prilagođena rješenja za mala i srednja preduzeća i NVO. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj.",
+      en: "Diginow provides customized solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development.",
+      tr: "Diginow küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
     },
     url: "https://diginow.me",
     siteName: "Diginow",
@@ -129,9 +126,9 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: {
-          default: "Diginow - Digitalna transformacija u Crnoj Gori",
-          en: "Diginow - Digital Transformation in Montenegro",
-          tr: "Diginow - Karadağ'da Dijital Dönüşüm",
+          default: "Diginow - Digitalna transformacija",
+          en: "Diginow - Digital Transformation",
+          tr: "Diginow - Dijital Dönüşüm",
         },
       },
     ],
@@ -139,16 +136,15 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: {
-      default:
-        "Diginow - Digitalna transformacija i poslovna rješenja u Crnoj Gori",
-      en: "Diginow - Digital Transformation and Business Solutions in Montenegro",
-      tr: "Diginow - Karadağ'da Dijital Dönüşüm ve İş Çözümleri",
+      default: "Diginow - Digitalna transformacija i poslovna rješenja",
+      en: "Diginow - Digital Transformation & Business Solutions",
+      tr: "Diginow - Dijital Dönüşüm ve İş Çözümleri",
     },
     description: {
       default:
-        "Prilagođena digitalna rješenja za mala i srednja preduzeća i nevladine organizacije. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj.",
-      en: "Customized digital solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development.",
-      tr: "KOBİ'ler ve STK'lar için özel dijital çözümler. Proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
+        "Diginow pruža prilagođena rješenja za mala i srednja preduzeća i NVO. Obuke za upravljanje projektima, konsultacije za digitalizaciju i web razvoj.",
+      en: "Diginow provides customized solutions for SMEs and NGOs. Project management training, digitalization consulting, and web development.",
+      tr: "Diginow küçük ve orta ölçekli işletmelere ve STK'lara özel çözümler sunar. Proje yönetimi eğitimi, dijitalleşme danışmanlığı ve web geliştirme.",
     },
     images: ["/og-image.jpg"],
   },
@@ -183,6 +179,13 @@ export default function RootLayout({ children, params }) {
           rel="alternate"
           hrefLang="x-default"
           href="https://diginow.me/sr"
+        />
+
+        {/* Self-referential hreflang for current page */}
+        <link
+          rel="alternate"
+          hrefLang={lang === "sr" ? "sr-ME" : lang === "en" ? "en-US" : "tr-TR"}
+          href={`https://diginow.me/${lang}`}
         />
 
         {/* Additional meta tags for better SEO */}

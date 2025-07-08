@@ -14,10 +14,10 @@ export const translations = {
       "Empowering Your Business with <span class='highlight'>Project Management, Digitalization Consulting, Web Solutions, Graphic Design & Branding .</span>",
     herotext:
       "Diginow was established to provide tailored solutions for small and medium-sized enterprises and non-governmental organizations by understanding the dynamics of an ever-changing business world. We deliver training to lead your projects to success, consulting services to optimize your processes, and modern web solutions to enhance your digital presence. Our goal is to be not only a service provider but also a long-term partner. With our innovative approach, we are ready to grow your business and make a difference.",
-    aboutButtonText: "Learn more about us",
+    aboutButtonText: "Learn more",
     servicesTitle: "Our Services",
     servicesSubtitle: "Our knowledge for your better today. Everyday.",
-    servicesButtonText: "Learn more about our services",
+    servicesButtonText: "Learn more",
     serviceCardTitleOne: "Project Management Training",
     serviceCardSubtitleOne: "Master the Art of Project Management",
     serviceCardTitleTwo: "Digitalization Consultancy",
@@ -45,7 +45,7 @@ export const translations = {
     divisionSubtitle: "Discover the Diginow Family",
     divisionText:
       "Diginow offers a comprehensive range of solutions through its specialized subsidiaries. Each division focuses on providing the best services in its area of expertise. Explore the wide range of services under the Diginow umbrella.",
-    divisionButtonText: "Learn more about our divisions",
+    divisionButtonText: "Learn more",
     contactTitle: "Get in Touch",
     contactText:
       "Whether you want to inquire about a project or have a question, we are happy to talk to you. We are here to provide solutions that meet your needs. <span class='highlight'>Reach out and let’s start working together.</span>",
@@ -138,10 +138,10 @@ export const translations = {
       "Osnažite svoje poslovanje uz <span class='highlight'>upravljanje projektima, konsultacije o digitalizaciji, web rješenja, grafički dizajn i brendiranje.</span>",
     herotext:
       "Diginow je osnovan kako bi pružio prilagođena rješenja za mala i srednja preduzeća, kao i nevladine organizacije, razumijevajući dinamiku stalno mijenjajućeg poslovnog svijeta. Nudimo obuke koje će osigurati uspjeh vaših projekata, konsultantske usluge za optimizaciju poslovnih procesa i moderna veb rješenja za jačanje vašeg digitalnog prisustva. Naš cilj nije samo da budemo pružalac usluga, već i dugoročni partner. Sa našim inovativnim pristupom, spremni smo da unaprijedimo vaše poslovanje i napravimo razliku.",
-    aboutButtonText: "Saznajte više o nama",
+    aboutButtonText: "Saznajte više",
     servicesTitle: "Naše usluge",
     servicesSubtitle: "Naše znanje za vaše bolje danas. Svaki dan.",
-    servicesButtonText: "Saznajte više o servisima",
+    servicesButtonText: "Saznajte više",
     serviceCardTitleOne: "Obuka za upravljanje projektima",
     serviceCardSubtitleOne: "Ovladajte umjetnošću upravljanja projektima",
     serviceCardTitleTwo: "Konsultacije za digitalizaciju",
@@ -169,7 +169,7 @@ export const translations = {
     divisionSubtitle: "Otkrijte Diginow porodicu",
     divisionText:
       "Diginow nudi sveobuhvatan raspon rješenja kroz svoje specijalizovane sektore. Svaki sektor se fokusira na pružanje najboljih usluga u svom području ekspertize. Istražite široku ponudu usluga u okviru Diginow porodice.",
-    divisionButtonText: "Saznajte više o našim sektorima",
+    divisionButtonText: "Saznajte više",
     contactTitle: "Kontaktirajte nas",
     contactText:
       "Bilo da želite da postavite pitanje o projektu ili da dobijete dodatne informacije, ovdje smo da vam pomognemo. <span class='highlight'>Obratite nam se i počnimo saradnju!</span>",
