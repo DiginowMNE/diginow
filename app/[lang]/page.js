@@ -12,6 +12,14 @@ import Contact from "../components/Contact";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
 
+  // Build hreflang languages object
+  const hreflangLanguages = {
+    "sr-ME": "https://diginow.me/sr",
+    "en-US": "https://diginow.me/en",
+    "tr-TR": "https://diginow.me/tr",
+    "x-default": "https://diginow.me/sr",
+  };
+
   const titles = {
     sr: "Diginow | PMP obuka",
     en: "Diginow | PMP Training",
@@ -72,11 +80,7 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://diginow.me/${lang}`,
-      languages: {
-        "sr-ME": "https://diginow.me/sr",
-        "en-US": "https://diginow.me/en",
-        "tr-TR": "https://diginow.me/tr",
-      },
+      languages: hreflangLanguages,
     },
   };
 }

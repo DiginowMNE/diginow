@@ -4,6 +4,14 @@ import ContactClient from "./contactClient";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
 
+  // Build hreflang languages object
+  const hreflangLanguages = {
+    "sr-ME": "https://diginow.me/sr/contact",
+    "en-US": "https://diginow.me/en/contact",
+    "tr-TR": "https://diginow.me/tr/contact",
+    "x-default": "https://diginow.me/sr/contact",
+  };
+
   const titles = {
     sr: "Kontakt | Diginow",
     en: "Contact | Diginow",
@@ -60,11 +68,7 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://diginow.me/${lang}/contact`,
-      languages: {
-        "sr-ME": "https://diginow.me/sr/contact",
-        "en-US": "https://diginow.me/en/contact",
-        "tr-TR": "https://diginow.me/tr/contact",
-      },
+      languages: hreflangLanguages,
     },
   };
 }

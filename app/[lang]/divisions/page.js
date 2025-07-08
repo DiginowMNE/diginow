@@ -4,6 +4,14 @@ import Divisions from "./divisions";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
 
+  // Build hreflang languages object
+  const hreflangLanguages = {
+    "sr-ME": "https://diginow.me/sr/divisions",
+    "en-US": "https://diginow.me/en/divisions",
+    "tr-TR": "https://diginow.me/tr/divisions",
+    "x-default": "https://diginow.me/sr/divisions",
+  };
+
   const titles = {
     sr: "Sektori | Diginow",
     en: "Divisions | Diginow",
@@ -63,11 +71,7 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://diginow.me/${lang}/divisions`,
-      languages: {
-        "sr-ME": "https://diginow.me/sr/divisions",
-        "en-US": "https://diginow.me/en/divisions",
-        "tr-TR": "https://diginow.me/tr/divisions",
-      },
+      languages: hreflangLanguages,
     },
   };
 }

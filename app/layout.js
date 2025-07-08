@@ -94,7 +94,6 @@ export const metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: "https://diginow.me",
     languages: {
       "sr-ME": "https://diginow.me/sr",
       "en-US": "https://diginow.me/en",
@@ -171,25 +170,53 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${montserrat.variable}`}>
       <head>
-        {/* Hreflang tags for all supported languages */}
-        <link rel="alternate" hrefLang="sr-ME" href="https://diginow.me/sr" />
-        <link rel="alternate" hrefLang="en-US" href="https://diginow.me/en" />
-        <link rel="alternate" hrefLang="tr-TR" href="https://diginow.me/tr" />
+        {/* Apple touch icons for mobile optimization */}
         <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://diginow.me/sr"
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/web-app-manifest-192x192.png"
         />
-
-        {/* Self-referential hreflang for current page */}
         <link
-          rel="alternate"
-          hrefLang={lang === "sr" ? "sr-ME" : lang === "en" ? "en-US" : "tr-TR"}
-          href={`https://diginow.me/${lang}`}
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/web-app-manifest-192x192.png"
         />
-
-        {/* Canonical URL for current page */}
-        <link rel="canonical" href={`https://diginow.me/${lang}`} />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/web-app-manifest-192x192.png"
+        />
+        <link rel="apple-touch-icon" href="/web-app-manifest-192x192.png" />
 
         {/* Additional meta tags for better SEO */}
         <meta name="geo.region" content="ME" />

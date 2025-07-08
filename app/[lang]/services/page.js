@@ -4,6 +4,14 @@ import ServicesClient from "./servicesClient";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
 
+  // Build hreflang languages object
+  const hreflangLanguages = {
+    "sr-ME": "https://diginow.me/sr/services",
+    "en-US": "https://diginow.me/en/services",
+    "tr-TR": "https://diginow.me/tr/services",
+    "x-default": "https://diginow.me/sr/services",
+  };
+
   const titles = {
     sr: "Usluge | PMP obuka i konsultacije",
     en: "Services | PMP Training & Consulting",
@@ -54,11 +62,7 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://diginow.me/${lang}/services`,
-      languages: {
-        "sr-ME": "https://diginow.me/sr/services",
-        "en-US": "https://diginow.me/en/services",
-        "tr-TR": "https://diginow.me/tr/services",
-      },
+      languages: hreflangLanguages,
     },
   };
 }

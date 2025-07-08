@@ -4,6 +4,14 @@ import About from "./about";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
 
+  // Build hreflang languages object
+  const hreflangLanguages = {
+    "sr-ME": "https://diginow.me/sr/about",
+    "en-US": "https://diginow.me/en/about",
+    "tr-TR": "https://diginow.me/tr/about",
+    "x-default": "https://diginow.me/sr/about",
+  };
+
   const titles = {
     sr: "O nama | Diginow",
     en: "About Us | Diginow",
@@ -60,11 +68,7 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://diginow.me/${lang}/about`,
-      languages: {
-        "sr-ME": "https://diginow.me/sr/about",
-        "en-US": "https://diginow.me/en/about",
-        "tr-TR": "https://diginow.me/tr/about",
-      },
+      languages: hreflangLanguages,
     },
   };
 }
