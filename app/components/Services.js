@@ -47,6 +47,7 @@ const Services = () => {
         <Fade cascade damping={0.2} direction="up" triggerOnce>
           <h2 className={styles.title}>{t("servicesTitle")}</h2>
           <p className={styles.servicesSubtitle}>{t("servicesSubtitle")}</p>
+          <p className={styles.servicesText}>{t("servicesText")}</p>
         </Fade>
       </div>
       <Fade className={styles.servicesCards} direction="up" triggerOnce>

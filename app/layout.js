@@ -250,6 +250,45 @@ export default function RootLayout({ children, params }) {
                 "https://www.linkedin.com/company/diginow",
                 "https://www.facebook.com/diginow",
               ],
+              serviceArea: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 42.7087,
+                  longitude: 19.3744,
+                },
+                geoRadius: "50000",
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Diginow Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Project Management Training",
+                      description: "PMP-focused training programs",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Digitalization Consulting",
+                      description: "Digital transformation consulting",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Web Development",
+                      description: "Professional web development services",
+                    },
+                  },
+                ],
+              },
             }),
           }}
         />

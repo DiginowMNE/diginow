@@ -17,6 +17,8 @@ export const translations = {
     aboutButtonText: "Learn more",
     servicesTitle: "Our Services",
     servicesSubtitle: "Our knowledge for your better today. Everyday.",
+    servicesText:
+      "We empower NGOs and SMEs across the Balkans and Turkey with tailored project management training, digitalization consulting, and creative web & branding solutions — all designed to generate sustainable digital impact.",
     servicesButtonText: "Learn more",
     serviceCardTitleOne: "Project Management Training",
     serviceCardSubtitleOne: "Master the Art of Project Management",
@@ -141,6 +143,8 @@ export const translations = {
     aboutButtonText: "Saznajte više",
     servicesTitle: "Naše usluge",
     servicesSubtitle: "Naše znanje za vaše bolje danas. Svaki dan.",
+    servicesText:
+      "Osnažujemo NVO-e i mala i srednja preduzeća širom Balkana i Turske kroz obuke iz upravljanja projektima, savjetovanje o digitalizaciji i kreativna web i brending rješenja — sve sa ciljem tvaranja održivog digitalnog uticaja.",
     servicesButtonText: "Saznajte više",
     serviceCardTitleOne: "Obuka za upravljanje projektima",
     serviceCardSubtitleOne: "Ovladajte umjetnošću upravljanja projektima",
@@ -262,10 +266,12 @@ export const translations = {
       "İşinizi <span class='highlight'>Proje Yönetimi, Dijitalleşme Danışmanlığı, Web Çözümleri ve Grafik Tasarım & Marka Oluşturma</span> ile Güçlendiriyoruz.",
     herotext:
       "Diginow, değişen iş dünyasının dinamiklerini anlayarak küçük ve orta ölçekli işletmeler ile sivil toplum kuruluşlarına özel çözümler sunmak için kuruldu. Projelerinizi başarıya ulaştıracak eğitimler, iş süreçlerinizi optimize edecek danışmanlık hizmetleri ve dijital dünyadaki varlığınızı güçlendirecek modern web çözümleri sunuyoruz. Hedefimiz, yalnızca bir hizmet sağlayıcı değil, aynı zamanda uzun vadeli bir çözüm ortağı olmaktır. Yenilikçi yaklaşımımızla işinizi büyütmeye ve fark yaratmaya hazırız.",
-    aboutButtonText: "Hakkımızda daha fazla bilgi alın",
+    aboutButtonText: "Daha fazla",
     servicesTitle: "HİZMETLERİMİZ",
     servicesSubtitle: "Hizmetlerimiz hakkında daha fazla bilgi alın.",
-    servicesButtonText: "Hizmetlerimiz hakkında daha fazla bilgi edinin",
+    servicesText:
+      "Diginow, Balkanlar ve Türkiye’deki STK’ları ve KOBİ’leri, özel proje yönetimi eğitimleri, dijitalleşme danışmanlığı ve yaratıcı web & marka çözümleriyle güçlendiriyor — tümü sürdürülebilir dijital etki yaratmak için tasarlandı.",
+    servicesButtonText: "Daha fazla",
     serviceCardTitleOne: "Proje Yönetimi Eğitimi",
     serviceCardSubtitleOne: "Proje Yönetiminde Ustalık Kazanın",
     serviceCardTitleTwo: "Dijitalleşme Danışmanlığı ",
@@ -293,7 +299,7 @@ export const translations = {
     divisionSubtitle: "Diginow Ailesini Keşfedin",
     divisionText:
       "Diginow, farklı alanlarda uzmanlaşmış alt şirketleriyle, müşterilerine kapsamlı çözümler sunar. Her şirket, kendi uzmanlık alanında en iyi hizmeti vermek için çalışır. Diginow çatısı altındaki geniş hizmet yelpazemizi keşfedin.",
-    divisionButtonText: "Alt şirketlerimiz hakkında daha fazla bilgi edinin",
+    divisionButtonText: "Daha fazla",
     contactTitle: "BİZE ULAŞIN",
     contactText:
       "İster bir proje hakkında bilgi almak isteyin, ister bir sorunuz olsun, sizinle konuşmaktan mutluluk duyarız. İhtiyaçlarınıza uygun çözümler sunmak için buradayız. <span class='highlight'>Bize ulaşın, birlikte çalışmaya başlayalım.</span>",
